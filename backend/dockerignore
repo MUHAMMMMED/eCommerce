@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.log
+
+# Django
+media/
+staticfiles/
+.env
+
+# IDEs and Editors
+.vscode/
+.idea/
+
+# Node modules (if using Node.js tools in the project)
+node_modules/
+
+# Docker
+Dockerfile
+docker-compose.yml
+*.dockerignore
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Misc
+*.git
