@@ -1,0 +1,58 @@
+
+
+ 
+ 
+.note-cardContent-Create {
+
+    float: right;
+    width: 90%;  
+    padding: 0;
+    margin: 0; 
+    margin-right: 5%;
+    margin-top: 10px;
+  }
+ 
+.card-Note-TextArea-Create{
+ float: right;
+ width: 84%;
+ 
+   }
+
+.Note-textarea-Create{
+    float: right;
+    width: 100%;
+    text-align: center;
+    height: 40px;
+ }
+
+.note-card-but-Save-Create{
+ float: right;
+ width: 15%;
+ 
+}
+  
+
+.card-but-Save-Create{
+    margin-top: 0px;
+    float: right;
+    width: 100%;
+    margin-right:5%;
+    border: 1px solid #dee2e6;
+    padding:10px;
+    font-size: 13px;
+    font-weight: 700;
+    background-color: black;
+    color: #ffffff; }
+ 
+.card-but-Save-Create:hover { background-color: rgb(36, 34, 34); }
+   
+ 
+
+ @media screen and (max-width: 768px) {
+  .note-cardContent-Create { width: 95%; margin-right: 2.5%;  }
+  .card-Note-TextArea-Create{ float: right; width: 100%;}
+  .Note-textarea-Create{height: 100px; }
+  .note-card-but-Save-Create{ width: 100%;   }
+  .card-but-Save-Create{  margin-right:0%;}
+  
+  }  

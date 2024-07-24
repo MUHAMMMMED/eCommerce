@@ -1,0 +1,44 @@
+.customer-list {
+    float: right;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    width: 100%;
+}
+
+.customer-list h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    direction: rtl;
+}
+
+.filters input {
+    padding: 7px;
+    font-size: 13px;
+    width: 25%;
+    text-align: center;
+    border: 1px solid #9081f6;
+
+}
+
+.filters button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color:  #9081f6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 15%;
+}
+
+.filters button:hover {
+    background-color: #9081f6;
+}
+ 

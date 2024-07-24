@@ -1,0 +1,93 @@
+.contner_card_report{
+ float: right;
+ background-color: #fff;
+ width: 100%;
+ height:auto;
+ margin-top: 20px;
+
+}
+.report_h2{
+float: right;
+width: 100%;
+text-align: right;
+padding: 5px;
+margin-top: 15px;
+margin-bottom: 15px;
+padding-right: 50px;
+}
+.report_p{
+    float: right;
+    width: 100%;
+    text-align: right;
+    padding: 5px;
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    padding-right: 50px;
+
+
+
+}
+
+
+.report_card{
+    margin-top: 15px;
+    float: right;
+    width: 22%;
+    height: 100px;
+    margin-right: 2%;
+    border-radius: 7px;
+    background-color:#ffffff;
+    color: #9081f6;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; 
+
+}
+.report_card_order{
+    margin-top: 15px;
+    float: right;
+    width: 14%;
+    height: 100px;
+    margin-right: 2%;
+    border-radius: 7px;
+    background-color:#ffffff;
+    color: #9081f6;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; 
+
+}
+
+@media screen and (max-width: 768px) {
+    .report_card{
+        margin-top: 15px;
+        float: right;
+        width: 45%;  
+        margin-right: 3%;
+        height: auto;}
+    }
+    
+
+ 
+
+   
+.report_card_text{
+    margin-top: 15px;
+    float: right;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    color: #9081f6;
+}
+
+.report_card_number{
+    margin-top: 8px;
+    float: right;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+}
+.report_card_code{
+ margin-top: -10px;
+font-size: 10px;
+color: fff;
+}

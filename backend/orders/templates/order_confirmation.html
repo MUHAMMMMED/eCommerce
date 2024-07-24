@@ -1,0 +1,115 @@
+{% load i18n %}
+  <!--================Checkout Area =================-->
+  <section  style="width:98%; margin-top:100px;margin-right:1%;">
+    <br><br><br><br><br><br>
+    <div class="container" style="max-width: 680px; margin:0 auto;border: thick dashed #ccc; padding:10px">
+    <table width="100%;float:right;"><tr>
+    <td width="75px;">
+    <div class="logotype" style="width:75px;height:75px;  line-height: 75px; text-align: center; font-size:11px;">
+      {% if info.logo%}
+      <img src="{{info.logo.url}}"
+       style="color:#fff;max-width:80px;  line-height: 75px; text-align: center; font-size:11px;" title="Logo">
+      {% endif %}
+    </div></td>
+    <td width="300px;float:left;">
+    <div style="font-size: 26px;font-weight: bold;color: #000; text-align:center;margin-right:100px;"> {{InvoiceTextT.invoic_help}} </div></td>
+    <td></td></tr></table>
+    <table width="100%" style="border-collapse: collapse; margin-top:20px"><tr>
+    <td widdth="50%" style="background:#ededed;padding:20px;">
+    <strong>  {{InvoiceTextT.Date}}
+    </strong> <span >{{ order.created_at }}</span><br>
+    </td>
+    <td style="background:#ede8e8;padding:20px;">
+      <strong> {{InvoiceTextT.order_number}}
+     </strong> {{ order.Tracking }}<br>
+
+    <strong>{{TrackTextT.order_status}}
+   </strong>
+      {% if order.default %}
+         {{InvoiceTextT.Paid}}
+      {% else %}
+        {{ InvoiceTextT.not_Paid}}
+      {% endif %}
+    <br>
+    <br>
+
+    </td></tr></table>
+    <br><table width="100%"><tr>
+    <td>
+    <table><tr>
+    <td style="vertical-align: text-top;">
+    <div style="background: #ededed url(https://cdn0.iconfinder.com/data/icons/commerce-line-1/512/comerce_delivery_shop_business-07-128.png);width: 50px;height: 50px;margin-right: 10px;background-position: center;background-size: 42px;"></div>
+    </td>
+    <td style="padding-right:15px;text-align:right;">
+    <strong> {{InvoiceTextT.shipping_information}}
+    </strong><br>
+    {{order.name}}<br>
+    {{order.country}}<br>
+    {{order.city}}<br>
+    {{order.shipping_address}}
+    {{order.apartment_address}}<br>
+    {{order.zip}}<br>
+    </td></tr></table></td>  <td>  <table><tr>
+    <td style="vertical-align: text-top;">
+    <div style="background: #ededed url(https://cdn2.iconfinder.com/data/icons/250-perfect-vector-pictograms/48/2.5-256.png) no-repeat;width: 50px;height: 50px;margin-right: 10px;background-position: center;background-size: 25px;"></div>
+    </td>
+    <td style="padding-right:15px;text-align:right;">
+    <strong>{{InvoiceTextT.contact_information}}
+    </strong><br>
+    {{order.name}}<br>
+    {{order.emailaddress}}<br>
+    {{order.phone}}<br>
+    </td></tr></table></td></tr></table>
+    <table width="100%" style="border-collapse: collapse;border-bottom:1px solid #eee; margin-top:30px">
+      <tr>
+      <td width="40%" class="column-header" style="background:#eee;text-transform:uppercase;padding:15px;font-size:11px;border-right:1px solid #eee;"> {{InvoiceTextT.product_name}}</td>
+      <td width="20%" class="column-header" style="background:#eee;text-transform:uppercase;padding:15px;font-size:11px;border-right:1px solid #eee;">  {{InvoiceTextT.price}}</td>
+      <td width="20%" class="column-header" style="background:#eee;text-transform:uppercase;padding:15px;font-size:11px;border-right:1px solid #eee;">  {{InvoiceTextT.Quantity}}</td>
+      <td width="20%" class="column-header" style="background:#eee;text-transform:uppercase;padding:15px;font-size:11px;border-right:1px solid #eee;">{{InvoiceTextT.total}} </td>
+      </tr>
+    {% for item in order.item.all %}
+    <tr>
+    <td class="row" style="padding:7px 14px;border-left:1px solid #eee;border-right:1px solid #eee;border-bottom:1px solid #eee;">{{ item.items }}</td>
+    <td class="row" style="padding:7px 14px;border-left:1px solid #eee;border-right:1px solid #eee;border-bottom:1px solid #eee;">{{ item.price }} </td>
+    <td class="row" style="padding:7px 14px;border-left:1px solid #eee;border-right:1px solid #eee;border-bottom:1px solid #eee;"> {{ item.quantity }} </td>
+    <td class="row" style="padding:7px 14px;border-left:1px solid #eee;border-right:1px solid #eee;border-bottom:1px solid #eee;">{{ item.total_price }}</td>
+    </tr>  {% endfor %}
+    </table>
+    <br><table width="100%" style="background:#eee;padding:20px;"><tr>  <td>
+      <table width="300px" style="float:right">
+        <tr><td><strong> {{InvoiceTextT.subtotal}} </strong></td>  <td style="text-align:right">{{ Subtotal }} <span style="font-size:8px;">  {{currency}} </span ></td></tr>
+        <tr><td><strong>  {{InvoiceTextT.shipping}} </strong></td><td style="text-align:right">{{shipping_price}} <span style="font-size:8px;">{{currency}}  </span ></td></tr>
+        <tr><td><strong>  {{InvoiceTextT.tax}} </strong></td><td style="text-align:right">{{tax_number}} <span style="font-size:8px;">{{currency}}  </span ></td></tr>
+        <tr><td><strong>  {{InvoiceTextT.total_all}} </strong></td><td style="text-align:right">{{ overall_total_price }} <span style="font-size:8px;">{{currency}}  </span ></td>
+      </tr></table></td></tr></table>
+
+
+<br>
+<h5 style="text-align:center;">
+<button  style="  display: inline-block; background-color: #005aff; color: #fff; padding: 8px 30px 8px 30px; border-radius: 50px; text-decoration: none;
+" onclick="window.print()"> {{InvoiceTextT.print}}  </button></h5>
+
+
+
+<br>
+
+
+<div class="ROW"><br><br><br><br><br><br>
+  <h5 style="text-align:center;">
+Copyright &copy;<script>document.write(new Date().getFullYear());</script>smart card
+</h5></div>
+
+
+  </section>
+
+
+
+  <!--================End Checkout Area =================-->
+<style media="screen">
+
+.Buy{display:none;}
+.BEST{display:none}
+.checkout-button {display:none}
+
+
+  </style>

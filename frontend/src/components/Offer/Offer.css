@@ -1,0 +1,22 @@
+ 
+
+.Offer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000000!important;
+    border-bottom: 1px solid #ddd;
+    direction: rtl;
+    margin-bottom: 2px;
+}
+
+.Offer-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+  }
+ 

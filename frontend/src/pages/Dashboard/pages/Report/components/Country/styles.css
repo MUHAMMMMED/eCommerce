@@ -1,0 +1,32 @@
+ 
+.CountryBut {
+    width:100%  ;
+    float: right;
+    height: auto;
+  }
+
+.CountryBut_flex{
+  width: 100%;
+ float: right;
+  }
+  .CountryBut_flex > div {
+    float: right;
+  }
+  
+  .Country_button {
+    margin-right: 10px;
+    margin-top: 10px;
+    float: right;
+    background-color:  #9081f6;
+    border: 1px solid  #9081f6;
+    color: white;  
+    padding: 8px 20px;  
+    cursor: pointer;  
+   font-size: 10px;
+    border-radius: 2px;
+  }
+  .Creat_button:hover {
+    background-color: #010a01;
+  }
+
+ 

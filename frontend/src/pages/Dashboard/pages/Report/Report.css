@@ -1,0 +1,186 @@
+ 
+
+
+.container_orders_filter{ 
+    float: right;
+    background-color: #ffffff;
+    width: 95%;
+    margin-right: 2.5%;
+    height:auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+   
+.orders_filter{
+    float: right;
+    background-color: #ffffff;
+    width: 100%;
+    height:auto;
+    border-radius: 8px;
+    padding: 5px;
+    border: 1px solid #ddd;
+
+}
+
+
+
+.orders_text{
+    float: right;
+    width: 40%;
+    text-align: right;
+    font-weight: 700;
+    font-size: 20px;
+    color: #000000;
+    padding: 10px;
+
+}
+.orders_select{
+    float: right;
+    width: 30%;
+    text-align: right;
+    margin-top: 8px;
+ }
+ 
+.orders_select_label{
+    float: right;
+    width: 30%;
+    font-weight: 700;
+    font-size: 17px;
+    text-align: left;
+    color: #504545;
+    margin-top: 8px;
+    margin-left:10px;
+}
+.orders_select_option{  float: right; width: 60%;}
+  
+.filter_list_web{display: block;}
+.filter_list_mobile{display: none;}
+.list_mobile{ width: 100%; float: right;}
+   
+   
+
+
+.mobile_text1{
+    width: 30%;
+    float: right;
+    text-align: right;
+    font-size: 16px;
+    color: #000000;
+    padding: 10px;
+    font-weight: 500;
+}
+.mobile_text2{
+    width: 70%;
+    float: right;
+    text-align: right;
+    font-size: 16px;
+    color: #000000;
+    padding: 10px;
+    font-weight: 500;
+}
+
+
+
+@media screen and (max-width: 768px) {
+.orders_text{width: 100%;  
+}
+.orders_select{  width: 100%; margin-top: 20px;}
+.orders_select_label{  width: 20%;    }
+.orders_select_option{  width: 75%; }
+.filter_list_web{display: none;}
+.filter_list_mobile{
+display: block;
+border: 1px solid #ddd;
+width: 100%;
+height: auto;
+float: right;
+margin-top: 15px;
+border-radius: 5px;
+padding: 5px;
+padding-top: 10px;
+padding-bottom: 10px;
+
+}
+
+ }
+.orders_CartPlu{
+    float: right;
+    font-weight: 700;
+    font-size: 20px;
+    color: #9081f6;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+ 
+.card_report_number{
+    margin-top: 8px;
+    float: right;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.card_report_code{
+ margin-top: -10px;
+font-size: 10px;
+color: fff;
+}
+.orders_filter_list{
+   border-top: 1px solid #ccc;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 20px;
+    color: #000000;
+    padding: 10px;
+    direction: rtl; 
+    
+}
+.filter_list_text{
+    text-align: center;  
+    font-weight: 100;
+    font-size: 18px;
+    color: #000000;
+    padding: 10px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .contner_orders_filter{ margin-top: 20px; }
+   
+    .orders_text{
+        float: right;
+        width: 100%;
+        text-align: right;
+        font-weight: 700;
+        font-size: 15px;
+        color: #000000;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+ 
+    }
+
+    .orders_CartPlu{
+        float: right;
+        font-weight: 700;
+        font-size: 15px;
+        color: #9081f6;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 2px;
+    }
+    /* .filter_list_text{
+        float: right;
+        text-align: center;
+        font-weight: 100;
+        font-size: 18px;
+        color: #000000;
+        padding: 10px;
+    } */
+
+}

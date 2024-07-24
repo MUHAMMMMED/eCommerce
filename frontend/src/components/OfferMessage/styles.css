@@ -1,0 +1,39 @@
+ 
+.OfferMessage {
+   position: relative;
+   background-color: #9081f6!important;
+   float: right;
+    color: #fff;
+    padding: 8px 0px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 100;
+    width: 95%;
+     margin-right: 2.5%;
+    letter-spacing: 2px;
+    animation: pulse 2.5s infinite;
+ 
+    z-index: 100;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    @media (max-width: 768px) {       
+        font-size: 15px!important; 
+        padding: 8px  0px;
+        width: 90%;
+        margin-right: 5%;
+
+      }
+}
+
+/* Animation for a pulsing effect */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

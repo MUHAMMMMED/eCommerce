@@ -1,0 +1,21 @@
+ 
+.DeliveryCard {
+float: right;
+border: 1px solid #ccc;
+border-radius: 8px;
+margin-top: 20px;
+margin-bottom: 20px;
+width: 80%;
+margin-right: 10%;
+background-color: white;
+padding: 10px;
+display: block;
+}
+.DeliveryCard:hover { background-color: #a68ec215; border: 2px solid #c66ee1; }
+   
+ @media screen and (max-width: 768px) {
+   .DeliveryCard {  width: 100%; margin-right: 0%; }
+  }
+
+
+  

@@ -1,0 +1,135 @@
+.DealItrm{ 
+    float: right;
+    width: 30%;
+    /* height: 200px; */
+    border: 1px solid #ccc;
+    margin-right: 2.5%;
+    padding: 0px;
+     margin-top: 25px;
+    @media screen and (max-width: 1200px) {
+        width: 45%;
+        margin-right: 2.5%;
+      }
+  
+      @media screen and (max-width: 785px) {
+        width: 95%;
+        margin-right: 2.5%;
+      }
+    }
+  
+
+.DealItrm_swiper{ 
+  float: right;
+  width: 90%;
+  border: 1px solid #ccc;
+  margin-right:  3%;
+  margin-left: 0%;
+  padding: 0px;
+  margin-top: 10px;
+ 
+  }
+ 
+ 
+.DealItrm:hover{    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);}
+
+
+.DealItrm-row{
+  float: right;width:48%; padding: 0px;margin-left: 2%;
+ 
+
+}
+ 
+
+.DealItrm-row-img{width:100%;height: 100%; padding: 0px;}
+.DealItrm-top-row-detail {
+    width: 80%;
+     margin-left: 20%; 
+     display: inline-block; 
+     flex-direction: column;
+     justify-content: space-between;
+      }
+.DealItrm-detail-off{
+       width:100%;
+       text-align: right;
+       font-size:13px;
+       font-weight: 500;
+       float: right;
+        padding-right: 10px;
+       padding:2px; 
+       margin-top: 15px;
+       margin-bottom: 15px; 
+ 
+    }  
+    .DealItrm-detail-off-span{
+        border: 1px solid #000000;
+        padding: 3px;
+
+    } 
+.DealItrm-titel{
+     width:100%;
+     text-align: right; 
+     font-size:15px;
+     font-weight: 500; 
+     letter-spacing: .1rem; 
+     margin-top:5px;  
+ 
+     @media screen and (max-width: 1200px) {
+      margin-top: 5px;  }
+      
+    }
+
+.DealItrm-sup_titel{
+
+  width:100%;
+  text-align: right; 
+  font-size:13px;
+  font-weight: 500; 
+  letter-spacing: .1rem; 
+  margin-top:5px;  
+color: #9081f6;
+
+
+}
+
+
+
+
+.DealItrm-timer{width:90%;display: flex;  justify-content: space-between; margin-top:20px;  margin-left: 5%;}
+.DealItrm-timer-row{text-align: center;width: 100px;
+
+    @media screen and (max-width: 1200px) {
+        margin-top: 15px;  }
+        @media screen and (max-width: 785px) {
+            margin-top: -5px;
+    
+          }
+    }
+.DealItrm-timer-row-number{float: right;width:100%; font-size:15px; font-weight: 500; }
+.DealItrm-timer-row-text{ float: right;width:100%; font-size:10px; font-weight: 500;margin-top:  5px;}
+.DealItrm-detail-B{float: right; width: 100%;margin-top:20px; }  
+ .DealItrm-detail-but{width:80%; margin: auto;  }
+ .DealItrm-detail-but-button{
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius:3px;
+    color: #000;
+    height:30px;
+    @media screen and (max-width: 1200px) {
+        /* margin-top: 5px; */
+
+      }
+      
+      @media screen and (max-width: 785px) {
+        margin-top: -15px;
+
+      }
+    }
+  
+ 
+.DealItrm-detail-but-button:hover{ background-color:#000;color:#fff;}

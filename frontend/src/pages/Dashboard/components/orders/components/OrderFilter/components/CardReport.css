@@ -1,0 +1,55 @@
+.contner_card_report{
+ float: right;
+ background-color: #fff;
+ width: 100%;
+ height:auto;
+ margin-top: 20px;
+
+}
+
+.card_report{
+    margin-top: 15px;
+    float: right;
+    width: 14%;
+    height: 100px;
+    margin-right: 2%;
+    border-radius: 7px;
+    background-color:#9081f6;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; 
+
+}
+
+@media screen and (max-width: 768px) {
+    .card_report{
+        margin-top: 15px;
+        float: right;
+        width: 45%;  
+        margin-right: 3%;}
+
+    }
+.card_report_text{
+    margin-top: 15px;
+    float: right;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    color: #fff;
+}
+ 
+.card_report_number{
+    margin-top: 8px;
+    float: right;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    color: #fff;
+
+}
+.card_report_code{
+ margin-top: -10px;
+font-size: 10px;
+color: fff;
+}

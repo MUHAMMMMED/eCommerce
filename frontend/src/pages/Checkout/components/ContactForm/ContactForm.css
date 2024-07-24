@@ -1,0 +1,193 @@
+.container {
+  width: 100%;
+    margin: 0 auto;
+  }
+  
+  form {
+    width: 100%;
+  margin-top: 96px;
+    padding: 0px;
+    border-radius: 5px;
+   
+  }
+  .grup {
+    display: flex;
+    flex-direction: row-reverse; /* Start from right */
+    justify-content: space-between; /* Space between items */
+    width: 100%;
+
+}
+ 
+  form h3 {
+    margin-bottom: 20px;
+    text-align: right;
+    font-size: 15px;
+
+
+  }
+  
+.input-text,
+  select,
+  textarea {
+    width: 49%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    float: right;
+    text-align: right;
+
+  }
+  .select{
+    width: 49%;
+    margin-left: 2%;
+   }
+  
+  @media screen and (max-width: 780px) {
+    form {
+      width: 100%;
+    margin-top: 15px;
+      padding: 0px;
+      border-radius: 5px;
+     
+    }
+    .grup {
+      display: inline-block;
+      flex-direction: row-reverse; /* Start from right */
+      justify-content: space-between; /* Space between items */
+      width: 100%;
+  }
+  .select{
+    width: 100%;
+    margin-left: 0%;
+   }
+  
+    .input-text,
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      float: right;
+      text-align: right;
+  
+    }
+  
+    }
+ 
+  .address-preview {
+    float: right;
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+    padding:  0px;
+    /* margin-bottom: 20px; */
+ 
+    width: 100%;
+
+
+
+  }
+  
+  .Shipping-method {
+    /* display: flex;
+    justify-content: space-between; */
+    float: right;  
+     width: 100%; 
+    /* background-color: antiquewhite; 
+    display: inline-block;
+    justify-content: space-between; */
+    }
+  
+
+  .address-sub-title{
+    color: hsl(0, 0%, 20%);
+    font-size: 15px;
+    padding-bottom: 15px;
+    text-align: right;
+    font-weight: 700;
+  
+  }
+  
+  /* Styles for the delivery card container */
+.Delivery-card {
+  float: right;  
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width:100%;
+  margin-left:0%;
+  padding: 20px;
+
+}
+
+.Delivery-card:hover {
+  background-color: #a68ec215;
+  border: 2px solid #c66ee1;
+
+}
+.Delivery-checked{
+  float: right;  
+  width:10px;
+  margin-right: 17px;
+  margin-top:12px;
+ 
+ }
+@media screen and (max-width: 1200px) {
+ 
+
+/* Styles for the delivery option icon */
+.Delivery-option-icon {
+  float: right;
+  margin-right:  0px;
+  width:35px;
+  margin-top: 4px;
+}
+
+/* Styles for the content within the delivery card */
+.delivery-card-content {
+  padding: 0;
+  float: right;
+  margin-right:2%;
+  width: 50%;
+  text-align: right;
+ 
+}
+
+ 
+.card-title {  
+  float: right;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 0px;
+  font-size: 14px;
+  font-weight: bold;
+ }
+
+ 
+.card-text {   
+  margin-top: 5px;
+  float: right;
+  width: 100%;
+  font-size: 14px;
+  color: #666;
+ 
+}
+ 
+
+.delivery-card-price{    
+  padding: 0;
+  float: right;
+  width: 27%;
+  text-align: center;
+  margin-top:10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+ 
+ }
+}
+ 

@@ -1,0 +1,45 @@
+.Info{
+    float: right;
+    margin-top: 20px;
+    margin-right: 5%;
+    margin-bottom: 50px;
+    width: 65%;
+    display: block;
+ }
+
+.Info-title{
+    margin-top:0px;
+    color: #9081f6;
+    padding: 5px;
+    float: right;
+    width: 100%;
+    text-align: right;
+    font-weight: 700;
+   font-size: 20px;
+   margin-bottom: 10px;
+   display: block;
+}
+.Info-Summary{
+    float: right;
+    width: 93%;
+    border-radius: 8px;
+    margin-right: 0%;
+    background: #f7f7f8;
+    padding: 16px;
+    display: block;
+}
+.Info-item{float: right; width: 100%;padding: 5px;    display: block;}
+.Info-icon{font-weight: 400; color: #9081f6;    display: block;}
+.Info-text-left{ text-align: right; float: right;    display: block; }
+.Info-text-right{ text-align: right; float: right;  margin-left: 8px;    display: block;}
+.Info-total-amount{font-size: 18px;font-weight: bold;color: #555; text-align: right;    display: block;}
+
+
+@media screen and (max-width: 768px) {
+
+    .Info{float: right; width:95%; margin-right: 2.5%;     display: block;}
+    .Info-text-left{ float: right;    display: block; }
+        
+
+    
+ }

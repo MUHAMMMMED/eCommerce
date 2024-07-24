@@ -1,0 +1,38 @@
+/* src/Breadcrumb.css */
+ul.breadcrumb {
+    float: right;
+    padding: 8px;
+    width: 100%;
+    list-style: none;
+    text-align: right;
+    padding: 10px 16px;
+    font-weight: 600;
+   }
+  ul.breadcrumb li {
+    padding-right: 10px;
+    display: inline;
+    font-size: 18px;
+    float: right;
+ 
+  }
+  ul.breadcrumb li+li:before {
+    padding: 0px;
+    color: black;
+    content: "/\00a0";
+    float: right;
+  
+
+  }
+  ul.breadcrumb li a {
+    color: #000000;
+    text-decoration: none;
+    padding-right: 20px;
+
+
+  }
+  ul.breadcrumb li a:hover {
+    color: #000000;
+    text-decoration: underline;
+  }
+  
+  

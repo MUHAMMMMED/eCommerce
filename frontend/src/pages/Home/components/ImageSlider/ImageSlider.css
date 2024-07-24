@@ -1,0 +1,12 @@
+ 
+ .Image_Slick{width: 100%; float: right; } 
+ .image-slider {margin: 0px auto;   }
+ .slickSlide_web{display: block; }
+ .slickSlide_mobile{display: none;}
+ .slickSlideImg{width: 100%; height: auto; display: block;  }
+ @media screen and (max-width: 785px) {
+    .slickSlide_web{ display: none; }
+    .slickSlide_mobile{display: block;}
+ 
+  }
+ 
