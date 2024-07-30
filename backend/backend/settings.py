@@ -75,13 +75,25 @@ AUTH_USER_MODEL = 'accounts.UserAccount'
 
 DOMAIN="http://localhost:3000"
 
-# Database
+ 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('POSTGRES_DB'),
+        'USER': os.getenv('POSTGRES_USER'),
+        'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
+        'HOST': 'db',
+        'PORT': '5432',
     }
 }
+
+ 
+
+
+
+
+
+
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -125,26 +137,21 @@ TIME_ZONE = 'Africa/Cairo'
 USE_I18N = True
 USE_TZ = True
  
-STATIC_URL = 'static/'
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+ 
+
+# Static files (CSS, JavaScript, Images)
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [BASE_DIR / 'static']
+
+# Other settings... 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Stripe settings
-STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', 'sk_test_51M0Bs9A9gttpg3uSGA5xQhMRCLgEaywkUYXphiJv5oT9MbDOTvNocMgzpfWu9fpvBira9Jiv4sKpIyGPX4XSq5tL00VCMwZq91')
-STRIPE_WEBHOOK_SECRET = 'whsec_583c87d69ea6c87e5c56ec19dac24ae51887a3cb70f75b67226e24921192aa9f'
- 
-# Send Email settings
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'mohamedeg7000@gmail.com'  # Replace with your email address
-EMAIL_HOST_PASSWORD = 'nseg ozas tebl zvzt'  # Replace with your email password
-EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
-EMAIL_PORT = 587  # Replace with the correct SMTP port
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY')
+STRIPE_WEBHOOK_SECRET =os.getenv('STRIPE_WEBHOOK_SECRET')  
 
-
+  
  
 
   

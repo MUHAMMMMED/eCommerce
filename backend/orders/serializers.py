@@ -1,6 +1,5 @@
 from rest_framework import serializers
 from .models import *
-from products.serializers import ProductSerializer
 from cart.serializers import NoteSerializer
 
 class Shipping_CompanySerializer(serializers.ModelSerializer):
@@ -19,7 +18,6 @@ class Shipping_CompanySerializer(serializers.ModelSerializer):
  
 
 class OrderSerializer(serializers.ModelSerializer):
-    # items = OrderItemSerializer(many=True)
     Shipping = Shipping_CompanySerializer()
     class Meta:
         model = Order
@@ -41,8 +39,7 @@ class shipping_CountrySerializer(serializers.ModelSerializer):
 class shippingCountrySerializer(serializers.ModelSerializer):
     class Meta:
         model = shipping_Country
-        # fields ="__all__"
-        exclude = ['Shipping']  # Exclude 'images' field from serialization
+        exclude = ['Shipping']  
 
  
 
@@ -101,7 +98,6 @@ class CustomerSerializer(serializers.ModelSerializer):
     IP_country = CountrySerializer()
     IP_Region = RegionSerializer()
     IP_city = CitySerializer()
-    # order=OrderSerializer(many=True)
     class Meta:
         model = Customers
         fields = '__all__'
@@ -136,21 +132,4 @@ class OrderDashSerializer(serializers.ModelSerializer):
     class Meta:
         model = Order
         fields ="__all__"
-  
-# class OrderDashSerializer(serializers.ModelSerializer):
-#     Shipping = Shipping_CompanySerializer()
-#     customer = CustomerSerializer()
-#     orderItem=OrderItemSerializer(many=True)
-#     class Meta:
-#         model = Order
-#         fields = "__all__"
-
-# class OrderDashSerializer(serializers.ModelSerializer):
-#     shipping = Shipping_CompanySerializer(read_only=True)
-#     customer = CustomerSerializer(read_only=True)
-#     order_items = OrderItemSerializer(many=True, read_only=True)  # Make sure this matches the related_name in OrderItem
-
-#     class Meta:
-#         model = Order
-#         fields = '__all__'
  

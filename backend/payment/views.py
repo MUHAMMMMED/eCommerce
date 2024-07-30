@@ -66,6 +66,8 @@ def create_checkout_session(request: Request):
             metadata={
                 "session_id": session_id,
                 "order_id": order_id,
+                # device_name: process.env.STRIPE_DEVICE_NAME // إضافة اسم الجهاز هنا
+
             }
         )
 
@@ -224,4 +226,7 @@ def stripe_webhook(request):
             return JsonResponse({"error": f"Cart with session id {session_id} does not exist."}, status=404)
 
     return JsonResponse({"status": "success"})
+ 
+
+ 
  

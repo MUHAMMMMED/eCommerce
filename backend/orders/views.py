@@ -143,7 +143,7 @@ class OrderAPIView(APIView):
                 return Response(customer_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
         # Placeholder IP address; replace with actual method to get IP
-        ip_address = '41.235.33.189'  # Example IP address, replace with actual method
+        ip_address = get_client_ip(request)
         if ip_address:
             try:
                 get_location = get_location_info(ip_address, session_key)
@@ -741,7 +741,6 @@ class InvoiceList(APIView):
         invoice_number_filter = request.query_params.get('invoice_number')
         start_date = request.query_params.get('createdAtStart')
         end_date = request.query_params.get('createdAtEnd')
-   
         orders = Order.objects.all().order_by('-created_at')
 
     # Apply invoice number filter if provided
