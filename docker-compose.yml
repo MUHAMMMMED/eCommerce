@@ -1,3 +1,4 @@
+version: '3.8'
 
 services:
   db:
@@ -28,16 +29,15 @@ services:
  
  
 
-
-  stripe:
-   image: stripe/stripe-cli:v1.21.2  
-   container_name: stripe
-   command: ["listen", "--forward-to", "http://backend:8000/api/payment/stripe_webhook"]
-   depends_on:
-    - backend
-   environment:
-    - STRIPE_API_KEY=   
  
+  stripe:
+    image: stripe/stripe-cli:v1.21.2  
+    container_name: stripe
+    command: ["listen", "--forward-to", "http://backend:8000/api/payment/stripe_webhook"]
+    depends_on:
+      - backend
+    env_file:
+      - ./.env
    
 
   frontend:
