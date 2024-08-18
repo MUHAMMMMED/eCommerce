@@ -18,7 +18,7 @@ COPY requirements.txt /app/requirements.txt
 RUN pip install --upgrade pip
 
 # 6: Install Python dependencies
-RUN pip install --no-cache-dir -r /app/requirements.txt
+RUN pip install --no-cache-dir -r /app/requirements.txt && pip freeze
 
 # 7: Copy the project code into the container
 COPY . /app/
