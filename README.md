@@ -2,7 +2,7 @@
 # eCommerce
 Project Overview
 
-This is a sophisticated eCommerce website built with Django for the backend and React for the frontend. It incorporates Stripe for payment processing, PostgreSQL for database management, and uses Docker and Nginx for containerization and deployment.
+This is a sophisticated eCommerce website built with Django for the backend and React for the frontend. It incorporates Stripe for payment processing, PostgreSQL for database management, and uses Docker and Nginx for containerization and use  CI/CD  and deployment.
 
 Key Features
 
