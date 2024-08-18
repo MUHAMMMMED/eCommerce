@@ -20,6 +20,8 @@ RUN pip install --upgrade pip
 # 6: Install Python dependencies
 RUN pip install --no-cache-dir -r /app/requirements.txt && pip freeze
 
+RUN python3 -m pip install --upgrade Pillow
+
 # 7: Copy the project code into the container
 COPY . /app/
 
