@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04  # Use a specific stable version of Ubuntu
 
     steps:
       # Step 1: Check out the code from the repository
