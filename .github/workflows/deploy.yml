@@ -25,21 +25,6 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Set up Docker Compose
-        uses: docker/compose-action@v2
-        with:
-          version: '2.18.0'
-
-      - name: Create .env file for backend
-        run: |
-          echo "POSTGRES_DB=${{ secrets.POSTGRES_DB }}" >> .env
-          echo "POSTGRES_USER=${{ secrets.POSTGRES_USER }}" >> .env
-          echo "SECRET_KEY=${{ secrets.SECRET_KEY }}" >> .env
-          echo "DEBUG=${{ secrets.DEBUG }}" >> .env
-          echo "POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }}" >> .env
-          echo "STRIPE_API_KEY=${{ secrets.STRIPE_API_KEY }}" >> .env
-          echo "STRIPE_WEBHOOK_SECRET=${{ secrets.STRIPE_WEBHOOK_SECRET }}" >> .env
-
       - name: Build and Push backend Docker image
         env:
           REPOSITORY: backend
