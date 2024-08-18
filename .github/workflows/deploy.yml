@@ -35,10 +35,9 @@ jobs:
           echo "STRIPE_WEBHOOK_SECRET=${{ secrets.STRIPE_WEBHOOK_SECRET }}" >> .env  # Add STRIPE_WEBHOOK_SECRET to .env
 
       - name: Build production Docker images
-        env:
-          IMAGE_TAG: prod  # Set the image tag to 'prod'
+ 
         run: |
-          docker-compose -f docker-compose.${IMAGE_TAG}.yml build  # Build Docker images using the production docker-compose file
+          docker-compose -f docker-compose.prod.yml build  # Build Docker images using the production docker-compose file
 
       - name: Push backend Docker image (production)
         env:
