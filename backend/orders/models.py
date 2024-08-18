@@ -29,7 +29,7 @@ class City (models.Model):
         return self.dictionary.name
   
 class Shipping_Company (models.Model):
-    image = models.FileField(upload_to="files/images/Item/%Y/%m/%d/", blank=True, null=True)
+    image = models.ImageField(upload_to="files/images/Item/%Y/%m/%d/", blank=True, null=True)
     name = models.CharField(max_length=50)
     shipping_price = models.FloatField(default=0)
     discount_price = models.FloatField(default=0)

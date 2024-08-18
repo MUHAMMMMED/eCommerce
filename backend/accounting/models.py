@@ -20,7 +20,7 @@ class MonthlyAdBudget(models.Model):
         return self.name
      
 class Package(models.Model):
-    image = models.FileField(upload_to="files/images/Item/%Y/%m/%d/", blank=True, null=True)
+    image = models.ImageField(upload_to="files/images/Item/%Y/%m/%d/", blank=True, null=True)
     name = models.CharField(max_length=255)
     description = models.TextField(blank=True, null=True)
     quantity = models.PositiveIntegerField()

@@ -18,7 +18,7 @@ class CartItem(models.Model):
     cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField( null=True, blank=True )
-    notes = models.ManyToManyField(Note, null=True, blank=True )
+    notes = models.ManyToManyField(Note, blank=True )
     def __str__(self):
         return self.cart.session_id
 

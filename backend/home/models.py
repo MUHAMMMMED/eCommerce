@@ -5,8 +5,8 @@ from products.models import Product
 
 class Info(models.Model):
     #   keywords= models.CharField(max_length = 300,blank=True, null=True)
-      FaviconIco= models.FileField(upload_to = "files/images/FaviconIco/%Y/%m/%d/",blank=True, null=True)
-      logo = models.FileField(upload_to = "files/images/logo/%Y/%m/%d/",blank=True, null=True)
+      FaviconIco= models.ImageField(upload_to = "files/images/FaviconIco/%Y/%m/%d/",blank=True, null=True)
+      logo = models.ImageField(upload_to = "files/images/logo/%Y/%m/%d/",blank=True, null=True)
       title = models.CharField(max_length=100,blank=True, null=True)
     #   PHONE = models.CharField(max_length = 15 ,blank=True, null=True)
       Whatsapp= models.CharField(max_length=15,blank=True, null=True)

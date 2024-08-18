@@ -1,5 +1,3 @@
-
- 
 # 1: Start with a Python base image
 FROM python:3.11-slim-bullseye
 
@@ -16,6 +14,9 @@ WORKDIR /app
 # 5: Copy the requirements file to the container
 COPY requirements.txt /app/requirements.txt
 
+# 6: Upgrade pip to the latest version
+RUN pip install --upgrade pip
+
 # 6: Install Python dependencies
 RUN pip install --no-cache-dir -r /app/requirements.txt
 
@@ -26,4 +27,6 @@ COPY . /app/
 EXPOSE 8000
 
 # 9: Set the entrypoint script to run Django commands and start Gunicorn
-ENTRYPOINT ["sh", "-c", "sleep 20 && python manage.py collectstatic --noinput && python manage.py migrate && gunicorn backend.wsgi:application --bind 0.0.0.0:8000"]
+ENTRYPOINT ["sh", "-c", "sleep 20 && python manage.py collectstatic --noinput && python manage.py migrate && python manage.py makemigrations && python manage.py migrate && gunicorn backend.wsgi:application --bind 0.0.0.0:8000"]
+
+ 

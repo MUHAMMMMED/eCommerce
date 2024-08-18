@@ -15,6 +15,7 @@ class CategorySerializer(serializers.ModelSerializer):
         return value
 
  
+ 
 class Image_ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Image_Product

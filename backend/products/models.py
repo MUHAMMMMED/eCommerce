@@ -1,13 +1,13 @@
 from django.db import models
-from django.contrib.contenttypes.fields import GenericForeignKey
-from django.contrib.contenttypes.models import ContentType
+# from django.contrib.contenttypes.fields import GenericForeignKey
+# from django.contrib.contenttypes.models import ContentType
 
 class Category(models.Model):
     is_active = models.BooleanField(default=True)
     name = models.CharField(max_length=100)
-    home_image = models.FileField(upload_to="files/images/Item/%Y/%m/%d/", blank=True, null=True)
-    top_slider_web= models.FileField(upload_to="files/images/Item/%Y/%m/%d/", blank=True, null=True)
-    top_slider_mobile= models.FileField(upload_to="files/images/Item/%Y/%m/%d/", blank=True, null=True)
+    home_image = models.ImageField(upload_to="files/images/Item/%Y/%m/%d/", blank=True, null=True)
+    top_slider_web= models.ImageField(upload_to="files/images/Item/%Y/%m/%d/", blank=True, null=True)
+    top_slider_mobile= models.ImageField(upload_to="files/images/Item/%Y/%m/%d/", blank=True, null=True)
     def __str__(self):
         return self.name
     
@@ -17,7 +17,7 @@ class Category(models.Model):
         super().delete(*args, **kwargs)
   
 class Image_Product(models.Model):
-    image = models.FileField(upload_to="files/images/Item/%Y/%m/%d/", blank=True, null=True)
+    image = models.ImageField(upload_to="files/images/Item/%Y/%m/%d/", blank=True, null=True)
  
 
     def delete(self, *args, **kwargs):
@@ -85,13 +85,13 @@ class Product(models.Model):
     discount_price4 = models.FloatField(default=0,blank=True, null=True)
     discount_price5 = models.FloatField(default=0,blank=True, null=True)
 
-    image_side_one = models.FileField(upload_to="files/images/side_one/%Y/%m/%d/", blank=True, null=True)
-    image_side_two = models.FileField(upload_to="files/images/side_one/%Y/%m/%d/", blank=True, null=True)
+    image_side_one = models.ImageField(upload_to="files/images/side_one/%Y/%m/%d/", blank=True, null=True)
+    image_side_two = models.ImageField(upload_to="files/images/side_one/%Y/%m/%d/", blank=True, null=True)
 
-    top_slider_web = models.FileField(upload_to="files/images/Item/%Y/%m/%d/", blank=True, null=True)
-    top_slider_mobile = models.FileField(upload_to="files/images/Item/%Y/%m/%d/", blank=True, null=True)
+    top_slider_web = models.ImageField(upload_to="files/images/Item/%Y/%m/%d/", blank=True, null=True)
+    top_slider_mobile = models.ImageField(upload_to="files/images/Item/%Y/%m/%d/", blank=True, null=True)
 
-    images = models.ManyToManyField(Image_Product, blank=True, null=True)
+    images = models.ManyToManyField(Image_Product, blank=True)
     video = models.CharField(max_length=300, blank=True, null=True)
 
     theme_type = models.CharField(max_length=20, choices=THEME_MODELS, default='', blank=True, null=True)
@@ -132,7 +132,7 @@ class FrequentlyAsked(models.Model):
 
 class MoreInfo(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, null=True)
-    image = models.FileField(upload_to="files/images/MoreInfo/%Y/%m/%d/", blank=True, null=True)
+    image = models.ImageField(upload_to="files/images/MoreInfo/%Y/%m/%d/", blank=True, null=True)
     name = models.CharField(max_length=300)
     description = models.TextField(blank=True, null=True)
     def __str__(self):

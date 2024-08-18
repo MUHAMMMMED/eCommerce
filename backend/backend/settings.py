@@ -1,17 +1,19 @@
 from pathlib import Path
 from datetime import timedelta
 import os
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-z(83xn=7-#(hjl6vgy+)*cd%y^k*3_f3ak1l9wp-t&6jovm@r6'
+SECRET_KEY = config('SECRET_KEY', default='django-insecure-z(83xn=7-#(hjl6vgy+)*cd%y^k*3_f3ak1l9wp-t&6jovm@r6') # Use a default value if needed
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['*', 'http://localhost:3000']
+# Hosts allowed to access this Django application
+ALLOWED_HOSTS = ['*']  # Note: Change this in production to a more restrictive list
 
 # Application definition
 INSTALLED_APPS = [
@@ -86,14 +88,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
  
-
-
-
-
-
-
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -137,21 +132,20 @@ TIME_ZONE = 'Africa/Cairo'
 USE_I18N = True
 USE_TZ = True
  
- 
-
 # Static files (CSS, JavaScript, Images)
+ 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_DIRS = [BASE_DIR / 'static']
+STATIC_ROOT = '/app/static'  
+MEDIA_URL = '/media/'
+MEDIA_ROOT = '/app/media'   
 
-# Other settings... 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Stripe settings
 STRIPE_SECRET_KEY = os.getenv('STRIPE_API_KEY')
 STRIPE_WEBHOOK_SECRET =os.getenv('STRIPE_WEBHOOK_SECRET')  
 
-  
- 
+# Other settings... 
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
   
