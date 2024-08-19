@@ -1,15 +1,21 @@
 from pathlib import Path
 from datetime import timedelta
 import os
- 
+from decouple import config
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+ 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-z(83xn=7-#(hjl6vgy+)*cd%y^k*3_f3ak1l9wp-t&6jovm@r6'
+SECRET_KEY = config(
+    "SECRET_KEY",
+    cast=str,
+    default="l#c66qv(=&0ktjbiuguigptw+zi%kf2xv&&x%&8da&j^m7#-kq+cw5a**"
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG')
+DEBUG = config('DEBUG', cast=bool, default=False)
+ 
 
 # Hosts allowed to access this Django application
 ALLOWED_HOSTS = ['*']  # Note: Change this in production to a more restrictive list
