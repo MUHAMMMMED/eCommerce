@@ -24,9 +24,12 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./backend:/app
       - static_backend:/app/static
       - media_backend:/app/media
+ 
+
+
+
 
   stripe:
     image: stripe/stripe-cli:v1.21.2

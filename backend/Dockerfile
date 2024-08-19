@@ -23,7 +23,6 @@ RUN pip install --no-cache-dir -r /app/requirements.txt
 
 # 7: Copy the project code into the container
 COPY . /app/
-
 # 8: Expose port 8000 for the application
 EXPOSE 8000
 
