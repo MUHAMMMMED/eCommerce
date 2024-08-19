@@ -72,7 +72,6 @@ jobs:
           IMAGE_TAG: latest
         run: |
           # Build the Docker image for the frontend service
-          cd ..
           cd frontend
           docker build  -t ${{ secrets.DOCKERHUB_USERNAME }}/$REPOSITORY:$IMAGE_TAG . 
           if [ $? -ne 0 ]; then
