@@ -12,7 +12,7 @@ services:
       - "5432:5432"
 
   backend:
-    image: mohamedeg/backend:v1
+    image: mohamedeg/backend
     container_name: backend
     depends_on:
       - db
