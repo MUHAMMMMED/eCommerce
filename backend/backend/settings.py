@@ -83,17 +83,33 @@ AUTH_USER_MODEL = 'accounts.UserAccount'
 DOMAIN="http://localhost:3000"
 
  
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('POSTGRES_DB'),
-        'USER': os.getenv('POSTGRES_USER'),
-        'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
-        'HOST': 'db',
-        'PORT': '5432',
-    }
-}
  
+
+# Using PostgreSQL
+
+POSTGRES_USER = config('POSTGRES_USER', cast=str)
+POSTGRES_PASSWORD = config('POSTGRES_PASSWORD', cast=str)
+POSTGRES_DB = config('POSTGRES_DB', cast=str)
+
+if all([POSTGRES_USER, POSTGRES_PASSWORD, POSTGRES_DB]):
+    print("Using PostgreSQL")
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': POSTGRES_DB,
+            'USER': POSTGRES_USER,
+            'PASSWORD': POSTGRES_PASSWORD,
+            'HOST': 'db',
+            'PORT': 5432,
+        }
+    }
+
+
+
+
+
+
+
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {
