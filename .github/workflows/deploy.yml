@@ -31,17 +31,17 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
         # This step logs in to Docker Hub to allow pushing images to your repository
 
-      # Step 4: Create .env file for all environment variables
-      - name: Create .env file
-        run: |
-          echo "POSTGRES_DB=${{ secrets.POSTGRES_DB }}" >> .env  # Add POSTGRES_DB to .env
-          echo "POSTGRES_USER=${{ secrets.POSTGRES_USER }}" >> .env  # Add POSTGRES_USER to .env
-          echo "POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }}" >> .env  # Add POSTGRES_PASSWORD to .env
-          echo "SECRET_KEY=${{ secrets.SECRET_KEY }}" >> .env  # Add SECRET_KEY to .env
-          echo "DEBUG=${{ secrets.DEBUG }}" >> .env  # Add DEBUG to .env
-          echo "STRIPE_API_KEY=${{ secrets.STRIPE_API_KEY }}" >> .env  # Add STRIPE_API_KEY to .env
-          echo "STRIPE_WEBHOOK_SECRET=${{ secrets.STRIPE_WEBHOOK_SECRET }}" >> .env  # Add STRIPE_WEBHOOK_SECRET to .env
-        # This step creates a .env file with sensitive environment variables required for the builds
+      # # Step 4: Create .env file for all environment variables
+      # - name: Create .env file
+      #   run: |
+      #     echo "POSTGRES_DB=${{ secrets.POSTGRES_DB }}" >> .env  # Add POSTGRES_DB to .env
+      #     echo "POSTGRES_USER=${{ secrets.POSTGRES_USER }}" >> .env  # Add POSTGRES_USER to .env
+      #     echo "POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }}" >> .env  # Add POSTGRES_PASSWORD to .env
+      #     echo "SECRET_KEY=${{ secrets.SECRET_KEY }}" >> .env  # Add SECRET_KEY to .env
+      #     echo "DEBUG=${{ secrets.DEBUG }}" >> .env  # Add DEBUG to .env
+      #     echo "STRIPE_API_KEY=${{ secrets.STRIPE_API_KEY }}" >> .env  # Add STRIPE_API_KEY to .env
+      #     echo "STRIPE_WEBHOOK_SECRET=${{ secrets.STRIPE_WEBHOOK_SECRET }}" >> .env  # Add STRIPE_WEBHOOK_SECRET to .env
+      #   # This step creates a .env file with sensitive environment variables required for the builds
 
       # Step 5: Build and push the backend Docker image
       - name: Build and Push backend Docker image
