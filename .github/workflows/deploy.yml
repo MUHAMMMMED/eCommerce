@@ -49,8 +49,10 @@ jobs:
           REPOSITORY: backend
           IMAGE_TAG: latest
         run: |
+
           # Build the Docker image for the backend service
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/$REPOSITORY:$IMAGE_TAG -f backend/Dockerfile backend/
+          cd backend
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/$REPOSITORY:$IMAGE_TAG .
           if [ $? -ne 0 ]; then
             echo "Backend Docker image build failed"
             exit 1
@@ -70,7 +72,8 @@ jobs:
           IMAGE_TAG: latest
         run: |
           # Build the Docker image for the frontend service
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/$REPOSITORY:$IMAGE_TAG -f frontend/Dockerfile frontend/
+          cd ../frontend
+          docker build  -t ${{ secrets.DOCKERHUB_USERNAME }}/$REPOSITORY:$IMAGE_TAG . 
           if [ $? -ne 0 ]; then
             echo "Frontend Docker image build failed"
             exit 1
