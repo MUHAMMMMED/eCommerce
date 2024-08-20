@@ -57,7 +57,7 @@ MIDDLEWARE = [
   
 CORS_ALLOW_ALL_ORIGINS=True
 CORS_ALLOW_CREDENTIALS=True
-CSRF_TRUSTED_ORIGINS = ["https://smartcardnfc.com/" ]
+CSRF_TRUSTED_ORIGINS = ["https://smartcardnfc.com" ]
 
 
  
@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 AUTH_USER_MODEL = 'accounts.UserAccount'
 
-DOMAIN="https://smartcardnfc.com/"
+DOMAIN="https://smartcardnfc.com"
 
  
  
