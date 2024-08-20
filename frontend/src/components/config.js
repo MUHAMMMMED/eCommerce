@@ -1,6 +1,6 @@
  
 const Config = {
-     baseURL : 'http://localhost:8000',  
+     baseURL : 'http://smartcardnfc.com',  
     };
   
   export default Config;
