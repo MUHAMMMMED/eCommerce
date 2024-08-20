@@ -57,8 +57,10 @@ MIDDLEWARE = [
   
 CORS_ALLOW_ALL_ORIGINS=True
 CORS_ALLOW_CREDENTIALS=True
-CSRF_TRUSTED_ORIGINS = ["http://localhost:3000" ]
+CSRF_TRUSTED_ORIGINS = ["https://smartcardnfc.com/" ]
 
+
+ 
 ROOT_URLCONF = 'backend.urls'
 
 TEMPLATES = [
@@ -80,7 +82,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 AUTH_USER_MODEL = 'accounts.UserAccount'
 
-DOMAIN="http://localhost:3000"
+DOMAIN="https://smartcardnfc.com/"
 
  
  
