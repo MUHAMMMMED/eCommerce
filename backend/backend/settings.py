@@ -158,10 +158,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
  
 STATIC_URL = '/static/'
-STATIC_ROOT = '/app/static'  
-MEDIA_URL = '/media/'
-MEDIA_ROOT = '/app/media'   
+STATIC_ROOT = '/app/static/'
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = '/app/media/'
 
 # Stripe settings
 STRIPE_SECRET_KEY = os.getenv('STRIPE_API_KEY')
