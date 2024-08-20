@@ -1,7 +1,5 @@
- 
 const Config = {
-     baseURL : 'http://smartcardnfc.com',  
-    };
-  
-  export default Config;
- 
+  baseURL: 'https://smartcardnfc.com',  
+};
+
+export default Config;
