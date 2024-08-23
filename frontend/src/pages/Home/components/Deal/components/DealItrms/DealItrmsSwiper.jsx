@@ -35,10 +35,10 @@ src={dealItem.product?.image_side_one ? `${Config.baseURL}${dealItem.product.ima
  
 <div className='DealItrm-row'>
   {dealItem.product && dealItem.product.discount > 0.0 ? (
-    <div className='DealItrm-detail-off'>  <span className='DealItrm-detail-off-span'> {dealItem.product.discount}% خصم    </span>  </div>
+    <div className='DealItrm-detail-off' style={{display:'block'}}>  <span className='DealItrm-detail-off-span'style={{display:'block'}}> {dealItem.product.discount}% خصم    </span>  </div>
   ) : (
  <><br /> </>  )}
-<div className='DealItrm-sup_titel'> {dealItem.title}</div>
+{/* <div className='DealItrm-sup_titel'> {dealItem.title}</div> */}
 <div className='DealItrm-titel'> {dealItem.product?.name}</div>
  <div className='DealItrm-timer'>
  <CounterSwiper targetDate={dealItem.product?.expiration_date_offer}/>    </div>

@@ -273,7 +273,7 @@ const ContactForm = ({ fetchCart, order, customer }) => {
                     <span className="card-title">{company?.name}</span>
                     <span className="card-text">{company?.work_days}</span>
                   </div>
-                  <div className="delivery-card-price">{company?.shipping_price} SAR</div>
+                  <div className="delivery-card-price">{company?.shipping_price} ريال</div>
                 </div>
               ))}
             </div>

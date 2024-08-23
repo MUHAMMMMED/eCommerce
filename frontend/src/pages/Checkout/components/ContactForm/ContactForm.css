@@ -136,15 +136,53 @@
   margin-top:12px;
  
  }
+
+ /* Styles for the delivery option icon */
+.Delivery-option-icon {
+  float: right;
+    margin-right:  0px;
+    width:35px;
+    margin-top: 4px;
+   }
+
+  .delivery-card-content {
+    padding: 0;
+    float: right;
+    margin-right:2%;
+    width: 50%;
+    text-align: right;
+   
+  }
+  .card-title {  
+    float: right;
+    padding: 0;
+    width: 100%;
+    margin-bottom: 0px;
+    font-size: 14px;
+    font-weight: bold;
+   }
+   .delivery-card-price{    
+    padding: 0;
+    float: right;
+    width: 27%;
+    text-align: center;
+    margin-top:10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+   
+   }
 @media screen and (max-width: 1200px) {
  
 
 /* Styles for the delivery option icon */
 .Delivery-option-icon {
-  float: right;
+float: right;
   margin-right:  0px;
   width:35px;
   margin-top: 4px;
+  display: block;
+
 }
 
 /* Styles for the content within the delivery card */
@@ -154,7 +192,8 @@
   margin-right:2%;
   width: 50%;
   text-align: right;
- 
+  display: block;
+
 }
 
  
@@ -165,6 +204,8 @@
   margin-bottom: 0px;
   font-size: 14px;
   font-weight: bold;
+  display: block;
+
  }
 
  
@@ -174,7 +215,8 @@
   width: 100%;
   font-size: 14px;
   color: #666;
- 
+  display: block;
+
 }
  
 
@@ -187,7 +229,7 @@
   font-size: 14px;
   font-weight: bold;
   color: #333;
- 
+ display: block;
  }
 }
  

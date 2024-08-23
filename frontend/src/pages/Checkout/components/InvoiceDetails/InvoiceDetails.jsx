@@ -57,12 +57,12 @@ export default function InvoiceDetails({ cart ,order }) {
                 <span className="pricing-amount">{shipping.toFixed(2)} <spen className='money_code'> ريال</spen></span>
               </div>
             </div>
-            <div className="totals-item-total">
-              <div className="col">
-                <span className="total-title">المجموع</span>
+            <div className="totals-item-total" style={{display:'block'}}>
+              <div className="col"style={{display:'block'}}>
+                <span className="total-title"style={{display:'block'}}>المجموع</span>
               </div>
-              <div className="text-right">
-                <span className="total-amount">{finalTotal.toFixed(2)} <spen className='money_code'> ريال</spen></span>
+              <div className="text-right"style={{display:'block'}}>
+                <span className="total-amount"style={{display:'block'}}>{finalTotal.toFixed(2)} <spen className='money_code'> ريال</spen></span>
               </div>
             </div>
           </div>

@@ -1,21 +1,89 @@
  
 .DeliveryCard {
-float: right;
-border: 1px solid #ccc;
-border-radius: 8px;
-margin-top: 20px;
-margin-bottom: 20px;
-width: 80%;
-margin-right: 10%;
-background-color: white;
-padding: 10px;
-display: block;
-}
-.DeliveryCard:hover { background-color: #a68ec215; border: 2px solid #c66ee1; }
-   
- @media screen and (max-width: 768px) {
-   .DeliveryCard {  width: 100%; margin-right: 0%; }
+  float: right;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 80%;
+  margin-right: 10%;
+  background-color: white;
+  padding: 10px;
+  display: block;
   }
-
-
+  .DeliveryCard:hover { background-color: #a68ec215; border: 2px solid #c66ee1; }
+     
   
+  
+   /* Styles for the delivery option icon */
+   .Delivery-option-icon {
+    float: right;
+      margin-right:  0px;
+      width:35px;
+      margin-top: 4px;
+      display: block;
+  
+     }
+  
+    .delivery-card-content {
+      padding: 0;
+      float: right;
+      margin-right:2%;
+      width: 50%;
+      text-align: right;
+      display: block;
+  
+    }
+    .delivery-card-title {  
+      float: right;
+      margin-top: 8px;   
+      margin-bottom: 0px;
+      font-size: 14px;
+      font-weight: bold;
+      display: block;
+  
+     }
+     .delivery-card-price{    
+      padding: 0;
+      float: right;
+      width: 40%;
+      text-align: center;
+      margin-top:10px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+      display: block;
+  
+     }
+  
+  
+  
+  
+   @media screen and (max-width: 768px) {
+     .DeliveryCard {  width: 100%; margin-right: 0%; }
+     .delivery-card-title {  
+      float: right;
+      padding: 5;
+      width: 100%;
+      margin-bottom: 0px;
+      font-size: 14px;
+      font-weight: bold;
+      display: block;
+  
+     }
+     .delivery-card-price{    
+      padding: 0;
+      float: right;
+      width:50%;
+      text-align: center;
+      margin-top:10px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+      display: block;
+  
+     }
+    }
+  
+  
+    

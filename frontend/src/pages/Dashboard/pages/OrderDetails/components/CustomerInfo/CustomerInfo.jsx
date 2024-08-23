@@ -78,11 +78,11 @@ export default function CustomerInfo({order}) {
  
               <DeliveryCard order={order}/>
 
-              <div className="Invoic-item" style={{display:'block',textAlign:"right",color:'#9081f6'}}> رقم التتبع الشحن</div>
+              <div className="Invoic-item" style={{display:'block',textAlign:"right",color:'#9081f6',display:'block'}}> رقم التتبع الشحن</div>
               <div className="Invoic-item"style={{display:'block'}} ></div>
               <div className="Invoic-item" style={{display:'block'}}><div className="Info-text-right" style={{display:'block', width:'30px'}}> </div>
               <div className="Info-text-left"style={{display:'block'}}> 
-              <span className="Info-total-amount" style={{display:'block',font:'25px'}}>  {order?.Tracking}     </span> 
+              <span className="Info-total-amount" style={{display:'block',font:'25px',display:'block'}}>  {order?.Tracking}     </span> 
               <span style={{display:'block',textAlign:"right",color:'#9081f6',font:'35px'}}><LiaShippingFastSolid />
               </span></div>
               </div> </div>
