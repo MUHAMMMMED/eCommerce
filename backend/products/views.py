@@ -97,7 +97,7 @@ class ProductDetailView(APIView):
         image_produc_Serializer = Image_ProductSerializer(image_product, many=True)
         freq_Serializer = FrequentlyAsked_Serializer(freq, many=True)
         rate_Serializer = RateSerializer(rate, many=True)
-        products_Serializer = ProductSerializer(related_products, many=True)
+        products_Serializer = ProductList_Serializer(related_products, many=True)
  
         data = serializer.data
         data['more_info'] = moreInfo_Serializer.data
@@ -108,7 +108,7 @@ class ProductDetailView(APIView):
         data['rate_count'] = rate_count
         data['most_frequent_rate_number'] = most_frequent_rate_number
 
-        return Response(data)
+        return Response(data, status=status.HTTP_200_OK)
 
   
 
@@ -315,11 +315,6 @@ class ImageProductDetail(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-
-
-
-
-
  
 class MoreInfoView(APIView):
     permission_classes = [IsAuthenticated]     
@@ -450,11 +445,11 @@ class RateView(APIView):
 
     def put(self, request, pk):
         try:
-            deal = Rate.objects.get(pk=pk)
-        except Rate.DoesNotExist:
-            return Response({'error': 'Deal not found'}, status=status.HTTP_404_NOT_FOUND)
+            rate = Rate.objects.get(pk=pk)
+        except rate.DoesNotExist:
+            return Response({'error': 'rate not found'}, status=status.HTTP_404_NOT_FOUND)
 
-        serializer = RateـSerializer(deal, data=request.data)
+        serializer = RateـSerializer(rate, data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
@@ -462,10 +457,10 @@ class RateView(APIView):
 
     def delete(self, request, pk):
         try:
-            deal = Rate.objects.get(pk=pk)
+            rate = Rate.objects.get(pk=pk)
         except Rate.DoesNotExist:
             return Response({'error': 'Rate not found'}, status=status.HTTP_404_NOT_FOUND)
 
-        deal.delete()
+        rate.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 

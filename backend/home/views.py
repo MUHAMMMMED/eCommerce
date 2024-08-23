@@ -7,7 +7,8 @@ from .serializers import  *
 from rest_framework.permissions import IsAuthenticated
 from .models import *
 from products.serializers import  *
- 
+from products.models import Rate
+
  
 
 
@@ -22,7 +23,7 @@ class HomeListView(APIView):
         card = Card.objects.all().order_by('?')
         best_sellers = BestSellers.objects.all().order_by('?')
         questions = QuestionsGeneral.objects.all()
-        rate = RateGeneral.objects.all().order_by('?')
+        rate = Rate.objects.all().order_by('?')
 
         info_serializer = InfoSerializer(info)
         slide_serializer = SlideSerializer(slide, many=True)
@@ -35,7 +36,7 @@ class HomeListView(APIView):
         card_serializer = CardSerializer(card, many=True)
         best_serializer = BestSellersSerializer(best_sellers, many=True)
         questions_serializer = QuestionsGeneralSerializer(questions, many=True)
-        rate_serializer = RateGeneralSerializer(rate, many=True)
+        rate_serializer = RateSerializer(rate, many=True)
  
         return Response({
             'info': info_serializer.data,
@@ -49,6 +50,8 @@ class HomeListView(APIView):
             'questions': questions_serializer.data,
             'rate': rate_serializer.data,
         }, status=200)
+ 
+
  
 
 

@@ -11,7 +11,7 @@ import Config from '../../config';
 import './AddToCard.css';
 axios.defaults.withCredentials = true; 
 
-export default function AddToCardSlide({ product  }) {
+export default function AddToCardSlide({product}) {
   const { fetchCart } = useCart();
   const [quantity, setQuantity] = useState({ [product.id]: 1 });
   const [showBAGeModal, setShowBAGeModal] = useState(false);
@@ -65,12 +65,13 @@ export default function AddToCardSlide({ product  }) {
 
   return (
     <>
+ 
 
-{product?.stock_no <= 0 ? (
-  <></> 
- ) : (
- <div className="content-Bag" onClick={() => setShowBAGeModal(true)}><TbShoppingBagPlus /> </div>
- )}
+ {product?.stock_no >=  1 ? (
+   <div className="content-Bag" onClick={() => setShowBAGeModal(true)}>
+   <TbShoppingBagPlus />
+ </div>   ) : (  <></>  )}
+
  {showBAGeModal && (
         <div className="Modal-Bag show">
           <div className="modal-content">
@@ -102,22 +103,19 @@ export default function AddToCardSlide({ product  }) {
               </div>
             ))}</>
             )}
-     
+           {product?.stock_no > 0 && (
             <button className='Add_to_Cart_but' onClick={handleAddToCart}>
               إضافة إلى السلة <TbShoppingBagPlus />
             </button>
+            )}
           </div>
         </div>
       )}
  <div className='content-button'>
   <Link to={`/Product/${product.name}/${product.id}`}>  
- <button className="but_bay">استعرض المنتج</button></Link>
-                        </div>
-
+ <button className="but_bay">استعرض المنتج</button></Link>     </div>        
  {successMessage && ( <div className="successMessage">{successMessage}</div>   )} 
-         
-     
-    </>
+  </>
     
   );
 }

@@ -6,7 +6,9 @@ export default function CreateSlide({ fetchData }) {
   const [showModalCreate, setShowModalCreate] = useState(false);
   const [formData, setFormData] = useState({
     top_slider_web: null,
-    top_slider_mobile: null
+    top_slider_mobile: null,
+    is_active: true,
+
   });
 
   const handleChange = (e) => {
@@ -68,6 +70,18 @@ export default function CreateSlide({ fetchData }) {
             </div>
           </div>
 
+
+          <div className="FOrm-container_dash">
+            <div className="form-container-half">
+              <label className='label_dash' htmlFor="is_active">نشط</label>
+              <label className="switch">
+                <input type="checkbox" name="is_active" checked={formData.is_active} onChange={handleChange} />
+                <span className="slider"></span>
+              </label>
+            </div>
+          </div>
+
+
           <br /><br />
           <div className="FOrm-container_dash">
             <div style={{ width: '78%' }}>
@@ -82,3 +96,5 @@ export default function CreateSlide({ fetchData }) {
     </>
   );
 }
+
+ 

@@ -35,7 +35,7 @@ export default function CustomerInfo({order}) {
               <div className="Info-text-right"style={{display:'block'}}> <span className="Info-icon"> <CgMail/> </span></div>
               <div className="Info-text-left"style={{display:'block'}}> <span className="Info-amount"style={{display:'block'}}>{order?.customer?.email}</span></div>
               </div>
-  {order && order.customer.country.name  &&
+  {order && order.customer?.country?.name  &&
               <div className="Invoic-item">
               <div className="Info-text-right"style={{display:'block'}}><span className="Info-icon">: الدولة  <IoLocationOutline /> </span>  </div>
               <div className="Info-text-left"style={{display:'block'}}> <span className="Info-amount"style={{display:'block'}}>  

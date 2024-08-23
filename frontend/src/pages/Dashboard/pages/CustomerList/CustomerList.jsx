@@ -142,61 +142,61 @@ const CustomerList = () => {
                                 {expandedCustomer === customer.id && (
                                     <div className="customer-modal show">
                                         <div className="customer-modal-content">
-                                            <span className="close" onClick={() => toggleMoreInfo(null)}>&times;</span>
-                                            <div className="modalContent">
+                                            <span className="close" style={{display:'block'}} onClick={() => toggleMoreInfo(null)}>&times;</span>
+                                            <div className="modalContent" style={{display:'block'}}>
 
-                                            <p className='modalContent-P' >
-                                            <span className='modalContent-span'>   تاريخ الانشاء :   </span> 
-                                            <span className='modalContent-span'>{formatDate(customer?.created_at)}</span>
+                                            <p className='modalContent-P' style={{display:'block'}} >
+                                            <span className='modalContent-span' style={{display:'block'}}>   تاريخ الانشاء :   </span> 
+                                            <span className='modalContent-span' style={{display:'block'}}>{formatDate(customer?.created_at)}</span>
                                             </p>
 
-                                            <p className='modalContent-P'>
-                                            <span className='modalContent-span'>  الاسم :</span>
-                                            <span className='modalContent-span'>{customer.name}</span>
+                                            <p className='modalContent-P' style={{display:'block'}}>
+                                            <span className='modalContent-span' style={{display:'block'}}>  الاسم :</span>
+                                            <span className='modalContent-span' style={{display:'block'}}>{customer.name}</span>
                                             </p>
 
-                                            <p className='modalContent-P'>
-                                            <span className='modalContent-span'> الدولة :</span>
-                                            <span className='modalContent-span'>{customer.country?.name}</span>
+                                            <p className='modalContent-P' style={{display:'block'}}>
+                                            <span className='modalContent-span' style={{display:'block'}}> الدولة :</span>
+                                            <span className='modalContent-span' style={{display:'block'}}>{customer.country?.name}</span>
                                             </p>
 
-                                            <p className='modalContent-P'>
-                                            <span className='modalContent-span'> المحافظة :</span>
-                                            <span className='modalContent-span'>{customer.governorate}</span>
+                                            <p className='modalContent-P' style={{display:'block'}}>
+                                            <span className='modalContent-span' style={{display:'block'}}> المحافظة :</span>
+                                            <span className='modalContent-span' style={{display:'block'}}>{customer.governorate}</span>
                                             </p>
 
                                             
 
-                                            <p className='modalContent-P'>
-                                            <span className='modalContent-span' >المدينه : </span>
-                                            <span className='modalContent-span'>{customer.city}</span>
+                                            <p className='modalContent-P' style={{display:'block'}}>
+                                            <span className='modalContent-span' style={{display:'block'}}>المدينه : </span>
+                                            <span className='modalContent-span'style={{display:'block'}}>{customer.city}</span>
                                             </p>
 
-                                            <p className='modalContent-P'>
-                                            <spa className='modalContent-span'> الحي :</spa>
-                                            <span className='modalContent-span'>{customer.neighborhood}</span>
+                                            <p className='modalContent-P'style={{display:'block'}}>
+                                            <spa className='modalContent-span'style={{display:'block'}}> الحي :</spa>
+                                            <span className='modalContent-span'style={{display:'block'}}>{customer.neighborhood}</span>
                                             </p>
 
-                                            <p className='modalContent-P'>
-                                            <span className='modalContent-span'>الشارع : </span>
-                                            <span className='modalContent-span'>{customer.street}</span>
+                                            <p className='modalContent-P'style={{display:'block'}}>
+                                            <span className='modalContent-span'style={{display:'block'}}>الشارع : </span>
+                                            <span className='modalContent-span'style={{display:'block'}}>{customer.street}</span>
                                             </p>
  
 
-                                            <p className='modalContent-P'>
-                                            <span className='modalContent-span'> العنوان التفصيلي :</span>
-                                            <span className='modalContent-span'>{customer.shipping_address}</span>
+                                            <p className='modalContent-P'style={{display:'block'}}>
+                                            <span className='modalContent-span'style={{display:'block'}}> العنوان التفصيلي :</span>
+                                            <span className='modalContent-span'style={{display:'block'}}>{customer.shipping_address}</span>
                                             </p>
 
-                                            <p className='modalContent-P'>
-                                            <span className='modalContent-span' style={{textAlign:"right",color:'#9081f6'}}><GrLocationPin /> :</span>
+                                            <p className='modalContent-P'style={{display:'block'}}>
+                                            <span className='modalContent-span' style={{textAlign:"right",color:'#9081f6',display:'block'}}><GrLocationPin /> :</span>
                                             <span className='modalContent-span'>{customer.IP_Address}</span>
                                             </p>
                                         
 
-                                            <p className='modalContent-P'>
-                                            <span className='modalContent-span' style={{textAlign:"right",color:'#9081f6'}}> <IoMdLocate />  :</span>
-                                            <span className='modalContent-span'> {customer?.IP_country?.dictionary?.name},{customer?.IP_country?.dictionary?.name}, {customer.IP_Region.dictionary.name} , {customer.IP_city.dictionary.name}</span>
+                                            <p className='modalContent-P'style={{display:'block'}}>
+                                            <span className='modalContent-span' style={{textAlign:"right",color:'#9081f6',display:'block'}}> <IoMdLocate />  :</span>
+                                            <span className='modalContent-span'style={{display:'block'}}> {customer?.IP_country?.dictionary?.name},{customer?.IP_country?.dictionary?.name}, {customer.IP_Region.dictionary.name} , {customer.IP_city.dictionary.name}</span>
                                             </p>
   
  

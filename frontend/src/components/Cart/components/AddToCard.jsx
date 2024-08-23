@@ -13,7 +13,7 @@ import Config from '../../config';
 import './AddToCard.css';
 axios.defaults.withCredentials = true; 
 
-export default function AddToCart({ product  }) {
+export default function AddToCart({ product}) {
   const { fetchCart } = useCart();
   const [quantity, setQuantity] = useState({ [product.id]: 1 });
   const [showBAGeModal, setShowBAGeModal] = useState(false);
@@ -68,15 +68,16 @@ export default function AddToCart({ product  }) {
   return (
     <>
 
-{product?.stock_no <= 0 ? (
-  <></> 
- ) : (
- <div className="content-Bag" onClick={() => setShowBAGeModal(true)}><TbShoppingBagPlus /> </div>
- )}
+
+{product?.stock_no >=  1 ? (
+   <div className="content-Bag" onClick={() => setShowBAGeModal(true)}>
+   <TbShoppingBagPlus />
+ </div>   ) : (  <></>  )}
+
  {showBAGeModal && (
         <div className="Modal-Bag show">
           <div className="modal-content">
-            <span className="close" onClick={() => setShowBAGeModal(false)}>&times;</span>
+            <span className="close" style={{display:'block'}} onClick={() => setShowBAGeModal(false)}>&times;</span>
             <div className="modal-text">{product.name}</div>
             <div className='QUAntity'>
               <div className='QUantity-arrow'>
@@ -104,9 +105,13 @@ export default function AddToCart({ product  }) {
               </div>
             ))}</>
             )}
+
+          {product?.stock_no > 0 && ( 
             <button className='Add_to_Cart_but' onClick={handleAddToCart}>
               إضافة إلى السلة <TbShoppingBagPlus />
             </button>
+           )}
+
           </div>
         </div>
 

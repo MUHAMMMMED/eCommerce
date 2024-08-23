@@ -9,7 +9,7 @@ export default function UpdateRate({ item, fetchData }) {
   const [products, setProducts] = useState([]);
   const [formData, setFormData] = useState({
     name: item.name,
-    product: item.product,
+    product: item.product ? item.product.id : '',  // Ensure it’s an integer or an empty string
     message: item.message,
     rate_number: item.rate_number,
   });
@@ -19,15 +19,15 @@ export default function UpdateRate({ item, fetchData }) {
   };
 
   const handleProductChange = (e) => {
-    const selectedProduct = e.target.value;
-    setFormData({ ...formData, product: selectedProduct });
+    const selectedProductId = parseInt(e.target.value, 10);
+    setFormData({ ...formData, product: selectedProductId });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = new FormData();
     data.append('name', formData.name);
-    data.append('product', formData.product);
+    data.append('product', formData.product);  // This should now be an integer
     data.append('message', formData.message);
     data.append('rate_number', formData.rate_number);
     
@@ -92,9 +92,11 @@ export default function UpdateRate({ item, fetchData }) {
             </div>
             <div className="form-container-half" style={{ marginTop: '10px' }}>
               <label htmlFor="product-select" style={{ paddingTop: '15px', textAlign: 'center', float: 'right', marginBottom: '5px' }}>اختر المنتج</label>
-              <select id="product-select" name="product" value={formData.product.id} onChange={handleProductChange}>
+              <select id="product-select" name="product" value={formData.product || ''} onChange={handleProductChange}>
                 <option value="">المنتجات</option>
-                {products.map((item) => (<option key={item.id} value={item.id}>{item.name}</option>))}
+                {products.map((item) => (
+                  <option key={item.id} value={item.id}>{item.name}</option>
+                ))}
               </select>
             </div>
           </div>

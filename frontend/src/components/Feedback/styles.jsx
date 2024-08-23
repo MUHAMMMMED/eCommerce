@@ -172,7 +172,7 @@ label:RatingBar-star;
     color: #ffba00;
     font-size: 14px;
     letter-spacing: 2px;
-    width: 80%;
+    width: 100%;
 `;
 
  

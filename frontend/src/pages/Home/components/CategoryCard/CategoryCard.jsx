@@ -15,23 +15,21 @@ export default function CategoryCard({Category}) {
 <Swiper
 modules={[Autoplay]}
 spaceBetween={0}
-slidesPerView={window.innerWidth > 768 ? 3 : 1}
+slidesPerView={window.innerWidth > 768 ? 6 : 3}
 loop={true}
 autoplay={{ delay: 5000, disableOnInteraction: false }} > 
                      
  {Category.map((itme ) => (
  <SwiperSlide key={itme.id} style={{padding:'5px'}}>
 <div className='categoryCard-list'>
-<div className='Card-list-row'><img className='list-row-img' 
-src={`${Config.baseURL}${itme?.home_image}`}  alt={itme.name} /></div>
-<div className='Card-list-row'><div className='list-row-detail-cat'>  الفئات</div>
-<div className='list-row-detail-titel'> {itme.name}</div> 
 <Link to={`/Category/${itme.name}/${itme.id}`}>  
-<div className='list-row-detail-but'>
-<button className='list-row-detail-but-button'>استعرض المنتحات</button> 
-</div></Link></div></div></SwiperSlide>))}
+<div className='Card-list-row'>
+<img className='list-row-img' src={`${Config.baseURL}${itme?.home_image}`}  alt={itme.name} />
+</div>
+<div className='list-row-detail-titel'> {itme.name}</div> 
 
-
+</Link>
+</div></SwiperSlide>))}
  </Swiper>
   </div>
     );

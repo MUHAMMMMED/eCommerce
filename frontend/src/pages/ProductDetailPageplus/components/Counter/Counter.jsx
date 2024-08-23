@@ -32,6 +32,10 @@ export default function Counter({ targetDate,discount }) {
   return (
     <>
     
+
+
+    <div className='center-Timer-row'>
+
       <div className='Timer-row'>
         <div className='Timer-row-number'>{timeLeft.days}</div>
         <div className='Timer-row-text'>يوم</div>
@@ -55,9 +59,9 @@ export default function Counter({ targetDate,discount }) {
      <div className='Timer-row' style={{ backgroundColor: '#9081f6', color: '#fff' }}>
     <div className='Timer-row-number' style={{ color: '#fff' }}>{discount}%</div>
     <div className='Timer-row-text'>خصم</div>
-     </div>
+    </div> 
     )}
-
+</div>
       
     </>
   );

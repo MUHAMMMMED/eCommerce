@@ -59,22 +59,16 @@ export default function OrderDetails() {
 <div className='details_head_h4'> 
 
 <div className='orders_text'>
-          <samp style={{display:'block' }}  >
-          <span style={{  display:'block', float:'right'   }}> تفاصيل الطالب</span> 
-            <span style={{ color: '#9081f6',display:'block',float:'right' }}>({order.id})</span>
-            </samp>   </div>
+<samp style={{display:'block' }}  >
+<span style={{  display:'block', float:'right'   }}> تفاصيل الطالب</span> 
+<span style={{ color: '#9081f6',display:'block',float:'right' }}>({order.id})</span>
+ </samp>   </div></div></div>
 
-            </div>
-</div>
-{order ? (
-<>
 <CartList order={order}/>
 <InvoiceDetails order={order}/>
 <CustomerInfo order={order}/>
 <Select order={order}/>
-</> ) : (
-     <></>
-    )}
+ 
  </div>
    )
 }

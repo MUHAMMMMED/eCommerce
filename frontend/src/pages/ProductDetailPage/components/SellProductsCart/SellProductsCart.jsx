@@ -79,17 +79,17 @@ function SellProductsCart({ product }) {
               padding: '10px', margin: '5px', cursor: 'pointer' }} >
           
             <div className='new-option'>
-            <div className='option_price'>
-            <div className="first-price"> <span>{product?.currency}</span> <span>{product?.price}</span></div>
+            <div className='option_price' style={{display:'block'}}>
+            <div className="first-price" style={{display:'block'}}> <span style={{display:'block'}} >{product?.currency}</span> <span style={{display:'block'}}>{product?.price}</span></div>
             <div className="second-price"> {product?.currency}{product?.discount_price} </div>
             </div>
-            <div className='option_title'>{product?.quantity}{product?.name} </div>
+            <div className='option_title'>{product?.quantity} - {product?.name} </div>
             <div className='option_img'> <img className='IMG' src={product?.img} alt="Product" /></div>
             <div className='option_checked'>
             {selectedProduct === product.id ? <span className="checked"></span> : <span className="unchecked"></span>}
            </div> </div> </div>
           ))}</div>
-      {product.note_help_top&& <span className="google-business-top">{product.note_help_top}</span>}
+      {product.note_help_top&& <span className="google-business-top"style={{display:'block',textAlign:'center'}}>{product.note_help_top}</span>}
       {product.is_active_note && (
         <>
           {selectedProduct && productsList[selectedProduct - 1] && (
@@ -106,13 +106,16 @@ function SellProductsCart({ product }) {
                       </div> ))}
                       </div>
               {product.note_help_bottom&& 
-              <span className="google-business-message">  {product.note_help_bottom}  </span>}
+              <span className="google-business-message"style={{display:'block',width:'100%',textAlign:'center'}}>  {product.note_help_bottom}  </span>}
               </> )}
              </>  )}
                <div className="new-form-atc" onClick={handleAddToCart}>أضف إلى السلة</div>
+               <div className="div-payment-button" >
                <button className="payment-button" type="button" onClick={handleBuyNow}> اشتري الآن </button>
-
-               {successMessage && (<div className="successMessage">{successMessage}</div>  )}
+               </div> <div  className="div-new-form-atc">
+               <button className="new-form-atc" type="button" style={{background:'#000',color:'#fff'}} onClick={handleBuyNow}> اشتري الآن </button>
+               </div>
+               {successMessage && (<div className="successMessage" style={{display:'block',textAlign:'center'}}>{successMessage}</div>  )}
           
       
   </>

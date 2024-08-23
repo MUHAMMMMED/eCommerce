@@ -58,16 +58,7 @@ class Product_Serializer(serializers.ModelSerializer):
         if not value.content_type.startswith('image/'):
             raise serializers.ValidationError('Uploaded file must be an image.')
         return value
-
-
-
-
-
-
-
-
-
-
+ 
 
 class MoreInfoSerializer(serializers.ModelSerializer):
     class Meta:
@@ -129,7 +120,7 @@ class ProductList_Serializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'description', 'category',  
                   'image_side_one','image_side_two', 'price1',
                   'discount_price1','currency','is_active_note',
-                  'note_help_top','note_help_bottom','note_help','default_option','expiration_date_offer' ]
+                  'note_help_top','note_help_bottom','note_help','default_option','expiration_date_offer','stock_no','discount' ]
 
 
 class ProductCart_Serializer(serializers.ModelSerializer):
@@ -141,7 +132,7 @@ class ProductCart_Serializer(serializers.ModelSerializer):
             'quantity1','quantity2','quantity3','quantity4','quantity5',
             'discount_price1','discount_price2','discount_price3','discount_price4','discount_price5',
             'is_active_note','note_help_top','note_help_bottom','note_help',
-             'price1', 'price2', 'price3', 'price4', 'price5', 'currency' ,'default_option','discount'
+             'price1', 'price2', 'price3', 'price4', 'price5', 'currency' ,'default_option','discount','stock_no'
 
 
         ]

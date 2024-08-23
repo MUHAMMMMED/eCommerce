@@ -40,7 +40,6 @@ class AddToCartView(APIView):
 class CartDetailView(APIView):
     def get(self, request, *args, **kwargs):
         session_id = request.session.session_key
- 
         # Get or create a session ID if it doesn't exist
         if not session_id:
             request.session.create()

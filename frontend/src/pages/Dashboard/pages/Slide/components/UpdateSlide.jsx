@@ -8,14 +8,17 @@ export default function UpdateSlide({ item, fetchData }) {
   const [showModalUpdate, setShowModalUpdate] = useState(false);
   const [formData, setFormData] = useState({
     top_slider_web: null,
-    top_slider_mobile: null
+    top_slider_mobile: null,
+    is_active: item.is_active,
   });
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.files[0]
-    });
+    const { name, type, checked, files } = e.target;
+
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: type === 'checkbox' ? checked : files ? files[0] : e.target.value,
+    }));
   };
 
   const handleSubmit = async (e) => {
@@ -28,6 +31,7 @@ export default function UpdateSlide({ item, fetchData }) {
     if (formData.top_slider_mobile) {
       form.append('top_slider_mobile', formData.top_slider_mobile);
     }
+    form.append('is_active', formData.is_active);
 
     try {
       await AxiosInstance.put(`${Config.baseURL}/api/home/slide/${item.id}/`, form, {
@@ -79,6 +83,16 @@ export default function UpdateSlide({ item, fetchData }) {
             <div className="form-container-half">
               <label className='label_dash' htmlFor="top_slider_mobile">صوره الموبيل</label>
               <input type="file" className='file_dash' name="top_slider_mobile" onChange={handleChange} />
+            </div>
+          </div>
+
+          <div className="FOrm-container_dash">
+            <div className="form-container-half">
+              <label className='label_dash' htmlFor="is_active">نشط</label>
+              <label className="switch">
+                <input type="checkbox" name="is_active" checked={formData.is_active} onChange={handleChange} />
+                <span className="slider"></span>
+              </label>
             </div>
           </div>
 

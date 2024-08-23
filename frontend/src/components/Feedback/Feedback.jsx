@@ -32,7 +32,7 @@ modules={[Autoplay]}>
  <AuthorThumbImg >  <FaUserTie /></AuthorThumbImg>
  <AuthorThumbSpen><FaQuoteLeft /></AuthorThumbSpen> </AuthorThumb>
   <RatingStar>
- <RatingBar>
+  <RatingBar  style={{  display:'block' }}>
  {Array.from({ length: item.rate_number }, (_, index) => (
   <FaStar key={index} />))}
 </RatingBar>
