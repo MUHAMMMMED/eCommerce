@@ -266,14 +266,15 @@ const ContactForm = ({ fetchCart, order, customer }) => {
                       src={`${Config.baseURL}${company?.image}`}
                       height="35"
                       className="Delivery-option-icon"
-                      alt="Delivery Option Icon"
-                    />
+                      alt="Delivery Option Icon"/>
+                    
                   </div>
-                  <div className="delivery-card-content">
+                  <div className="DElivery-card-content">
                     <span className="card-title">{company?.name}</span>
+
                     <span className="card-text">{company?.work_days}</span>
                   </div>
-                  <div className="delivery-card-price">{company?.shipping_price} ريال</div>
+                  <div className="DElivery-card-price"> {company?.shipping_price} <span className='money_code' style={{display:'block', }}> ريال</span></div>
                 </div>
               ))}
             </div>

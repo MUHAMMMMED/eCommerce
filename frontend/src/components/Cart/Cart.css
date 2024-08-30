@@ -102,9 +102,12 @@
 
 .single_product_text { padding-top:0px; font-size: 17px;  padding-bottom:30px;}
   
-.single_product-content{    width: 100%!important;  background-color: aliceblue;}
+.single_product-content{ width: 100%!important;  background-color: aliceblue;}
   
-.div-price{ float:right; width:50%!important;  }
+.div-price{ 
+  float:right; 
+  width:50%;       
+}
   
 .discounted-price {
         text-decoration: line-through;
@@ -124,6 +127,8 @@
        width:100%!important;
        float:right;
        text-align:right;
+ 
+
     }
 .content-Bag{
   float: right;
@@ -133,11 +138,17 @@
   border: 1px solid #ccc;
   border-radius:5px;
   color: #000;
+  display: block;
 }
 .content-Bag:hover{ background-color:#000;color:#fff;}
  
+@media (max-width: 768px) {
+  .content-Bag{ display: none; }
+}
+
 .content-button{  width:35%!important; float: left;}
-   
+
+ 
    .but_shopping{
      background-color: #fff; /* orange color */
      border: none;
@@ -162,11 +173,16 @@
    border: 1px solid #ccc;
    border-radius:3px;
    color: #000;
+   @media (max-width: 768px) {
+    font-size: 12px;
+    padding:6px 13px 6px 13px;
+    float: left;
 
+  }
    } 
 
    .but_know{
-     background-color: #fff; /* orange color */
+     background-color: #fff;  
      border: none;
      outline: none;
      cursor: pointer;
@@ -202,19 +218,15 @@
 
    @media (max-width: 768px) {
     .Container { padding: 0 0px;}
-
-    .but_bay{font-size: 10px;  height:auto!important; } 
+    .but_bay{font-size: 10px; font-weight: 700; height:auto!important; } 
     .single_product_text { font-size:9px; text-align: center; }
-    .div-price{ width: 75%!important;  }
-    .content-button{float: right; width: 100%!important; margin-top: 10px; }
-    /* .but_bay{  width: 100%!important;  } */
-    .discounted-price {font-size: 15px; }
-    .content-price {font-size:15px;  }
+    .div-price{ width: 50%!important;   margin-top: 4px; }
+    .content-button{float: right; width: 50%!important; margin-top: -1px;  }
+    .discounted-price {font-size: 13px; }
+    .content-price {font-size:14px;  }
     .Out_stock{ font-size: 10px; margin-left: 30%;display: block;  }
 
-     
-     
- 
+      
   }
 
    /* Media query for screens larger than 576px */

@@ -92,9 +92,9 @@ export default function CartPage() {
     setCouponCode(e.target.value);
   };
 
-  if (loading) {
-    return <Loading />;
-  }
+  // if (loading) {
+  //   return <Loading />;
+  // }
 
   return (
     <div>

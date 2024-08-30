@@ -54,8 +54,8 @@ export default function ProductDetailPageplus({product}) {
  <div style={{ float: 'right', marginRight: '5px' }}>({product?.rate_count})</div>
  </div> </div>
  <div className="product_price">
- <div className="price_item">{product?.price1} {product?.currency} </div>
- <div className="price-item_sale">{product?.discount_price1} {product?.currency} </div>
+ <div className="price_item">{product?.price1} <spen className='money_code'>{product?.currency}</spen>  </div>
+ <div className="price-item_sale">{product?.discount_price1} <spen className='money_code'>{product?.currency}</spen> </div>
  {product?.stock_no <= 0 ? (
   <div className="sold_out">نفذ المخزون</div>
 ) : (
@@ -68,7 +68,6 @@ export default function ProductDetailPageplus({product}) {
  <br/><p>{product.description} </p></div>
 
  {product&&<SellProductsSlider product={product}/>}
-
 
  {today < expirationDate && (
 <div style={{ float: 'left',  width: '100%',  paddingTop: '15px', paddingBottom: '15px',  marginTop: '5px', marginBottom: '15px'}}  >

@@ -42,8 +42,8 @@ export default function FollowUpPayment({ order, cart }) {
     <>
       {order && (
         <div className="grid-a" onClick={handleSubmit}>
-          <div className="Btn fw-bold" style={{ width: '93%', marginTop: '20px', float: 'right' }}>
-            {finalTotal} ريال<div>متابعة الدفع</div>
+          <div className="Btn fw-bold" style={{ width: '93%', textAlign:'left', marginTop: '20px', float: 'right' }}>
+          ريال {finalTotal} <div>متابعة الدفع</div>
           </div>
         </div>
       )}

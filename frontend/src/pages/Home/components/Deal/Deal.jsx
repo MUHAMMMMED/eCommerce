@@ -23,15 +23,15 @@ export default function Deal({data}) {
 <Counter targetDate= {data.one_deal?.product?.expiration_date_offer}/>
 </div>
 
-<div className='detail-B'> 
-<div className='detail-but'>  
+<div className='detail-B'style={{display:'block'}}> 
+<div className='detail-but'style={{display:'block'}}>  
 {data.one_deal.product && data.one_deal.product.discount > 0.0 ? (
-<div className='detail-but-off'> 
- <div className='off-number'>{data.one_deal.product.discount}%</div>   خصم</div>   
+<div className='detail-but-off'style={{display:'block'}}> 
+ <div className='off-number' style={{display:'block'}}>{data.one_deal.product.discount}%</div>   خصم</div>   
  ) : (
  <> <br/> </>  )}
   <Link to={`/Product/${data.one_deal?.product?.name}/${data.one_deal?.product?.id}`}>  
-   <button className='detail-but-button'>استعرض المنتج</button>  </Link> </div>  
+   <button className='detail-but-button' >استعرض المنتج</button>  </Link> </div>  
 </div></div></div></div>
 {/* <div className='Deal-ROW'> <DealItrms deal={data.deal}/></div> */}
 <div className='Deal-ROW-Swiper'>

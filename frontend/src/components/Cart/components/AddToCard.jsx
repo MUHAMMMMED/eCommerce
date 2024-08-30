@@ -4,10 +4,8 @@ import React, { useEffect, useState } from 'react';
 import { AiOutlinePlus } from "react-icons/ai";
 import { MdMinimize } from "react-icons/md";
 import { TbShoppingBagPlus } from "react-icons/tb";
-import 'react-toastify/dist/ReactToastify.css';
-
-
 import { Link } from 'react-router-dom';
+import 'react-toastify/dist/ReactToastify.css';
 import { useCart } from '../../Provider/CartProvider/CartProvider';
 import Config from '../../config';
 import './AddToCard.css';
@@ -27,7 +25,7 @@ export default function AddToCart({ product}) {
 
   const handleAddToCart = async () => {
     try {
-      const response = await axios.post(`${Config.baseURL}/api/cart/add/`, {
+        await axios.post(`${Config.baseURL}/api/cart/add/`, {
         productId: product.id,
         quantity: quantity[product.id],
         notes: notes // Sending notes to the API

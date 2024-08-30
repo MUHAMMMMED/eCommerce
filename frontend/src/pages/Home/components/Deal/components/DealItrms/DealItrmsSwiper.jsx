@@ -33,7 +33,7 @@ src={dealItem.product?.image_side_one ? `${Config.baseURL}${dealItem.product.ima
  alt={dealItem.product?.name || 'Product Image'} />
 </div>  
  
-<div className='DealItrm-row'>
+<div className='DealItrm-row'style={{display:'block'}}>
   {dealItem.product && dealItem.product.discount > 0.0 ? (
     <div className='DealItrm-detail-off' style={{display:'block'}}>  <span className='DealItrm-detail-off-span'style={{display:'block'}}> {dealItem.product.discount}% خصم    </span>  </div>
   ) : (

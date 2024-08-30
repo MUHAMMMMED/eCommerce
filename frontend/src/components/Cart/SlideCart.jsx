@@ -45,9 +45,9 @@ export default function SlideCart({ products,title }) {
     <div className='single_product-content' >
     <div  className="div-price">
     {product?.discount > 0 ? (
-  <div  className="discounted-price"> {product?.currency}{product?.discount_price1} </div>
+  <div  className="discounted-price"> <spen className='money_code'>{product?.currency}</spen> {product?.discount_price1} </div>
    ) : (  <></>  )}
-    <div  className="content-price"> {product?.currency}{product?.price1} </div>
+    <div  className="content-price"> <spen className='money_code'>{product?.currency}</spen> {product?.price1} </div>
     </div>
   {product&&
  <AddToCardSlide product={product} />}

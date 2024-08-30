@@ -69,20 +69,12 @@ const ProductUpdate = () => {
         stock_alarm: product.stock_alarm || 0,
         video: product.video || '',
         expiration_date_offer: product.expiration_date_offer || '',
+        discount:product.discount || 0, 
+
       });
     }
   }, [product]);
-  
-
-
-
-
-
-
-
-
-
-
+   
 
 
   // Fetch categories from the server
@@ -406,15 +398,28 @@ const ProductUpdate = () => {
          <input type="number" step="0.01" name="discount_price5" value={formData.discount_price5} onChange={handleChange} />
           </div>
          
-        <div className="form_Group">
-        <label  className='form-group-label'>  كميه المحدد داخل صفحه المنتج    </label>
-         <input type="number"   name="default_option" value={formData.default_option} onChange={handleChange} />
+        
+          <div className="form_Group">
+         <label  className='form-group-label'>      الخصم العام    </label>
+         <input type="number"   name="discount" value={formData.discount} onChange={handleChange} />
        </div>
+
+
+
+
  
        <div className="form_Group">
           <label className='form-group-label'>حدد تاريخ انتهاء التخفيض</label>
           <input type="date" name="expiration_date_offer" value={formData.expiration_date_offer} onChange={handleChange} />
-        </div>  </div>  </div>
+        </div>
+        
+      
+        <div className="form_Group">
+        <label  className='form-group-label'>  كميه المحدد داخل صفحه المنتج    </label>
+         <input type="number"   name="default_option" value={formData.default_option} onChange={handleChange} />
+       </div>  
+        
+          </div>  </div>
  
 {ProductId&&
 <Image_Product ProductId={ProductId}/>}

@@ -95,16 +95,16 @@ export default function SellProductsSlider({ product }) {
             </>
           )}
           {product.note_help_bottom && (
-            <span className="google-business-message">{product.note_help_bottom}</span>
-          )}
+            <span className="google-business-message" style={{display:'block',width:'100%',textAlign:'center'}}>{product.note_help_bottom}</span>
+            )}
         </div>
-   
+        <div style={{float:'right', width:'95%',marginRight:'2.5%'}}>
         <div className="Sell-Row-name">
           <button className='Sell-button-btn' onClick={handleAddToCart}>إضافة للسلة</button>
         </div>
         <div className="Sell-Row-price">
           <button className='Sell-button-pay' onClick={handleBuyNow}>اشتري الآن</button>
-        </div>
+        </div></div>
         {successMessage && (
           <div className="successMessage">{successMessage}</div>
         )}

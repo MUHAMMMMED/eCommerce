@@ -25,6 +25,7 @@ export default function InvoiceDetails({ cart ,order }) {
                 <span className="pricing-amount">({cart.cart_items_count})</span>
               </div>
             </div>
+
             <div className="totals-item-sub_totals">
               <div className="col">
                 <span className="pricing-title">الكمية</span>
@@ -33,15 +34,17 @@ export default function InvoiceDetails({ cart ,order }) {
                 <span className="pricing-amount">({cart.cart_quantity})</span>
               </div>
             </div>
-            <div className="totals-item-shipping">
-              <div className="col">
+
+
+            <div className="totals-item-sub_totals">
+              <div className="col" >
                 <span className="pricing-title">المجموع الفرعي</span>
               </div>
               <div className="text-right">
                 <span className="pricing-amount">{total.toFixed(2)}  <spen className='money_code'> ريال</spen></span>
               </div>
             </div>
-            <div className="totals-item-shipping">
+            <div className="totals-item-sub_totals">
               <div className="col">
                 <span className="pricing-title"> ({taxRate.toFixed(0)} %) الضريبه</span>
               </div>
@@ -49,7 +52,7 @@ export default function InvoiceDetails({ cart ,order }) {
                 <span className="pricing-amount">{taxAmount.toFixed(2)} <spen className='money_code'> ريال</spen></span>
               </div>
             </div>
-            <div className="totals-item-shipping">
+            <div className="totals-item-sub_totals">
               <div className="col">
                 <span className="pricing-title">رسوم التوصيل</span>
               </div>
