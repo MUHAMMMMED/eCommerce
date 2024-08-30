@@ -15,7 +15,7 @@ export default function OrderTracking() {
     const [trackingNumber, setTrackingNumber] = useState('');
     const [order, setOrder] = useState(null);
     const [loading, setLoading] = useState(false);
-    const [searched, setSearched] = useState(false); 
+    const [searched, setSearched] = useState(false);
 
     const fetchOrder = async () => {
         setLoading(true);
@@ -37,8 +37,8 @@ export default function OrderTracking() {
 
     if (loading) {
         return <Loading />;
-      }
-      
+    }
+
 
 
     const handleInputChange = (e) => {
@@ -114,7 +114,7 @@ export default function OrderTracking() {
 
 
 
-    
+
     return (
         <div className="container_Tracking">
             <section className="Tracking_CONtainer">
@@ -131,7 +131,7 @@ export default function OrderTracking() {
                     <button className='Tracking_button' type="button" onClick={handleSearchClick}>بحث </button>
                 </div>
                 {searched && (!order || !order.id) && (
-                <p style={{ color: 'red', textAlign: 'center' }}>رقم الطلب غير صحيح أو لا يوجد معلومات لهذا الطلب</p>
+                    <p style={{ color: 'red', textAlign: 'center' }}>رقم الطلب غير صحيح أو لا يوجد معلومات لهذا الطلب</p>
                 )}
             </section>
 
@@ -139,15 +139,15 @@ export default function OrderTracking() {
                 <div className="Tracking_info">
                     <div className='Tracking_info_h5'>
                         <div className='Tracking_info_center'>
-                        {order.anticipation && (  <>
-                        <div className='Tracking_info_spen-R'> : الطلب رقم  </div>
-                        <div className='Tracking_info_spen-L'>{order.id}</div>
-                        </>)} <br />
-                        {order.anticipation && ( <>
-                        <div className='Tracking_info_spen-R'> : الوصول المتوقع   </div>
-                        <div className='Tracking_info_spen-L'>{renderAnticipationDay(order.anticipation)}</div>
-                       </>  )}
-              </div></div> </div>
+                            {order.anticipation && (<>
+                                <div className='Tracking_info_spen-R'> : الطلب رقم  </div>
+                                <div className='Tracking_info_spen-L'>{order.id}</div>
+                            </>)} <br />
+                            {order.anticipation && (<>
+                                <div className='Tracking_info_spen-R'> : الوصول المتوقع   </div>
+                                <div className='Tracking_info_spen-L'>{renderAnticipationDay(order.anticipation)}</div>
+                            </>)}
+                        </div></div> </div>
             }
 
             {renderOrderStatus()}

@@ -13,14 +13,14 @@ export default function ProductDetail() {
     const { id: ProductId } = useParams();
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);  
+    const [error, setError] = useState(null);
 
     const fetchProduct = async () => {
         try {
-            if (!ProductId) return;  
+            if (!ProductId) return;
             const response = await axios.get(`${Config.baseURL}/api/products/products/${ProductId}/`);
             setProduct(response.data);
-        } catch (error) { 
+        } catch (error) {
             setError(error.response?.data?.message || " الصفحة غير موجوده");
         } finally {
             setLoading(false);
@@ -41,20 +41,20 @@ export default function ProductDetail() {
 
     return (
         <>
- 
-
-        <br/> <br/> <br/> <br/> <br/> <br/>
-
-        {product&&
-<>
-            {product.theme_type === 'themeone' && <ProductDetailPage product={product} />}
-            {product.theme_type === 'themetwo' && <ProductDetailPageplus product={product}  />}
-            {product.theme_type === 'themethree' && <h1>ThemeThree</h1>}
-             </>
-}
 
 
-<Footer/>
+            <br /> <br /> <br /> <br /> <br /> <br />
+
+            {product &&
+                <>
+                    {product.theme_type === 'themeone' && <ProductDetailPage product={product} />}
+                    {product.theme_type === 'themetwo' && <ProductDetailPageplus product={product} />}
+                    {product.theme_type === 'themethree' && <h1>ThemeThree</h1>}
+                </>
+            }
+
+
+            <Footer />
 
         </>
     );

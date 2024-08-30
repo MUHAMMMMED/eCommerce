@@ -1,4 +1,4 @@
- 
+
 
 import axios from 'axios'; // Import axios properly
 import { useEffect, useState } from 'react';
@@ -22,7 +22,7 @@ export default function FollowUpPayment({ order, cart }) {
     try {
       const response = await axios.post(`${Config.baseURL}/api/payment/create-checkout-session/`, { items: [{ id: order.id, finalTotal }] }, {
         headers: {
-           'Content-Type': 'application/json'
+          'Content-Type': 'application/json'
         },
         withCredentials: true  // Ensure withCredentials is set correctly
       });
@@ -42,8 +42,8 @@ export default function FollowUpPayment({ order, cart }) {
     <>
       {order && (
         <div className="grid-a" onClick={handleSubmit}>
-          <div className="Btn fw-bold" style={{ width: '93%', textAlign:'left', marginTop: '20px', float: 'right' }}>
-          ريال {finalTotal} <div>متابعة الدفع</div>
+          <div className="Btn fw-bold" style={{ width: '93%', textAlign: 'left', marginTop: '20px', float: 'right' }}>
+            ريال {finalTotal} <div>متابعة الدفع</div>
           </div>
         </div>
       )}
@@ -52,4 +52,3 @@ export default function FollowUpPayment({ order, cart }) {
 }
 
 
- 

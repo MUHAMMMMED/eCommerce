@@ -1,10 +1,22 @@
+.BG_web {
+    float: right;
+    width: 100%;
+    display: block;
+}
 
+.BG_mobile {
+    float: right;
+    width: 100%;
+    display: none;
+}
 
-.BG_web{  float: right; width: 100%; display: block;}
-.BG_mobile{ float: right; width: 100%;display: none;}
-  
 @media screen and (max-width: 780px) {
- .BG_web{ display: none;}
- .BG_mobile{ display: block; }
-    
-  }
+    .BG_web {
+        display: none;
+    }
+
+    .BG_mobile {
+        display: block;
+    }
+
+}

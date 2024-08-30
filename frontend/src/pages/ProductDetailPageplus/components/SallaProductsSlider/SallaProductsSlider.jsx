@@ -1,4 +1,4 @@
- 
+
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -28,19 +28,19 @@ export default function SellProductsSlider({ product }) {
     if (!productId) return;
 
     try {
-      const response = await axios.post(`${Config.baseURL}/api/cart/add/`, {
+      await axios.post(`${Config.baseURL}/api/cart/add/`, {
         productId,
         quantity: quantity[productId],
         notes: notes,
       });
 
- 
+
       setQuantity({ [productId]: 1 }); // Reset quantity to 1 after success
       setNotes('');
       fetchCart();
       setSuccessMessage("تمت إضافة المنتج إلى السلة"); // Set success message
     } catch (error) {
-     }
+    }
   };
 
   const handleIncrement = () => {
@@ -95,16 +95,16 @@ export default function SellProductsSlider({ product }) {
             </>
           )}
           {product.note_help_bottom && (
-            <span className="google-business-message" style={{display:'block',width:'100%',textAlign:'center'}}>{product.note_help_bottom}</span>
-            )}
+            <span className="google-business-message" style={{ display: 'block', width: '100%', textAlign: 'center' }}>{product.note_help_bottom}</span>
+          )}
         </div>
-        <div style={{float:'right', width:'95%',marginRight:'2.5%'}}>
-        <div className="Sell-Row-name">
-          <button className='Sell-button-btn' onClick={handleAddToCart}>إضافة للسلة</button>
-        </div>
-        <div className="Sell-Row-price">
-          <button className='Sell-button-pay' onClick={handleBuyNow}>اشتري الآن</button>
-        </div></div>
+        <div style={{ float: 'right', width: '95%', marginRight: '2.5%' }}>
+          <div className="Sell-Row-name">
+            <button className='Sell-button-btn' onClick={handleAddToCart}>إضافة للسلة</button>
+          </div>
+          <div className="Sell-Row-price">
+            <button className='Sell-button-pay' onClick={handleBuyNow}>اشتري الآن</button>
+          </div></div>
         {successMessage && (
           <div className="successMessage">{successMessage}</div>
         )}

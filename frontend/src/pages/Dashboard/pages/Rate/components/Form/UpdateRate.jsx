@@ -30,7 +30,7 @@ export default function UpdateRate({ item, fetchData }) {
     data.append('product', formData.product);  // This should now be an integer
     data.append('message', formData.message);
     data.append('rate_number', formData.rate_number);
-    
+
     try {
       await AxiosInstance.put(`${Config.baseURL}/api/products/rate/${item.id}/`, data, {
         headers: {

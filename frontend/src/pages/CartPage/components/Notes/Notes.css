@@ -1,101 +1,113 @@
-.note-card{
-float: right;
-width: 90%;
-margin-right: 5%;
-padding:3px 10px;
-margin-top: 10px;
- 
-border:1px solid #dee2e6;
+.note-card {
+  float: right;
+  width: 90%;
+  margin-right: 5%;
+  padding: 3px 10px;
+  margin-top: 10px;
+
+  border: 1px solid #dee2e6;
 
 }
 
-.note-card-content{
- float: right;
- width: 80%;
-}
-.note-card-but{
- float: right;
- width: 20%;
+.note-card-content {
+  float: right;
+  width: 80%;
 }
 
+.note-card-but {
+  float: right;
+  width: 20%;
+}
 
 
-.note-card-icon{
-    margin-top: 7px;
-   float: right;
-   padding: 3px 8px;
-   background-color: #ffffff;
-   border-radius: 3px;
-   border: 1px solid #dee2e6;
-   color: rgb(0, 0, 0);
-   font-size:13px;
+
+.note-card-icon {
+  margin-top: 7px;
+  float: right;
+  padding: 3px 8px;
+  background-color: #ffffff;
+  border-radius: 3px;
+  border: 1px solid #dee2e6;
+  color: rgb(0, 0, 0);
+  font-size: 13px;
 
 }
 
-.note-card-title{
-    font-size: 16px;
+.note-card-title {
+  font-size: 16px;
+  float: right;
+  color: rgb(0, 0, 0);
+  padding: 10px 0px;
+  text-align: right;
+  font-size: 16px;
+  margin-right: 10px;
+
+
+}
+
+.card-but {
+  margin-top: 8px;
+  float: right;
+  width: 45%;
+  margin-right: 5%;
+  border: 1px solid #dee2e6;
+  padding: 3px;
+
+}
+
+.card-but:hover {
+  background-color: black;
+  color: #ffffff;
+}
+
+
+@media screen and (max-width: 768px) {
+  .note-card {
     float: right;
-    color: rgb(0, 0, 0);
-    padding:  10px 0px ;
-    text-align: right;
-    font-size: 16px;
-    margin-right: 10px;
+    width: 98%;
+    margin-right: 1%;
 
+  }
 
-}
+  .note-card-content {
+    width: 100%;
+  }
 
-.card-but{
+  .note-card-but {
+    width: 100%;
+    margin-right: 0%;
+    padding-bottom: 5px;
+  }
+
+  .card-but {
+    padding: 5px;
     margin-top: 8px;
     float: right;
     width: 45%;
-    margin-right:5%;
+    margin-right: 3%;
     border: 1px solid #dee2e6;
-    padding: 3px;
-
- }
- .card-but:hover {
-    background-color: black;
-    color: #ffffff; }
- 
-
- @media screen and (max-width: 768px) {
-    .note-card{
-        float: right;
-        width:98%;
-        margin-right: 1%;
-
-        }
-        
-        .note-card-content{
-         width: 100%;
-        }
-        .note-card-but{
-         width: 100%;
-         margin-right: 0%;
-         padding-bottom: 5px;
-        }
-        .card-but{
-            padding: 5px;
-            margin-top: 8px;
-            float: right;
-            width: 45%;
-            margin-right:3%;
-            border: 1px solid #dee2e6;
-        
-         }
-
 
   }
 
 
-  @keyframes flash {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
+}
+
+
+@keyframes flash {
+  0% {
+    opacity: 1;
   }
-  
-  .flashText {
-    animation: flash 0.8s infinite;
-    color: red;
+
+  50% {
+    opacity: 0;
   }
-  
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.flashText {
+  animation: flash 0.8s infinite;
+  color: red;
+}

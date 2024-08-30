@@ -1,10 +1,33 @@
+.product-Freq {
+    float: right;
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
 
-.product-Freq{float: right;    width: 100%; border: 1px solid #ccc;  margin-top: 10px;  }
-.Freq-div{float: right; width:60px; padding: 5px;margin-left: 1%;  }
-.Freq-div_img{ width:60px;margin-left:5px;   }
-.Freq-div-text{  float: right; width: 85%;   }
-.Freq-text{float: right; margin-top: 8px; width: 100%; }
-.Freq-but{ float: right; }
-    
- 
- 
+.Freq-div {
+    float: right;
+    width: 60px;
+    padding: 5px;
+    margin-left: 1%;
+}
+
+.Freq-div_img {
+    width: 60px;
+    margin-left: 5px;
+}
+
+.Freq-div-text {
+    float: right;
+    width: 85%;
+}
+
+.Freq-text {
+    float: right;
+    margin-top: 8px;
+    width: 100%;
+}
+
+.Freq-but {
+    float: right;
+}

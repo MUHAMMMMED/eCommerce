@@ -1,45 +1,46 @@
- 
-.SuccessMessage{
-    float: right;
-    width: 70%;
-    margin-right: 15%;
-    padding: 15px;
-    margin-top: 5rem;
-    margin-bottom: .1rem;
-    background-color: #b4a9f53b;
-    color: #9081f6;
-    border: 1px solid  #9081f6;
-    border-radius: 8px;
-}
-
-.SuccessMessage-text {
-    text-align: right;
-    padding: 0;
-    margin: 0;
-    float: right;
-    width: 100%;
+ .SuccessMessage {
+     float: right;
+     width: 70%;
+     margin-right: 15%;
+     padding: 15px;
+     margin-top: 5rem;
+     margin-bottom: .1rem;
+     background-color: #b4a9f53b;
+     color: #9081f6;
+     border: 1px solid #9081f6;
+     border-radius: 8px;
  }
- .SuccessMessage-icon{
-    float: right;
-    padding: 5px;
-    margin-left: 11px;
-    display: block;
+
+ .SuccessMessage-text {
+     text-align: right;
+     padding: 0;
+     margin: 0;
+     float: right;
+     width: 100%;
+ }
+
+ .SuccessMessage-icon {
+     float: right;
+     padding: 5px;
+     margin-left: 11px;
+     display: block;
 
  }
- 
-@media screen and (max-width: 785px) {
-    .SuccessMessage{
-        width: 100%;
-        margin-right: 0%;
-    
-    }
-    .SuccessMessage-text {
-        text-align: center;
-        padding: 0;
-        margin: 0;
-        float: right;
-        width: 100%;
+
+ @media screen and (max-width: 785px) {
+     .SuccessMessage {
+         width: 100%;
+         margin-right: 0%;
+
+     }
+
+     .SuccessMessage-text {
+         text-align: center;
+         padding: 0;
+         margin: 0;
+         float: right;
+         width: 100%;
      }
 
 
-}
+ }

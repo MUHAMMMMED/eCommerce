@@ -69,10 +69,10 @@ export default function CreateCard({ fetchData }) {
             </div>
           </div>
 
-       
-            <label className='label_dash' htmlFor="link">الرابط</label>
-            <input type="text" className='text_dash' name="link" value={formData.link} onChange={handleChange} placeholder="الرابط" />
-         
+
+          <label className='label_dash' htmlFor="link">الرابط</label>
+          <input type="text" className='text_dash' name="link" value={formData.link} onChange={handleChange} placeholder="الرابط" />
+
 
           <br /><br />
           <div className="FOrm-container_dash">

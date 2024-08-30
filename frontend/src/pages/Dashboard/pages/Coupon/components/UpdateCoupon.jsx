@@ -1,21 +1,21 @@
 
 import React, { useState } from 'react';
 import Config from '../../../../../components/config';
- 
+
 import { AiOutlineDelete } from 'react-icons/ai';
 import { GrUpdate } from "react-icons/gr";
 import AxiosInstance from '../../../../../components/Authentication/AxiosInstance';
 
-export default function UpdateCoupon({  item, fetchCoupon }) {
- 
-    const [showModalUpdate, setShowModalUpdate] = useState(false);
-    const [formData, setFormData] = useState({
-      code: item.code,
-      discount: item.discount,
-      coupon_usage: item.coupon_usage,
-      expiryDate: item.expiryDate,
- 
-    });
+export default function UpdateCoupon({ item, fetchCoupon }) {
+
+  const [showModalUpdate, setShowModalUpdate] = useState(false);
+  const [formData, setFormData] = useState({
+    code: item.code,
+    discount: item.discount,
+    coupon_usage: item.coupon_usage,
+    expiryDate: item.expiryDate,
+
+  });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -37,7 +37,7 @@ export default function UpdateCoupon({  item, fetchCoupon }) {
     }
   };
 
-  
+
 
   const handleDelete = async () => {
     if (window.confirm('هل أنت متأكد أنك تريد حذف هذه كود الخصم ؟')) {
@@ -76,25 +76,25 @@ export default function UpdateCoupon({  item, fetchCoupon }) {
 
             <div className="form-container-half">
               <label className='label_dash' htmlFor="expiryDate" style={{ paddingTop: '15px' }}>تاريخ انتهاء الكود</label>
-              <input type="date" className='text_dash' name="expiryDate" value={formData.expiryDate}  onChange={handleChange} />
+              <input type="date" className='text_dash' name="expiryDate" value={formData.expiryDate} onChange={handleChange} />
             </div>
           </div>
 
           <div className="FOrm-container_dash">
 
-          <div className="form-container-half">
+            <div className="form-container-half">
               <label className='label_dash' htmlFor="discount" style={{ paddingTop: '15px' }}>الخصم</label>
-              <input type="number" className='text_dash' name="discount" value={formData.discount}  onChange={handleChange} />
+              <input type="number" className='text_dash' name="discount" value={formData.discount} onChange={handleChange} />
             </div>
-            
+
             <div className="form-container-half">
               <label className='label_dash' htmlFor="coupon_usage" style={{ paddingTop: '15px' }}>عدد مرات الاستخدام </label>
-              <input type="text" className='text_dash' name="coupon_usage" value={formData.coupon_usage} onChange={handleChange}  />
+              <input type="text" className='text_dash' name="coupon_usage" value={formData.coupon_usage} onChange={handleChange} />
             </div>
-            
-            </div>
-       
-         
+
+          </div>
+
+
           <br /><br />
           <div className="FOrm-container_dash" style={{ paddingTop: '20px' }}>
             <div style={{ width: '78%' }}><button className="button-form" type="submit">حفظ</button></div>

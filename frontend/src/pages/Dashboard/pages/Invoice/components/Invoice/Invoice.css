@@ -1,5 +1,4 @@
-
-.invoice-container{
+.invoice-container {
     float: right;
     width: 70%;
     margin-right: 15%;
@@ -8,27 +7,28 @@
     padding-bottom: 5rem;
 }
 
-.invoice-cont  {
+.invoice-cont {
     float: right;
     width: 100%;
     border: 1px solid #dee2e6;
 
 }
-.invoice-logo{
-float: right;
-height:130px;
-padding: 0;
-margin: 0;
-margin-top: 8px;
+
+.invoice-logo {
+    float: right;
+    height: 130px;
+    padding: 0;
+    margin: 0;
+    margin-top: 8px;
 
 }
- 
+
 
 .text-center {
     text-align: center;
     padding: 0;
     margin: 0;
- }
+}
 
 .border-top {
     border-top: 1px solid #dee2e6;
@@ -55,7 +55,7 @@ margin-top: 8px;
 
 .text-primary {
     color: #9081f6;
-    
+
 }
 
 .fw-bold {
@@ -88,7 +88,7 @@ margin-top: 8px;
     border-bottom: 2px solid #dee2e6;
 }
 
-.table tbody + tbody {
+.table tbody+tbody {
     border-top: 2px solid #dee2e6;
 }
 
@@ -104,19 +104,20 @@ margin-top: 8px;
 .justify-content-between {
     justify-content: space-between;
 }
-.invoice-flex_left{
-padding-right: 5px;
-width: 40%;
-text-align: right;
+
+.invoice-flex_left {
+    padding-right: 5px;
+    width: 40%;
+    text-align: right;
 
 }
 
-.invoice-flex_right{
+.invoice-flex_right {
     padding-right: 15px;
     width: 40%;
     text-align: right;
-    
-    }
+
+}
 
 .mt-5 {
     margin-top: 3rem;
@@ -156,48 +157,53 @@ text-align: right;
     background-color: #9081f6;
     color: #fff;
     text-decoration: none;
-     width: 100%;
+    width: 100%;
     margin: auto;
 }
+
 @media screen and (max-width: 785px) {
-    .invoice-container{
+    .invoice-container {
         width: 100%;
         margin-right: 0%;
-    
+
     }
-    .invoice-logo{
+
+    .invoice-logo {
         float: right;
-        height:80px;
+        height: 80px;
         padding: 0;
         margin: 0;
         margin-top: 8px;
-        
-        }
-        .invoice-cont  {
-             width: 100%;
-         
-        }
+
+    }
+
+    .invoice-cont {
+        width: 100%;
+
+    }
 
 
-        .table th,.table td {
+    .table th,
+    .table td {
         padding: .4rem;
         vertical-align: top;
-        font-size: 13px;}
+        font-size: 13px;
+    }
 
-        .invoice-flex_left{
-            padding-right: 5px;
-            width: 50%;
-            text-align: right;
-            font-size: 13px;
+    .invoice-flex_left {
+        padding-right: 5px;
+        width: 50%;
+        text-align: right;
+        font-size: 13px;
 
-            }
-            
-            .invoice-flex_right{
-                padding-right: 15px;
-                width: 50%;
-                text-align: right;
-                font-size: 13px;
-                }
+    }
+
+    .invoice-flex_right {
+        padding-right: 15px;
+        width: 50%;
+        text-align: right;
+        font-size: 13px;
+    }
 
 
 

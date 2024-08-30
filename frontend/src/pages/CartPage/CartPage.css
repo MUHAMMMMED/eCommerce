@@ -1,19 +1,20 @@
-.cartPageSection {float: right;
-  background-color:#9081f6!important;
-  color:#fff!important;
+.cartPageSection {
+  float: right;
+  background-color: #9081f6 !important;
+  color: #fff !important;
   text-align: center !important;
- padding: 0;
+  padding: 0;
   width: 100%;
 
 }
- 
- 
+
+
 .section-cart-products {
   margin-top: 20px;
   float: right;
   width: 80%;
   margin-right: 10%;
- 
+
 }
 
 .section-cart-products-row1 {
@@ -32,12 +33,13 @@
 
 /* Responsive styles */
 @media screen and (max-width: 1200px) {
-  .section-cart-products{
+  .section-cart-products {
 
     width: 95%;
-    margin-right:2.5%;
+    margin-right: 2.5%;
 
   }
+
   .section-cart-products-row1,
   .section-cart-products-row2 {
     width: 100%;
@@ -50,7 +52,7 @@
   .section-cart-products {
     height: auto;
     width: 95%;
-    margin-right:2.5%;
+    margin-right: 2.5%;
     margin-bottom: 50px;
 
   }
@@ -67,201 +69,219 @@
   }
 }
 
-  .list-group-item {
-    float: right;
-    padding: 8px 0px ;
-    color: #000;  
-    text-decoration: none;
-    border: 1px solid #dee2e6;
-    width: 100%;
-    background-color: #ffffff;
-    margin-top: 18px; 
-    border-radius: 5px;
-    align-items: center;
-  
-    /* padding: 10px 20px; */
- 
-}
- 
+.list-group-item {
+  float: right;
+  padding: 8px 0px;
+  color: #000;
+  text-decoration: none;
+  border: 1px solid #dee2e6;
+  width: 100%;
+  background-color: #ffffff;
+  margin-top: 18px;
+  border-radius: 5px;
+  align-items: center;
 
-.cartProductRemove{
-  margin:10px 5px 5px 5px  ;
+  /* padding: 10px 20px; */
+
+}
+
+
+.cartProductRemove {
+  margin: 10px 5px 5px 5px;
   padding: 5px;
   border: 1px solid #dee2e6;
   border-radius: 3px;
   float: right;
   margin-right: 20px;
 
- 
+
 }
+
 .cartProductRemove:hover {
   border: 1px solid #9081f6;
   background-color: #9081f6;
   color: #fff;
 }
-.cart-product-col-img{
+
+.cart-product-col-img {
   float: right;
   margin-right: 20px;
   width: 50%;
- 
+
 }
 
 @media screen and (max-width: 768px) {
-  .cart-product-col-img{
+  .cart-product-col-img {
     float: right;
-    margin-right:10px;
+    margin-right: 10px;
     width: 80%;
-   
+
   }
 }
 
 
 
-.cart-product-image{ width: 50px;  float: right;
+.cart-product-image {
+  width: 50px;
+  float: right;
 }
- 
-  .cart-product-titel{
+
+.cart-product-titel {
   float: right;
   font-size: 1rem;
   font-weight: 700;
   font-weight: 500;
   margin-top: 10px;
-  padding-right: 15px; 
- text-align: right;
- width:80%;
- @media screen and (max-width: 768px) {
-  font-size: .9rem;
+  padding-right: 15px;
+  text-align: right;
+  width: 80%;
 
-   
+  @media screen and (max-width: 768px) {
+    font-size: .9rem;
+
+
   }
- }
+}
 
 
 
 
 
-.cartProductQuantity{
+.cartProductQuantity {
   position: relative;
-  padding:0px;
+  padding: 0px;
   border-radius: 3px;
   float: right;
-  text-align:center ;
-  width:13%;
+  text-align: center;
+  width: 13%;
   margin-top: 1px;
   padding: 5px;
 }
- 
-.Quantity-number{
-  margin-left:  0px;
+
+.Quantity-number {
+  margin-left: 0px;
   margin-top: 1px;
   margin-right: 0px;
   float: right;
   width: 100%;
   text-align: center;
- 
+
 }
 
-.Quantity-SlArrow{
+.Quantity-SlArrow {
   margin-top: 2px;
   float: right;
   width: 100%;
- }
+}
 
-.Quantity-SlArrow-Up{
-border: 1px solid #dee2e6;
-font-size: 10px;
-float: left;
-width: 45%;
-padding: 4px 1px 2px 1px ;
-@media screen and (max-width: 768px) {
-  padding: 6px 1px 2px 1px ;
+.Quantity-SlArrow-Up {
+  border: 1px solid #dee2e6;
+  font-size: 10px;
+  float: left;
+  width: 45%;
+  padding: 4px 1px 2px 1px;
+
+  @media screen and (max-width: 768px) {
+    padding: 6px 1px 2px 1px;
 
   }
 }
-.Quantity-SlArrow-Down{
+
+.Quantity-SlArrow-Down {
   font-size: 10px;
   border: 1px solid #dee2e6;
-  padding: 2px 1px 4px 1px ;
+  padding: 2px 1px 4px 1px;
   float: left;
   width: 45%;
   margin-right: 10%;
-  @media screen and (max-width: 768px) {
-    padding: 4px 1px 6px 1px ;
 
-    }
+  @media screen and (max-width: 768px) {
+    padding: 4px 1px 6px 1px;
+
+  }
 }
-.Quantity-SlArrow-Up:hover{ background-color:  #000; color: #fff;}
-.Quantity-SlArrow-Down:hover{ background-color:  #000; color: #fff;}
- 
- 
+
+.Quantity-SlArrow-Up:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.Quantity-SlArrow-Down:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+
 
 @media screen and (max-width: 768px) {
-  .cartProductQuantity{
+  .cartProductQuantity {
     position: relative;
-    padding:0px;
+    padding: 0px;
     border-radius: 3px;
     float: right;
-    text-align:center ;
-    width:40%;
+    text-align: center;
+    width: 40%;
     margin-top: 1px;
-  padding: 5px;
+    padding: 5px;
   }
 }
 
 
-.Quantity{
-  text-align:center ;
+.Quantity {
+  text-align: center;
   width: 100%;
 }
 
- .cart-product-price{
+.cart-product-price {
   float: right;
   text-align: center;
   width: 17%;
   margin-top: 7px;
- 
-  }
-  @media screen and (max-width: 768px) {
-    .cart-product-price{
-      float: right;
-      text-align: center;
-      width:45%;
-      margin-top: 7px;
-     
-      }
-  }
 
- 
-.price{
+}
+
+@media screen and (max-width: 768px) {
+  .cart-product-price {
+    float: right;
+    text-align: center;
+    width: 45%;
+    margin-top: 7px;
+
+  }
+}
+
+
+.price {
   width: 100%;
   float: right;
   font-size: 1rem !important;
   color: #495057;
   font-weight: 700;
- 
-}
-.before-price{
-  width: 100%;
-    float: right;
-    font-size: .875em;
-    color: #495057;
-    text-decoration: line-through;
-  
-  } 
 
- /*  */
- .section-cart-totals{
+}
+
+.before-price {
+  width: 100%;
+  float: right;
+  font-size: .875em;
+  color: #495057;
+  text-decoration: line-through;
+
+}
+
+/*  */
+.section-cart-totals {
   border-radius: 8px;
   width: 100%;
   margin: auto;
   border: 1px solid #dee2e6;
   padding-bottom: 20px;
 
- }
+}
 
 
- .text-body {
-  padding-top:10px; 
+.text-body {
+  padding-top: 10px;
   text-align: center;
   padding-right: 1rem !important;
   font-weight: 700;
@@ -270,9 +290,9 @@ padding: 4px 1px 2px 1px ;
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
- 
+
 }
- 
+
 
 
 
@@ -284,7 +304,7 @@ padding: 4px 1px 2px 1px ;
   display: block;
 
 }
- 
+
 .list-group-item-li {
 
   display: flex;
@@ -292,9 +312,9 @@ padding: 4px 1px 2px 1px ;
   align-items: center;
   border: none;
   width: 90%;
-  padding: 20px   0px;
+  padding: 20px 0px;
   border-top: 1px solid #dee2e6;
-  margin-left:5%;
+  margin-left: 5%;
 
 }
 
@@ -304,22 +324,23 @@ padding: 4px 1px 2px 1px ;
   display: block;
 
 }
- 
+
 .text-primary {
-  color:#9081f6;
+  color: #9081f6;
 }
 
 .fw-bold {
   font-weight: bold;
 }
 
- 
+
 .section-card {
   /* border: 1px solid #ced4da;   */
-  border-radius: 8px; /* Rounded corners */
+  border-radius: 8px;
+  /* Rounded corners */
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);   */
   padding: 20px;
-  width:95%;
+  width: 95%;
   margin: auto;
   border-top: 1px solid #dee2e6;
 
@@ -333,25 +354,35 @@ padding: 4px 1px 2px 1px ;
 
 /* Styles for the input */
 .coupon-input-group {
-  flex: 1; /* Take remaining space */
-  border: none; /* Remove border */
-  border-radius: 0px 4px 4px 0px ; /* Rounded corners */
-  padding: 10px; /* Add padding */
-  margin-left: 0px; /* Add some space between input and button */
+  flex: 1;
+  /* Take remaining space */
+  border: none;
+  /* Remove border */
+  border-radius: 0px 4px 4px 0px;
+  /* Rounded corners */
+  padding: 10px;
+  /* Add padding */
+  margin-left: 0px;
+  /* Add some space between input and button */
   border: 1px solid #dee2e6;
   text-align: center;
- 
+
 }
 
 /* Styles for the button */
 .coupon-btn {
   float: right;
   background-color: #9081f6;
-  color: #fff; /* White text */
-  border: none; /* Remove border */
-  border-radius: 4px 0px 0px 4px ; /* Rounded corners */
-  padding: 10px 20px; /* Add padding */
-  cursor: pointer; /* Add pointer cursor */
+  color: #fff;
+  /* White text */
+  border: none;
+  /* Remove border */
+  border-radius: 4px 0px 0px 4px;
+  /* Rounded corners */
+  padding: 10px 20px;
+  /* Add padding */
+  cursor: pointer;
+  /* Add pointer cursor */
 }
 
 /* Hover effect for the button */
@@ -361,78 +392,119 @@ padding: 4px 1px 2px 1px ;
 
 /* Disabled state for the button */
 .btn:disabled {
-  background-color: #6c757d; /* Gray background for disabled state */
-  cursor: not-allowed; /* Change cursor to not-allowed */
+  background-color: #6c757d;
+  /* Gray background for disabled state */
+  cursor: not-allowed;
+  /* Change cursor to not-allowed */
 }
 
-.js-apply-coupon-icon{   float: right;margin-right: 3px;   display: block; width: 20px;}
+.js-apply-coupon-icon {
+  float: right;
+  margin-right: 3px;
+  display: block;
+  width: 20px;
+}
 
-.px-1{  float: right; margin-right: 3px; font-weight: 700;display: block;}
+.px-1 {
+  float: right;
+  margin-right: 3px;
+  font-weight: 700;
+  display: block;
+}
 
 @media screen and (max-width: 768px) {
- 
-  .js-apply-coupon-icon{ float: right;   display: block; width:15px;}
 
-  .px-1{  float: right;   }
+  .js-apply-coupon-icon {
+    float: right;
+    display: block;
+    width: 15px;
+  }
+
+  .px-1 {
+    float: right;
+  }
 }
 
 /* Styles for the button container */
 .grid {
   display: grid;
-  gap: 1rem; /* Adjust the gap between buttons */
-  margin-top: 1.5rem; /* Adjust the top margin */
+  gap: 1rem;
+  /* Adjust the gap between buttons */
+  margin-top: 1.5rem;
+  /* Adjust the top margin */
 }
-.grid-a{
 
-  text-decoration: none; /* Remove default underline */
-margin-top:1px;
+.grid-a {
+
+  text-decoration: none;
+  /* Remove default underline */
+  margin-top: 1px;
 
 }
+
 /* Styles for the button */
 .Btn {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem  ; /* Adjust padding */
+  padding: 0.75rem;
+  /* Adjust padding */
   border: none;
-  border-radius: 0.5rem; /* Adjust border radius */
+  border-radius: 0.5rem;
+  /* Adjust border radius */
   background-color: #9081f6;
-  color: #fff; /* Button text color */
-  text-decoration: none; /* Remove default underline */
-  transition: background-color 0.3s ease; /* Smooth transition on hover */
-  width:83%;
- margin: auto;
+  color: #fff;
+  /* Button text color */
+  text-decoration: none;
+  /* Remove default underline */
+  transition: background-color 0.3s ease;
+  /* Smooth transition on hover */
+  width: 83%;
+  margin: auto;
 }
-.Btn-b{
+
+.Btn-b {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.55rem  ; /* Adjust padding */
+  padding: 0.55rem;
+  /* Adjust padding */
   border: none;
-  border-radius: 0.5rem; /* Adjust border radius */
+  border-radius: 0.5rem;
+  /* Adjust border radius */
   background-color: #9081f6;
-  color: #fff; /* Button text color */
-  text-decoration: none; /* Remove default underline */
-  transition: background-color 0.5s ease; /* Smooth transition on hover */
-  width:83%;
+  color: #fff;
+  /* Button text color */
+  text-decoration: none;
+  /* Remove default underline */
+  transition: background-color 0.5s ease;
+  /* Smooth transition on hover */
+  width: 83%;
   margin: auto;
 
 }
- 
+
 .Btn-b:hover {
-  background-color: #5747cd; /* Darker shade of purple on hover */
-  color: #fff; /* Change text color on hover */
-  text-decoration: none; /* Remove underline on hover */
- 
+  background-color: #5747cd;
+  /* Darker shade of purple on hover */
+  color: #fff;
+  /* Change text color on hover */
+  text-decoration: none;
+  /* Remove underline on hover */
+
 }
- 
- .Btn:hover {
-  background-color: #5747cd; /* Darker shade of purple on hover */
-  color: #fff; /* Change text color on hover */
-  text-decoration: none; /* Remove underline on hover */
- 
+
+.Btn:hover {
+  background-color: #5747cd;
+  /* Darker shade of purple on hover */
+  color: #fff;
+  /* Change text color on hover */
+  text-decoration: none;
+  /* Remove underline on hover */
+
 }
-.successMessage{
+
+.successMessage {
   margin-top: 15px;
   float: left;
   color: #fff;
@@ -442,7 +514,7 @@ margin-top:1px;
   background-color: #38c883;
 }
 
-.errorMessage{
+.errorMessage {
 
   margin-top: 15px;
   float: left;

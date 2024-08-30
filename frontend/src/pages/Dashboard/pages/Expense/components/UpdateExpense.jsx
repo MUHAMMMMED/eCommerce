@@ -7,8 +7,8 @@ import Config from '../../../../../components/config';
 export default function UpdateExpense({ item, fetchExpense }) {
   const [showModalUpdate, setShowModalUpdate] = useState(false);
   const [formData, setFormData] = useState({
-    description:item.description|| '',
-    amount:item.amount|| 0
+    description: item.description || '',
+    amount: item.amount || 0
   });
 
   const handleChange = (e) => {

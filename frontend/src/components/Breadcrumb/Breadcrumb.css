@@ -7,7 +7,8 @@ ul.breadcrumb {
   text-align: right;
   padding: 10px 16px;
   font-weight: 600;
- }
+}
+
 ul.breadcrumb li {
   padding-right: 10px;
   display: inline;
@@ -15,6 +16,7 @@ ul.breadcrumb li {
   float: right;
 
 }
+
 ul.breadcrumb li+li:before {
   padding: 0px;
   color: black;
@@ -23,6 +25,7 @@ ul.breadcrumb li+li:before {
 
 
 }
+
 ul.breadcrumb li a {
   color: #000000;
   text-decoration: none;
@@ -30,6 +33,7 @@ ul.breadcrumb li a {
 
 
 }
+
 ul.breadcrumb li a:hover {
   color: #000000;
   text-decoration: underline;
@@ -44,21 +48,22 @@ ul.breadcrumb li a:hover {
     text-align: right;
     padding: 10px 16px;
     font-weight: 600;
-   }
+  }
+
   ul.breadcrumb li {
     padding-right: 7px;
     display: inline;
     font-size: 13px;
     float: right;
- 
+
   }
- 
+
   ul.breadcrumb li a {
     padding-right: 5px;
 
 
   }
- 
+
 
 
 }

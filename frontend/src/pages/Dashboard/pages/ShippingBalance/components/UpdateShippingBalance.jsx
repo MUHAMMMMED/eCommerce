@@ -11,7 +11,7 @@ export default function UpdateShippingBalance({ item, fetchBalance }) {
   const [formData, setFormData] = useState({
     shipping: item.shipping.id,
     initial_balance: item.initial_balance,
-    added_amount:item.added_amount,
+    added_amount: item.added_amount,
     final_balance: item.final_balance,
     date: item.date,
   });
@@ -84,7 +84,7 @@ export default function UpdateShippingBalance({ item, fetchBalance }) {
             <div className="FOrm-container_dash">
               <div className="form-container-half" style={{ width: '70%' }}>
                 <label htmlFor="category-select" style={{ paddingBottom: '15px', float: 'right' }}>شركات الشحن</label>
-                <select id="category-select" style={{ border: '1px solid #9081f6',marginTop:'3px' }} onChange={handleCompanyChange} value={formData.shipping}>
+                <select id="category-select" style={{ border: '1px solid #9081f6', marginTop: '3px' }} onChange={handleCompanyChange} value={formData.shipping}>
                   <option value="">اختر شركات الشحن</option>
                   {companyData.map((company) => (
                     <option key={company.id} value={company.id}>{company.name}</option>
@@ -105,10 +105,10 @@ export default function UpdateShippingBalance({ item, fetchBalance }) {
               </div>
 
               <div className="form-container-half">
-              <label className='label_dash' htmlFor="added_amount">رصيد مضاف</label>
-              <input type="number" className='text_dash' name="added_amount" value={formData.added_amount} onChange={handleChange} />
-            </div>
-       
+                <label className='label_dash' htmlFor="added_amount">رصيد مضاف</label>
+                <input type="number" className='text_dash' name="added_amount" value={formData.added_amount} onChange={handleChange} />
+              </div>
+
 
 
               <div className="form-container-half">

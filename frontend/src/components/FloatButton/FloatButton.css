@@ -1,103 +1,103 @@
-
 .checkout-button {
     background-color: #fff;
     color: #ccc;
     border: none;
-    padding:  13px   13px 10px 13px   ;
+    padding: 13px 13px 10px 13px;
     font-size: 20px;
     cursor: pointer;
     border-radius: 50px;
     /* padding: 10px; */
     border: 1px solid #ccc;
-   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-   position: fixed;
-   bottom:95px;
-   right: 30px;
-   z-index: 100;
-   @media screen and (max-width: 785px) {
-    right: 20px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    position: fixed;
+    bottom: 95px;
+    right: 30px;
+    z-index: 100;
 
-   }
-   }
-   
-   .checkout-button i {
+    @media screen and (max-width: 785px) {
+        right: 20px;
+
+    }
+}
+
+.checkout-button i {
     margin-right: 5px;
-   }
-   
-   
-   
-   .cart-count {
-     top: 12px;
-     left: 8px;
-     background-color: red;
-     color: white;
-     border-radius: 50%;
-     padding: 3px 6px;
-     font-size: 13px;
-     z-index: 200;
-     display: block;
-    
-   }
-   
-   
-   
-   
-   
-   .float-button {
-          text-decoration: none;
-          position: fixed;
-          padding: 10px;
-          padding-right: 15px;
-          bottom: 30px;
-          right: 30px;
-          color: #fff;
-          background-color:#25D366;
-          border-radius: 25px 30px 5px 25px;
-          z-index: 200;
-          font-family: Arial;
-          font-size: 18px;
-          animation: whatsapp-animation 0.5s ease-in-out;
-          box-shadow: 1px 2px 5px 2px rgba(30,30,30,0.3);
-          transition:all 0.3s ease-out;
-          direction: rtl;
-      }
-   
-      .float-button:hover {
-           background-color: #128C7E;
-            color: #fff;
-      }
-   
-      .fa-whatsapp {
-        float: right;
-          font-size: 20px !important;
-          padding-right: 5px;
-          padding-left: 5px;
-      }
-   
-      @keyframes whatsapp-animation {
-          from {
-              opacity: 0%;
-          }
-   
-          to {
-              opacity: 100%
-          }
-      }
-   
-      @media screen and (max-width: 545px) {
-          span {
-              display: none;
-          }
-   
-          .float-button {
-              bottom: 20px;
-              right: 15px;
-              width: 55px;
-              border-radius: 20px 20px 5px 20px;
-          }
-   
-          .fa-whatsapp {
-              font-size: 22px !important;
-              padding: 4px;
-          }
-      }
+}
+
+
+
+.cart-count {
+    top: 12px;
+    left: 8px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 6px;
+    font-size: 13px;
+    z-index: 200;
+    display: block;
+
+}
+
+
+
+
+
+.float-button {
+    text-decoration: none;
+    position: fixed;
+    padding: 10px;
+    padding-right: 15px;
+    bottom: 30px;
+    right: 30px;
+    color: #fff;
+    background-color: #25D366;
+    border-radius: 25px 30px 5px 25px;
+    z-index: 200;
+    font-family: Arial;
+    font-size: 18px;
+    animation: whatsapp-animation 0.5s ease-in-out;
+    box-shadow: 1px 2px 5px 2px rgba(30, 30, 30, 0.3);
+    transition: all 0.3s ease-out;
+    direction: rtl;
+}
+
+.float-button:hover {
+    background-color: #128C7E;
+    color: #fff;
+}
+
+.fa-whatsapp {
+    float: right;
+    font-size: 20px !important;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+@keyframes whatsapp-animation {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%
+    }
+}
+
+@media screen and (max-width: 545px) {
+    span {
+        display: none;
+    }
+
+    .float-button {
+        bottom: 20px;
+        right: 15px;
+        width: 55px;
+        border-radius: 20px 20px 5px 20px;
+    }
+
+    .fa-whatsapp {
+        font-size: 22px !important;
+        padding: 4px;
+    }
+}

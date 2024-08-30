@@ -1,14 +1,32 @@
-.Filter{   float: right;  width: 100%;}
- 
-.product-filter-input {  float: right;  width: 70%; margin-right: 15%;margin-bottom: 50px;
+.Filter {
+  float: right;
+  width: 100%;
+}
 
-    @media screen and (max-width: 785px) {
-    width: 90%; margin-right: 5%;  } }
-     
-  .product-filter .div_input{
-    width: 50%;   margin: auto;
-    @media screen and (max-width: 785px) {
-    width: 100%;}}
-  
-.s-search-input {    width: 100%;text-align: center;  padding: 5px;  font-size: 1rem;}
-  
+.product-filter-input {
+  float: right;
+  width: 70%;
+  margin-right: 15%;
+  margin-bottom: 50px;
+
+  @media screen and (max-width: 785px) {
+    width: 90%;
+    margin-right: 5%;
+  }
+}
+
+.product-filter .div_input {
+  width: 50%;
+  margin: auto;
+
+  @media screen and (max-width: 785px) {
+    width: 100%;
+  }
+}
+
+.s-search-input {
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  font-size: 1rem;
+}

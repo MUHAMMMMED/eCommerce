@@ -1,57 +1,109 @@
-.container_order_details{
-margin-top: 20px;
-float: right;
-width: 100%;
+.container_order_details {
+    margin-top: 20px;
+    float: right;
+    width: 100%;
 }
-.order_details_head{
+
+.order_details_head {
     float: right;
     width: 100%;
     height: auto;
     background-color: #fff;
 }
-.details_head_ArrowBack{
+
+.details_head_ArrowBack {
     float: left;
     border: 2px solid #9081f6;
-    color:  #9081f6;
-    padding: 5px 0px 0px 0px ;
-    margin-left:20px;
+    color: #9081f6;
+    padding: 5px 0px 0px 0px;
+    margin-left: 20px;
     font-size: 25px;
     border-radius: 5px;
     font-weight: 700;
 }
-.details_head_ArrowBack:hover{
-    color:  #ffffff;
+
+.details_head_ArrowBack:hover {
+    color: #ffffff;
     background-color: #9081f6;
 }
-.details_head_h4{
- float: right;
- text-align: right;
- width: 100%;
- font-size: 20px;
- padding-right: 30px;
-margin-bottom: 20px;
+
+.details_head_h4 {
+    float: right;
+    text-align: right;
+    width: 100%;
+    font-size: 20px;
+    padding-right: 30px;
+    margin-bottom: 20px;
 }
 
 
 
-.details_select{ margin-top: 10px;float: right;  width: 80%; margin-right:10% ;}
-.details_orders_select { float: right; width:  50%;   }
-.details_orders_select_label{float: right; width:  30%;font-size: 18px;margin-top: 8px; margin-left:1%;}
-.details_orders_select_option{float: right; width:  68%; }
-    
+.details_select {
+    margin-top: 10px;
+    float: right;
+    width: 80%;
+    margin-right: 10%;
+}
+
+.details_orders_select {
+    float: right;
+    width: 50%;
+}
+
+.details_orders_select_label {
+    float: right;
+    width: 30%;
+    font-size: 18px;
+    margin-top: 8px;
+    margin-left: 1%;
+}
+
+.details_orders_select_option {
+    float: right;
+    width: 68%;
+}
+
 
 
 
 @media screen and (max-width: 768px) {
- 
-    .details_select{ margin-top: 10px; float: right; width: 100%; margin-right:0% ;}
-    .details_orders_select { float: right; width:  90%; margin-right: 5%;}
-    .details_orders_select_label{float: right; width:25%;font-size: 14px;margin-top: 8px; margin-left:1%; }
-    .details_orders_select_option{float: right; width:  68%; }  
-    .details_head_ArrowBack{  padding: 5px 0px 0px 0px ;  font-size: 20px;   }  
-   .details_head_h4{  font-size:18px;    }
-      
-      
-       
-   
- }
+
+    .details_select {
+        margin-top: 10px;
+        float: right;
+        width: 100%;
+        margin-right: 0%;
+    }
+
+    .details_orders_select {
+        float: right;
+        width: 90%;
+        margin-right: 5%;
+    }
+
+    .details_orders_select_label {
+        float: right;
+        width: 25%;
+        font-size: 14px;
+        margin-top: 8px;
+        margin-left: 1%;
+    }
+
+    .details_orders_select_option {
+        float: right;
+        width: 68%;
+    }
+
+    .details_head_ArrowBack {
+        padding: 5px 0px 0px 0px;
+        font-size: 20px;
+    }
+
+    .details_head_h4 {
+        font-size: 18px;
+    }
+
+
+
+
+}

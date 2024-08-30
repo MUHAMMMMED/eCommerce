@@ -1,7 +1,7 @@
- 
+
 import React from 'react';
 
-export default function InvoiceDetails({ cart ,order }) {
+export default function InvoiceDetails({ cart, order }) {
   // Extract total, tax rate, and shipping from cart_data, ensuring they are numbers
   const total = Number(cart?.cart_data?.total) || 0;
   const taxRate = Number(order?.tax) || 0;
@@ -13,7 +13,7 @@ export default function InvoiceDetails({ cart ,order }) {
 
   return (
     <>
-       {cart?.order && (
+      {cart?.order && (
         <>
           <div className="Pricing-sub-title">تفاصيل الفاتورة</div>
           <div className="Pricing-Summary">
@@ -60,12 +60,12 @@ export default function InvoiceDetails({ cart ,order }) {
                 <span className="pricing-amount">{shipping.toFixed(2)} <spen className='money_code'> ريال</spen></span>
               </div>
             </div>
-            <div className="totals-item-total" style={{display:'block'}}>
-              <div className="col"style={{display:'block'}}>
-                <span className="total-title"style={{display:'block'}}>المجموع</span>
+            <div className="totals-item-total" style={{ display: 'block' }}>
+              <div className="col" style={{ display: 'block' }}>
+                <span className="total-title" style={{ display: 'block' }}>المجموع</span>
               </div>
-              <div className="text-right"style={{display:'block'}}>
-                <span className="total-amount"style={{display:'block'}}>{finalTotal.toFixed(2)} <spen className='money_code'> ريال</spen></span>
+              <div className="text-right" style={{ display: 'block' }}>
+                <span className="total-amount" style={{ display: 'block' }}>{finalTotal.toFixed(2)} <spen className='money_code'> ريال</spen></span>
               </div>
             </div>
           </div>

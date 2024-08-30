@@ -18,12 +18,11 @@ export default function Cancel() {
   return (
     <div className='SuccessMessage'>
       <h2 className='SuccessMessage-text'>
-   .   حدث خطأ في عملية الدفع  يرجى المحاولة ببطاقة أخرى 
-     <span className='SuccessMessage-icon'><MdCancel /> </span>
-       </h2>    </div>
-      
+        .   حدث خطأ في عملية الدفع  يرجى المحاولة ببطاقة أخرى
+        <span className='SuccessMessage-icon'><MdCancel /> </span>
+      </h2>    </div>
+
   )
 }
 
 
- 

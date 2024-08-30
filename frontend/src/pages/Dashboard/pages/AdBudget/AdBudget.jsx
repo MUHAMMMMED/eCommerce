@@ -12,12 +12,12 @@ import UpdateAdBudget from './components/UpdateAdBudget';
 const AdBudget = () => {
     const navigate = useNavigate();
     useEffect(() => {
-      const userExists = localStorage.getItem('user');
-      if (!userExists) {
-        navigate('/login');
-      }
+        const userExists = localStorage.getItem('user');
+        if (!userExists) {
+            navigate('/login');
+        }
     }, [navigate]); // Ensure navigate is added as a dependency for useEffect
-  
+
 
 
 
@@ -28,10 +28,10 @@ const AdBudget = () => {
     const [createdAtEnd, setCreatedAtEnd] = useState('');
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-   
+
     useEffect(() => {
         fetchBalance();
-     }, []);
+    }, []);
 
     const fetchBalance = async (params = {}) => {
         try {
@@ -39,30 +39,30 @@ const AdBudget = () => {
             setData(response.data.ad_budget);
             setCount(response.data.ad_budget_count);
             setTotal_amount(response.data.total_amount);
- 
+
         } catch (error) {
             setError(error.response?.data?.message || " الصفحة غير موجوده");
-          } finally {
+        } finally {
             setLoading(false);
-          }
-        };
-      
+        }
+    };
+
     const handleSearch = () => {
         const params = {};
         if (createdAtStart) params.createdAtStart = createdAtStart;
         if (createdAtEnd) params.createdAtEnd = createdAtEnd;
- 
+
         fetchBalance(params);
     };
 
     if (loading) {
         return <Loading />;
-      }
-      
-      if (error) {
+    }
+
+    if (error) {
         return <ErrorPage head="Error Occurred" error={error} />;
-      }
-      
+    }
+
     return (
         <div className='container_order_details'>
             <div className='details_head'>
@@ -78,24 +78,24 @@ const AdBudget = () => {
             <div className="customer-list">
                 <div className="filters"  >
 
-                     <input
-                        style={{  height:'44px' }}
+                    <input
+                        style={{ height: '44px' }}
                         type="date"
                         placeholder="Created At Start"
                         value={createdAtStart}
                         onChange={(e) => setCreatedAtStart(e.target.value)}
-                    /> 
- 
+                    />
+
                     <input
-                     style={{  height:'44px' }}
+                        style={{ height: '44px' }}
                         type="date"
                         placeholder="Created At End"
                         value={createdAtEnd}
                         onChange={(e) => setCreatedAtEnd(e.target.value)}
-                    /> 
-  
-                  
-                    <button  style={{  height:'44px' }} onClick={handleSearch}>بحث</button> 
+                    />
+
+
+                    <button style={{ height: '44px' }} onClick={handleSearch}>بحث</button>
                 </div>
                 <div className="filters">
                     <div style={{ width: '49%', float: 'left', marginRight: '1%' }}>
@@ -108,15 +108,15 @@ const AdBudget = () => {
                     </div>
                 </div>
                 <table> <thead>
-                   <tr>
-                            <th>تاريخ</th>
-                            <th>اسم المنصه  </th>
-                            <th>رصيد أول المدة</th>
-                            <th>رصيد مضاف</th>
-                            <th>رصيد آخر المدة</th>
-                             <th></th>
-                        </tr>
-                    </thead>
+                    <tr>
+                        <th>تاريخ</th>
+                        <th>اسم المنصه  </th>
+                        <th>رصيد أول المدة</th>
+                        <th>رصيد مضاف</th>
+                        <th>رصيد آخر المدة</th>
+                        <th></th>
+                    </tr>
+                </thead>
                     <tbody>
                         {data.map(item => (
                             <tr key={item.id}>
@@ -128,8 +128,8 @@ const AdBudget = () => {
 
 
                                 <td style={{ width: '180px' }}>
-                                {item.id&&
-                                    <UpdateAdBudget item={item} fetchBalance={fetchBalance} />}
+                                    {item.id &&
+                                        <UpdateAdBudget item={item} fetchBalance={fetchBalance} />}
                                 </td>
                             </tr>
                         ))}

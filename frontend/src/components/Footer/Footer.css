@@ -1,81 +1,84 @@
 /* Footer.css */
 
 .footer {
-    float: right;
-    background-color:#fafafa;
-    border: 1px solid #c4c6f7;
-    color: 0000; 
-    padding:  0px 0;
-    width:100%; 
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
-    z-index: 1200;
-    margin-top: 50px;
-    @media (max-width: 768px) {
- 
-      }
- }
- .footer-h2{
-color: #000!important;
-font-size: 15px;
+  float: right;
+  background-color: #fafafa;
+  border: 1px solid #c4c6f7;
+  color: 0000;
+  padding: 0px 0;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  z-index: 1200;
+  margin-top: 50px;
 
- }
-  .contaIner {
-    width:100%; 
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  
-  .footer-section {
-    flex: 1;
-    margin: 20px;
-    margin-left: 0%;
+  @media (max-width: 768px) {}
+}
 
-    @media (max-width: 768px) {
-    flex:none;
+.footer-h2 {
+  color: #000 !important;
+  font-size: 15px;
+
+}
+
+.contaIner {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 20px;
+  margin-left: 0%;
+
+  @media (max-width: 768px) {
+    flex: none;
     margin: 0px;
     margin-top: 10px;
     /* margin-bottom:10px; */
     float: left;
     width: 90%;
     margin-left: 5%;
-    } }
-  
- 
-  
-  ul {
-    list-style: none;
-    padding: 0;
   }
-  
-  ul li {
-    margin-bottom: 10px;
-  }
-  
-  .social-icons a {
-    color: #9081f6!important;
-    font-size: 20px;
-    margin-right: 10px;
-    margin-top: 10px;
-  }
-  
-  .social-icons a:hover {
-    color: #000!important;
-   }
-  .copywright-section {
-    background-color: #9081f6!important;
-    color:  #fff; 
-    padding: 10px 0;
-    text-align: center;
-  }
-  
-  .copywright-section p {
-    color:  #fff; 
-    font-weight: 700;
-    margin: 0;
-  }
+}
+
+
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  color: #9081f6 !important;
+  font-size: 20px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.social-icons a:hover {
+  color: #000 !important;
+}
+
+.copywright-section {
+  background-color: #9081f6 !important;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.copywright-section p {
+  color: #fff;
+  font-weight: 700;
+  margin: 0;
+}

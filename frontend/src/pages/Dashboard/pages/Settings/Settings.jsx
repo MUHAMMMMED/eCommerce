@@ -35,7 +35,7 @@ export default function Settings() {
           <div className='details_head_ArrowBack'><IoIosArrowBack /></div>
         </Link>
       </div>
-      
+
       <div className='details_head'>
         <div className='details_head_h4'> </div>
       </div>
@@ -61,7 +61,7 @@ export default function Settings() {
       <SettingsCart name={' مجموع منتجات '} icon={<HiOutlineRectangleGroup />} link={'/group'} />
       <SettingsCart name={' معلومات الموقع'} icon={<TbInfoSquareRounded />} link={'/info_settings'} />
       <SettingsCart name={'ملاحظات الطلبات'} icon={<MdOutlineEditNote />} link={'/note'} />
- 
+
     </div>
   );
 } 

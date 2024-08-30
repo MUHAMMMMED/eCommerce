@@ -6,15 +6,13 @@ import Config from '../../../../../components/config';
 
 export default function UpdateAdBudget({ item, fetchBalance }) {
   const [showModalUpdate, setShowModalUpdate] = useState(false);
- 
+
   const [formData, setFormData] = useState({
     name: item.name,
     month: item.month,
-    initial_balance:item.initial_balance,
+    initial_balance: item.initial_balance,
     added_amount: item.added_amount,
     final_balance: item.final_balance,
-
-
 
   });
 
@@ -48,7 +46,7 @@ export default function UpdateAdBudget({ item, fetchBalance }) {
     setShowModalUpdate(false);
   };
 
- 
+
 
   return (
     <>
@@ -62,38 +60,38 @@ export default function UpdateAdBudget({ item, fetchBalance }) {
 
       {showModalUpdate && (
         <div className="modal_dash show_dash">
-          <form className="modal-content_dash animate" onSubmit={handleSubmit} encType="multipart/form-data" style={{color:'#000'}}>
+          <form className="modal-content_dash animate" onSubmit={handleSubmit} encType="multipart/form-data" style={{ color: '#000' }}>
             <div className='form_title'>تحديث البيانات</div>
- 
+
 
             <div className="FOrm-container_dash">
-            <div className="form-container-half"  >
-              <label className='label_dash' htmlFor="month">التاريخ</label>
-              <input type="date" className='text_dash' name="month" value={formData.month} onChange={handleChange} />
-            </div>
-            <div className="form-container-half">
-              <label className='label_dash' htmlFor="name"> الاسم</label>
-              <input type="name" className='text_dash' name="name" value={formData.name} onChange={handleChange} />
-            </div>
+              <div className="form-container-half"  >
+                <label className='label_dash' htmlFor="month">التاريخ</label>
+                <input type="date" className='text_dash' name="month" value={formData.month} onChange={handleChange} />
+              </div>
+              <div className="form-container-half">
+                <label className='label_dash' htmlFor="name"> الاسم</label>
+                <input type="name" className='text_dash' name="name" value={formData.name} onChange={handleChange} />
+              </div>
 
-       
-          </div>
-          <div className="FOrm-container_dash">
 
-          <div className="form-container-half">
-              <label className='label_dash' htmlFor="initial_balance">رصيد اول المده</label>
-              <input type="number" className='text_dash' name="initial_balance" value={formData.initial_balance} onChange={handleChange} />
             </div>
+            <div className="FOrm-container_dash">
 
-          <div className="form-container-half">
-              <label className='label_dash' htmlFor="added_amount">رصيد مضاف</label>
-              <input type="number" className='text_dash' name="added_amount" value={formData.added_amount} onChange={handleChange} />
-            </div>
+              <div className="form-container-half">
+                <label className='label_dash' htmlFor="initial_balance">رصيد اول المده</label>
+                <input type="number" className='text_dash' name="initial_balance" value={formData.initial_balance} onChange={handleChange} />
+              </div>
 
-            <div className="form-container-half">
-              <label className='label_dash' htmlFor="amount">رصيد اخر المده</label>
-              <input type="number" className='text_dash' name="final_balance" value={formData.final_balance} onChange={handleChange} />
-            </div>
+              <div className="form-container-half">
+                <label className='label_dash' htmlFor="added_amount">رصيد مضاف</label>
+                <input type="number" className='text_dash' name="added_amount" value={formData.added_amount} onChange={handleChange} />
+              </div>
+
+              <div className="form-container-half">
+                <label className='label_dash' htmlFor="amount">رصيد اخر المده</label>
+                <input type="number" className='text_dash' name="final_balance" value={formData.final_balance} onChange={handleChange} />
+              </div>
             </div>
 
 

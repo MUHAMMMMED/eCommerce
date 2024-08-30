@@ -4,10 +4,10 @@ import OrderFilter from './components/OrderFilter/OrderFilter';
 
 export default function Orders() {
   return (
- <div className='contner_orders'>
-        
-<OrderFilter/>
- 
+    <div className='contner_orders'>
+
+      <OrderFilter />
+
     </div>
   )
 }

@@ -1,4 +1,4 @@
- 
+
 
 import React, { useState } from 'react';
 import AxiosInstance from '../../../../../../../components/Authentication/AxiosInstance';
@@ -62,19 +62,19 @@ export default function CreateInfo({ ProductId, fetchProduct }) {
       </button>
 
       <div className={`modal_dash ${showModalCreate ? 'show_dash' : ''}`}>
-        <div className="modal-content_dash animate"  encType="multipart/form-data">
+        <div className="modal-content_dash animate" encType="multipart/form-data">
           <div className='form_title'>اضافه جديد</div>
-          <input type="text" className='text_dash'   style={{width:'100%'}} name="name" value={formData.name} onChange={handleChange} placeholder="العنوان" />
-          <input type="text" className='text_dash' style={{width:'100%'}}name="description" value={formData.description} onChange={handleChange} placeholder="التفاصيل" />
-          
-            <div className="form-container-half">
-              <input type="file" className='file_dash' name="image" onChange={handleChange} />
-            </div>
-         
-          <br/><br/>
+          <input type="text" className='text_dash' style={{ width: '100%' }} name="name" value={formData.name} onChange={handleChange} placeholder="العنوان" />
+          <input type="text" className='text_dash' style={{ width: '100%' }} name="description" value={formData.description} onChange={handleChange} placeholder="التفاصيل" />
+
+          <div className="form-container-half">
+            <input type="file" className='file_dash' name="image" onChange={handleChange} />
+          </div>
+
+          <br /><br />
           <div className="FOrm-container_dash">
             <div style={{ width: '78%' }}>
-              <button className="button-form"   onClick={handleSubmitInfo}>حفظ</button>
+              <button className="button-form" onClick={handleSubmitInfo}>حفظ</button>
             </div>
             <div style={{ width: '20%' }}>
               <button className="cancel-button" onClick={handleCloseModal}>الغاء</button>

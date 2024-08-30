@@ -62,16 +62,16 @@ export default function MobileList({ order }) {
       <div className='list_mobile'>
         <div className='mobile_text1' style={{ color: '#9081f6' }}>
 
-        {order.new ?   <span style={{
+          {order.new ? <span style={{
             float: 'right',
             padding: '3px 15px',
             background: '#fff',
             border: '1px solid #9081f6',
             borderRadius: '3px',
             marginTop: '3px'
-          }}>جديد</span>:<></>}
+          }}>جديد</span> : <></>}
 
-       
+
         </div>
         <div className='mobile_text2'>
           <Link to={`/order/${order.id}`}>

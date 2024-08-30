@@ -10,7 +10,7 @@ export default function NoteCreate({ item, fetchCart }) {
     const handleSave = () => {
         axios.post(`${Config.baseURL}/api/cart/note/create/${item.id}/`, { note })
             .then(response => {
-                fetchCart(); 
+                fetchCart();
                 setNote('');
                 // toast.success('Note saved successfully!'); 
 
@@ -36,7 +36,7 @@ export default function NoteCreate({ item, fetchCart }) {
                 />
             </div>
             <div className='note-card-but-Save-Create'>
-            <button className='card-but-Save-Create' onClick={handleSave}>حفظ</button>
+                <button className='card-but-Save-Create' onClick={handleSave}>حفظ</button>
             </div>
             <ToastContainer />
         </div>

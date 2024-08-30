@@ -1,4 +1,4 @@
- 
+
 import React from 'react';
 import 'swiper/css';
 import 'swiper/css/autoplay'; // Import autoplay styles
@@ -6,8 +6,8 @@ import { Autoplay } from 'swiper/modules'; // Import the autoplay module
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Config from '../../../components/config';
 
-const SwiperSlide_img = ({image_product}) => {
- 
+const SwiperSlide_img = ({ image_product }) => {
+
 
   return (
     <div className='Image_Slick'>
@@ -21,10 +21,7 @@ const SwiperSlide_img = ({image_product}) => {
       >
         {image_product.map((item) => (
           <SwiperSlide key={item.id}>
-            <img className='Product_img'  src={`${Config.baseURL}${item?.image}`} alt={`Image ${item?.name }`}   /> 
- 
-
-
+            <img className='Product_img' src={`${Config.baseURL}${item?.image}`} alt={`Image ${item?.name}`} />
           </SwiperSlide>
         ))}
       </Swiper>

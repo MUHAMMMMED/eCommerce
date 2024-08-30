@@ -30,27 +30,27 @@ export default function CounterSwiper({ targetDate }) {
 
   return (
     <>
-    <div className='DealItrm-timer-row' style={{fontSize:'10px'}}>
-    <div className='DealItrm-timer-row-number'>{timeLeft.days}</div>
-    <div className='DealItrm-timer-row-text'>يوم</div>
+      <div className='DealItrm-timer-row' style={{ fontSize: '10px' }}>
+        <div className='DealItrm-timer-row-number'>{timeLeft.days}</div>
+        <div className='DealItrm-timer-row-text'>يوم</div>
       </div>
 
       <div className='DealItrm-timer-row'>
-      <div className='DealItrm-timer-row-number'>{timeLeft.hours}</div>
-      <div className='DealItrm-timer-row-text'>الساعه</div>
+        <div className='DealItrm-timer-row-number'>{timeLeft.hours}</div>
+        <div className='DealItrm-timer-row-text'>الساعه</div>
       </div>
 
       <div className='DealItrm-timer-row'>
-      <div className='DealItrm-timer-row-number'>{timeLeft.minutes}</div>
-      <div className='DealItrm-timer-row-text'>الدقيقه</div>
+        <div className='DealItrm-timer-row-number'>{timeLeft.minutes}</div>
+        <div className='DealItrm-timer-row-text'>الدقيقه</div>
       </div>
 
       <div className='DealItrm-timer-row'>
-      <div className='DealItrm-timer-row-number'>{timeLeft.seconds}</div>
-      <div className='DealItrm-timer-row-text'>ثانيه</div>
+        <div className='DealItrm-timer-row-number'>{timeLeft.seconds}</div>
+        <div className='DealItrm-timer-row-text'>ثانيه</div>
       </div>
 
- 
+
     </>
   );
 }

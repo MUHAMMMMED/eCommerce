@@ -1,4 +1,4 @@
- 
+
 
 import React, { useEffect, useState } from 'react';
 import AxiosInstance from '../../../../../../components/Authentication/AxiosInstance';
@@ -37,7 +37,7 @@ export default function CreateBestSellers({ fetchData }) {
 
   const fetchProducts = async () => {
     try {
-       const response = await AxiosInstance.get(`${Config.baseURL}/api/products/product_list_dash/`);
+      const response = await AxiosInstance.get(`${Config.baseURL}/api/products/product_list_dash/`);
 
       setProducts(response.data.products);
     } catch (error) {
@@ -55,7 +55,7 @@ export default function CreateBestSellers({ fetchData }) {
       <div className={`modal_dash ${showModalCreate ? 'show_dash' : ''}`}>
         <form className="modal-content_dash animate" onSubmit={handleSubmit} encType="multipart/form-data">
           <div className='form_title'>انشاء جديد</div>
-          
+
           <label htmlFor="product-select" style={{ paddingTop: '15px', textAlign: 'center', float: 'right', marginBottom: '5px' }}>
             اختر المنتج
           </label>
@@ -65,9 +65,9 @@ export default function CreateBestSellers({ fetchData }) {
               <option key={item.id} value={item.id}>{item.name}</option>
             ))}
           </select>
-          
+
           <div className="FOrm-container_dash" style={{ paddingTop: '20px' }}>
-          <div style={{ width: '78%' }}><button className="button-form" type="submit">حفظ</button></div>
+            <div style={{ width: '78%' }}><button className="button-form" type="submit">حفظ</button></div>
             <div style={{ width: '20%' }}><button className="cancel-button" onClick={handleCloseModal}>الغاء</button></div>
           </div>
         </form>

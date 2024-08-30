@@ -14,15 +14,15 @@ const QuestionsGeneral = () => {
     useEffect(() => {
         const userExists = localStorage.getItem('user');
         if (!userExists) {
-          navigate('/login');
+            navigate('/login');
         }
-      }, [navigate]); // Ensure navigate is added as a dependency for useEffect
-    
+    }, [navigate]); // Ensure navigate is added as a dependency for useEffect
+
     const [data, setData] = useState([]); // Initialize dealData as an empty array
     const [Count, setCount] = useState('');
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-   
+
     useEffect(() => {
         fetchData();
     }, []);
@@ -39,17 +39,17 @@ const QuestionsGeneral = () => {
             }
         } catch (error) {
             setError(error.response?.data?.message || " الصفحة غير موجوده");
-          } finally {
+        } finally {
             setLoading(false);
-          }
-        };
-        if (loading) {
-            return <Loading />;
-          }
-          
-          if (error) {
-            return <ErrorPage head="Error Occurred" error={error} />;
-          }
+        }
+    };
+    if (loading) {
+        return <Loading />;
+    }
+
+    if (error) {
+        return <ErrorPage head="Error Occurred" error={error} />;
+    }
 
     return (
         <div className='container_order_details'>
@@ -69,16 +69,16 @@ const QuestionsGeneral = () => {
                     </div>
                     <div style={{ width: '50%', float: 'right' }}>
                         <samp style={{ width: '90%', float: 'right', textAlign: 'left', fontSize: '20px', marginTop: '5px', fontWeight: '600' }}>
-                        عدد الاسئلة({Count})</samp>
-                        
-                       </div></div>
-                        <table>
-                        <thead>
+                            عدد الاسئلة({Count})</samp>
+
+                    </div></div>
+                <table>
+                    <thead>
                         <tr>
-                        <th>السؤال</th>
-                        <th>الاجابه</th>
-                        <th></th>
-                       </tr>
+                            <th>السؤال</th>
+                            <th>الاجابه</th>
+                            <th></th>
+                        </tr>
                     </thead>
                     <tbody>
                         {data.map(item => (
@@ -86,8 +86,8 @@ const QuestionsGeneral = () => {
                                 <td>{item.question}</td>
                                 <td>{item.answer}</td>
                                 <td style={{ width: '106px' }}>
-                               <UpdateQuestionsGeneral item={item} fetchData={fetchData}  /> 
-                               </td>
+                                    <UpdateQuestionsGeneral item={item} fetchData={fetchData} />
+                                </td>
                             </tr>
                         ))}
                     </tbody>

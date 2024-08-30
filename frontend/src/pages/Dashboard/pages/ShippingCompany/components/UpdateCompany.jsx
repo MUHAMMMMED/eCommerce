@@ -35,7 +35,7 @@ export default function UpdateCompany({ item, fetchCompany }) {
       data.append('shipping_price', formData.shipping_price);
       data.append('discount_price', formData.discount_price);
       data.append('work_days', formData.work_days);
-      
+
       await AxiosInstance.put(`${Config.baseURL}/api/orders/shipping_company/${item.id}/`, data, {
         headers: {
           'Content-Type': 'multipart/form-data',
@@ -74,7 +74,7 @@ export default function UpdateCompany({ item, fetchCompany }) {
       </div>
 
       <div className={`modal_dash ${showModalUpdate ? 'show_dash' : ''}`}>
-        <form className="modal-content_dash animate" onSubmit={handleSubmit} encType="multipart/form-data" style={{color:'#000'}}>
+        <form className="modal-content_dash animate" onSubmit={handleSubmit} encType="multipart/form-data" style={{ color: '#000' }}>
           <div className='form_title'>تحديث البيانات</div>
           <div className="FOrm-container_dash">
             <div className="form-container-half">

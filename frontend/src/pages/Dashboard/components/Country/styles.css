@@ -1,37 +1,35 @@
-
-
- 
 .CountryBut {
- 
-    width:100%  ;
-    float: left;
-    height: auto;
-  }
-  
 
-.CountryBut_flex{
   width: 100%;
- float: left;
- 
+  float: left;
+  height: auto;
+}
 
-  }
-  
-  .CountryBut_flex > div {
-    float: left;
-  }
-  
-  .Country_button {
-    margin-right: 10px;
-    margin-top: 10px;
-    float: left;
-    background-color: #58a58f;
-    border: 1px solid #58a58f;  
-    color: white;  
-    padding: 8px 20px;  
-    cursor: pointer;  
-   font-size: 10px;
-    border-radius: 2px;
-  }
-  .Creat_button:hover {
-    background-color: #010a01;
-  }
+
+.CountryBut_flex {
+  width: 100%;
+  float: left;
+
+
+}
+
+.CountryBut_flex>div {
+  float: left;
+}
+
+.Country_button {
+  margin-right: 10px;
+  margin-top: 10px;
+  float: left;
+  background-color: #58a58f;
+  border: 1px solid #58a58f;
+  color: white;
+  padding: 8px 20px;
+  cursor: pointer;
+  font-size: 10px;
+  border-radius: 2px;
+}
+
+.Creat_button:hover {
+  background-color: #010a01;
+}

@@ -64,4 +64,4 @@ const Filter = ({ categoryId }) => {
   );
 };
 
-export default  Filter;
+export default Filter;

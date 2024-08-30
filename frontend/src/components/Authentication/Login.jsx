@@ -4,7 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AxiosInstance from "./AxiosInstance";
 import './styles.css';
-  
+
 const Login = () => {
   const navigate = useNavigate();
   useEffect(() => {
@@ -19,7 +19,7 @@ const Login = () => {
     email: "",
     password: ""
   });
-  const [errorMessage, setErrorMessage] = useState(""); 
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleOnChange = (e) => {
     setLogindata({ ...logindata, [e.target.name]: e.target.value });
@@ -40,7 +40,7 @@ const Login = () => {
         localStorage.setItem('user', JSON.stringify(user));
         toast.success('Login successful');
         await navigate('/dashboard');
- 
+
       } else {
         toast.error('Something went wrong');
       }
@@ -59,7 +59,7 @@ const Login = () => {
         <div className="login-form">
           <h4 className="TitlE">تسجيل الدخول </h4>
           <div>
-            <form action="" style={{padding:'0',margin:'0'}} onSubmit={handleSubmit}>
+            <form action="" style={{ padding: '0', margin: '0' }} onSubmit={handleSubmit}>
               <div className="single-form">
                 <input type="email" name="email" value={logindata.email} onChange={handleOnChange} placeholder="البريد الالكتروني" />
               </div>
@@ -69,13 +69,13 @@ const Login = () => {
               {errorMessage && <p className="error-message">{errorMessage}</p>}
               <div className="single-form">
                 <button className=" BtnPrimary" type="submit" value="Login">تسجيل الدخول</button>
-               </div>
-        
+              </div>
+
             </form>
           </div>
         </div>
       </div>       <ToastContainer />
-    </div> 
+    </div>
   );
 }
 

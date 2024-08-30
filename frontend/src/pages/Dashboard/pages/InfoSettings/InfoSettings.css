@@ -2,52 +2,52 @@
     float: right;
     padding: 20px;
     font-family: Arial, sans-serif;
-    width:70%;
+    width: 70%;
     margin-right: 15%;
     height: 700px;
- }
+}
 
-.Info_card{
+.Info_card {
     border: 1px solid #9081f6;
     float: right;
-    width:100%;
+    width: 100%;
     margin-top: 15px;
     border-radius: 4px;
 
 }
 
-.Info_card_space{
+.Info_card_space {
     display: flex;
     justify-content: space-between;
     direction: rtl;
     padding: 8px;
-    
+
 }
 
-.Info_card_icon{
-background-color: #9081f659;
-border: 1px solid #9081f6;
-padding: 5px;
-font-size:25px;
-color: #6d59ec;
-border-radius: 3px;
+.Info_card_icon {
+    background-color: #9081f659;
+    border: 1px solid #9081f6;
+    padding: 5px;
+    font-size: 25px;
+    color: #6d59ec;
+    border-radius: 3px;
 }
-.Info_card_text{
-    margin-top:15px;
 
- }
-.Info_card_but{
- 
+.Info_card_text {
+    margin-top: 15px;
+
 }
- 
- 
+
+.Info_card_but {}
+
+
 
 .card_but_button {
     float: right;
-    margin-top:  2.5px;
+    margin-top: 2.5px;
     padding: 10px 30px;
     font-size: 16px;
-    background-color:  #9081f6;
+    background-color: #9081f6;
     color: white;
     border: none;
     cursor: pointer;
@@ -65,17 +65,19 @@ border-radius: 3px;
     direction: rtl;
 }
 
-.customer-list th, .customer-list td {
+.customer-list th,
+.customer-list td {
     border: 1px solid #9081f6;
     padding: 8px;
     text-align: center;
     font-weight: 300;
 }
+
 .customer-list th {
     background-color: #9081f6;
     color: #ffffff;
 }
- 
+
 .customer-list tr:hover {
     background-color: #9081f6;
     color: #ffffff;
@@ -128,12 +130,13 @@ border-radius: 3px;
     display: block;
 }
 
-.modalContent{
-width: 100%;
-float: right;
-text-align: right;
+.modalContent {
+    width: 100%;
+    float: right;
+    text-align: right;
 }
-.modalContent-P{
+
+.modalContent-P {
     width: 100%;
     float: right;
     text-align: right;
@@ -142,18 +145,18 @@ text-align: right;
 }
 
 
-.modalContent-span{
+.modalContent-span {
     float: right;
     margin-left: 10px;
 
 }
 
-.customer-list_but{
+.customer-list_but {
     float: right;
     margin-right: 10%;
     width: 80%;
     border: 1px solid #f0f0f0;
     background-color: #9081f6;
-    color:  #9081f6; 
+    color: #9081f6;
     color: #ffff;
 }

@@ -1,27 +1,35 @@
 .sidenav {
-    height: 100%;
-    width: 0%;
-    position: fixed;
-    top: 0px;
-    left: -1px;
-    background-color: #ffffff; /* Background color for the sidebar */
-    padding-top: 50px;
-    transition: width 0.3s ease; /* Smooth transition */
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-    border-right: 1px solid  #fff;
-    z-index: 50;
-  }
-  .sidenav.open {
-    width: 100%; /* Open the sidebar */
-  }
-  .nav-link {
-    display: block;
-    padding: 16px;
-    text-decoration: none;
-    color: #000; /* Text color */
-    text-align: center;
-  }
-  .nav-link:hover {
-    background-color: #e9ecef; /* Background color on hover */
-  }
- 
+  height: 100%;
+  width: 0%;
+  position: fixed;
+  top: 0px;
+  left: -1px;
+  background-color: #ffffff;
+  /* Background color for the sidebar */
+  padding-top: 50px;
+  transition: width 0.3s ease;
+  /* Smooth transition */
+  overflow-x: hidden;
+  /* Hide horizontal scrollbar */
+  border-right: 1px solid #fff;
+  z-index: 50;
+}
+
+.sidenav.open {
+  width: 100%;
+  /* Open the sidebar */
+}
+
+.nav-link {
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+  color: #000;
+  /* Text color */
+  text-align: center;
+}
+
+.nav-link:hover {
+  background-color: #e9ecef;
+  /* Background color on hover */
+}

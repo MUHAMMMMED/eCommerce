@@ -61,12 +61,12 @@ export default function UpdateFreq({ item, ProductId, fetchProduct }) {
       </div>
 
       <div className={`modal_dash ${showModalUpdate ? 'show_dash' : ''}`}>
-        <form className="modal-content_dash animate"  encType="multipart/form-data">
+        <form className="modal-content_dash animate" encType="multipart/form-data">
           <div className='form_title'>تعديل البيانات</div>
 
           <input type="text" className='text_dash' name="question" value={formData.question} onChange={handleChange} placeholder="السؤال" />
           <textarea className='text_dash' name="answer" value={formData.answer} onChange={handleChange} placeholder="الاجابه" />
-          <br/><br/>
+          <br /><br />
           <div className="FOrm-container_dash">
             <div style={{ width: '78%' }}><button className="button-form" onClick={handleSubmit} >حفظ</button></div>
             <div style={{ width: '20%' }}><button type="button" className="cancel-button" onClick={handleCloseModal}>الغاء</button></div>

@@ -1,4 +1,4 @@
- 
+
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { AiOutlinePlus } from "react-icons/ai";
@@ -9,9 +9,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useCart } from '../../Provider/CartProvider/CartProvider';
 import Config from '../../config';
 import './AddToCard.css';
-axios.defaults.withCredentials = true; 
+axios.defaults.withCredentials = true;
 
-export default function AddToCardSlide({product}) {
+export default function AddToCardSlide({ product }) {
   const { fetchCart } = useCart();
   const [quantity, setQuantity] = useState({ [product.id]: 1 });
   const [showBAGeModal, setShowBAGeModal] = useState(false);
@@ -30,11 +30,11 @@ export default function AddToCardSlide({product}) {
         quantity: quantity[product.id],
         notes: notes // Sending notes to the API
       });
- 
+
       setShowBAGeModal(false); // Hide modal after adding to cart
       setSuccessMessage("تمت إضافة المنتج إلى السلة"); // Set success message
       fetchCart();
-       setQuantity({ [product.id]: 1 });
+      setQuantity({ [product.id]: 1 });
 
     } catch (error) {
       console.error('Error adding product to cart', error);
@@ -65,14 +65,14 @@ export default function AddToCardSlide({product}) {
 
   return (
     <>
- 
 
- {product?.stock_no >=  1 ? (
-   <div className="content-Bag" onClick={() => setShowBAGeModal(true)}>
-   <TbShoppingBagPlus />
- </div>   ) : (  <></>  )}
 
- {showBAGeModal && (
+      {product?.stock_no >= 1 ? (
+        <div className="content-Bag" onClick={() => setShowBAGeModal(true)}>
+          <TbShoppingBagPlus />
+        </div>) : (<></>)}
+
+      {showBAGeModal && (
         <div className="Modal-Bag show">
           <div className="modal-content">
             <span className="close" onClick={() => setShowBAGeModal(false)}>&times;</span>
@@ -89,35 +89,34 @@ export default function AddToCardSlide({product}) {
               </div>
             </div>
             {product.is_active_note && (
-             <>
-              {product.note_help_top&& <span className="modal-note-text">{product.note_help_top}</span>}
-              {Array.from({ length: quantity[product.id] }).map((_, index) => (
-              <div key={index} className='modal-Note'>
-              <textarea
-                  name={`note${index}`}
-                  className='Note'
-                  value={notes[index] || ""}
-                  onChange={(e) => handleNoteChange(index, e.target.value)}
-                  placeholder={` (${index + 1})${product?.note_help}`}
-                  />
-              </div>
-            ))}</>
+              <>
+                {product.note_help_top && <span className="modal-note-text">{product.note_help_top}</span>}
+                {Array.from({ length: quantity[product.id] }).map((_, index) => (
+                  <div key={index} className='modal-Note'>
+                    <textarea
+                      name={`note${index}`}
+                      className='Note'
+                      value={notes[index] || ""}
+                      onChange={(e) => handleNoteChange(index, e.target.value)}
+                      placeholder={` (${index + 1})${product?.note_help}`}
+                    />
+                  </div>
+                ))}</>
             )}
-           {product?.stock_no > 0 && (
-            <button className='Add_to_Cart_but' onClick={handleAddToCart}>
-              إضافة إلى السلة <TbShoppingBagPlus />
-            </button>
+            {product?.stock_no > 0 && (
+              <button className='Add_to_Cart_but' onClick={handleAddToCart}>
+                إضافة إلى السلة <TbShoppingBagPlus />
+              </button>
             )}
           </div>
         </div>
       )}
- <div className='content-button'>
-  <Link to={`/Product/${product.name}/${product.id}`}>  
- <button className="but_bay">استعرض المنتج</button></Link>     </div>        
- {successMessage && ( <div className="successMessage">{successMessage}</div>   )} 
-  </>
-    
+      <div className='content-button'>
+        <Link to={`/Product/${product.name}/${product.id}`}>
+          <button className="but_bay">استعرض المنتج</button></Link>     </div>
+      {successMessage && (<div className="successMessage">{successMessage}</div>)}
+    </>
+
   );
 }
 
- 

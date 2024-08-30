@@ -5,7 +5,7 @@ import Config from '../../../../../../../components/config';
 
 export default function CreateInfo({ fetchBalance }) {
   const [showModalCreate, setShowModalCreate] = useState(false);
-   const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState({
     FaviconIco: null,
     logo: null,
     title: '',
@@ -17,8 +17,8 @@ export default function CreateInfo({ fetchBalance }) {
     pixel_id: '',
     offer_message: '',
     StripeFee: '',
- 
- 
+
+
   });
 
   const handleChange = (e) => {
@@ -36,7 +36,7 @@ export default function CreateInfo({ fetchBalance }) {
     if (formData.logo) {
       form.append('logo', formData.logo);
     }
-  
+
 
     try {
       await AxiosInstance.post(`${Config.baseURL}/api/home/info/`, formData);
@@ -64,7 +64,7 @@ export default function CreateInfo({ fetchBalance }) {
     setShowModalCreate(false);
   };
 
-  
+
 
   return (
     <>
@@ -74,7 +74,7 @@ export default function CreateInfo({ fetchBalance }) {
           <div className='form_title'>انشاء جديد</div>
 
           <div className="FOrm-container_dash">
-          <div className="form-container-half">
+            <div className="form-container-half">
               <label className='label_dash' htmlFor="title">اسم الموقع</label>
               <input type="text" className='text_dash' name="title" value={formData.amount} onChange={handleChange} />
             </div>
@@ -90,9 +90,9 @@ export default function CreateInfo({ fetchBalance }) {
             </div>
 
           </div>
- 
+
           <div className="FOrm-container_dash">
-     
+
             <div className="form-container-half">
               <label className='label_dash' htmlFor="facebook"> فيس بوك</label>
               <input type="text" className='text_dash' name="facebook" value={formData.facebook} onChange={handleChange} />
@@ -101,44 +101,44 @@ export default function CreateInfo({ fetchBalance }) {
               <label className='label_dash' htmlFor="instagram"> انستجرام</label>
               <input type="text" className='text_dash' name="instagram" value={formData.instagram} onChange={handleChange} />
             </div>
- 
-            </div>
-            <div className="FOrm-container_dash">
+
+          </div>
+          <div className="FOrm-container_dash">
 
             <div className="form-container-half"  >
               <label className='label_dash' htmlFor="snapchat">   اسناب شات</label>
               <input type="text" className='text_dash' name="snapchat" value={formData.snapchat} onChange={handleChange} />
             </div>
- 
+
             <div className="form-container-half">
               <label className='label_dash' htmlFor="Twitter"> تويتر</label>
               <input type="text" className='text_dash' name="Twitter" value={formData.Twitter} onChange={handleChange} />
             </div>
 
-            </div>
-            <div className="FOrm-container_dash">
+          </div>
+          <div className="FOrm-container_dash">
             <div className="form-container-half">
               <label className='label_dash' htmlFor="Whatsapp">   واتساب</label>
               <input type="number" className='text_dash' name="Whatsapp" value={formData.Whatsapp} onChange={handleChange} />
             </div>
- 
+
             <div className="form-container-half">
               <label className='label_dash' htmlFor="StripeFee">  عمولة سترايب</label>
               <input type="number" className='text_dash' name="StripeFee" value={formData.StripeFee} onChange={handleChange} />
-              </div>
-        
+            </div>
+
           </div>
-          
-          <div style={{marginBottom:'10px' }}  >
-              <label className='label_dash' htmlFor="pixel_id">  بكسل جوجل</label>
-              <input type="text" className='text_dash' name="pixel_id" value={formData.pixel_id} onChange={handleChange} />
-              </div>
-              <div style={{paddingBottom:'10px' }}  >
-              <label className='label_dash' htmlFor="offer_message"> الرساله التروجيه</label>
-              <textarea type="text" className='text_dash' name="offer_message" value={formData.offer_message} onChange={handleChange} />
-              </div>
-              
-        <br/> <br/>
+
+          <div style={{ marginBottom: '10px' }}  >
+            <label className='label_dash' htmlFor="pixel_id">  بكسل جوجل</label>
+            <input type="text" className='text_dash' name="pixel_id" value={formData.pixel_id} onChange={handleChange} />
+          </div>
+          <div style={{ paddingBottom: '10px' }}  >
+            <label className='label_dash' htmlFor="offer_message"> الرساله التروجيه</label>
+            <textarea type="text" className='text_dash' name="offer_message" value={formData.offer_message} onChange={handleChange} />
+          </div>
+
+          <br /> <br />
           <div className="FOrm-container_dash">
             <div style={{ width: '78%' }}>
               <button className="button-form" type="submit">حفظ</button>

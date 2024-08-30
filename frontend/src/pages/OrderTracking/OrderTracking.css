@@ -1,56 +1,78 @@
+.OrderTracking {
+    width: 100%;
+    float: right;
+}
 
-
-.OrderTracking {width:100%;float: right;}
-     
 .container_Tracking {
- margin-top: 15px;
- float: right;
- width:90%;
- margin-right: 5%;
- border: 1px solid #ffffff;
- padding: 10px;
- border-radius: 15px;
+    margin-top: 15px;
+    float: right;
+    width: 90%;
+    margin-right: 5%;
+    border: 1px solid #ffffff;
+    padding: 10px;
+    border-radius: 15px;
 
 }
-.rowTracking {float: right;width:24%;margin-right: 1%;}
- 
-  
- 
-.card_cou_icon{ float: right; width: 100%;text-align: center; }
-  
-.card_icon{ width: 60px; margin: auto;  margin-bottom:15px;  margin-top: 18px; }
-   
-.icon{ width: 40px; height:40px; margin: auto;margin-left:-8px;}
 
- 
-.icon_spen{
+.rowTracking {
+    float: right;
+    width: 24%;
+    margin-right: 1%;
+}
+
+
+
+.card_cou_icon {
+    float: right;
+    width: 100%;
+    text-align: center;
+}
+
+.card_icon {
+    width: 60px;
+    margin: auto;
+    margin-bottom: 15px;
+    margin-top: 18px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    margin-left: -8px;
+}
+
+
+.icon_spen {
     color: #9081f6;
     font-size: 40px;
     border: 3px solid #9081f6;
-    padding: 15px  53px  5px  14px;
+    padding: 15px 53px 5px 14px;
     border-radius: 50px;
-    background-color: #fff;;
+    background-color: #fff;
+    ;
 
 }
 
-.Check{
+.Check {
     color: #ffffff;
     font-size: 40px;
     border: 2px solid#9081f6;
-    padding: 15px  53px  5px  14px;
+    padding: 15px 53px 5px 14px;
     border-radius: 50px;
-    background-color: #9081f6;;
+    background-color: #9081f6;
+    ;
 }
- 
-.card_cou_text{
-float: right;
-margin-top:0px;
-width: 100%;
-text-align: center;
-color: #9081f6;
-font-weight: 700;
-font-size: 18px;
- }
+
+.card_cou_text {
+    float: right;
+    margin-top: 0px;
+    width: 100%;
+    text-align: center;
+    color: #9081f6;
+    font-weight: 700;
+    font-size: 18px;
+}
 
 .Tracking_CONtainer {
     max-width: 500px;
@@ -73,7 +95,7 @@ font-size: 18px;
     margin: .5em 0;
 }
 
-.Tracking_input{
+.Tracking_input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -92,31 +114,34 @@ font-size: 18px;
     width: 100%;
 }
 
-.Tracking_info{
-width: 100%;
-float: right;
-height: auto;
-text-align: center;
-margin-bottom: 50px;
-}
-.Tracking_info_h5{
+.Tracking_info {
     width: 100%;
-    margin: auto;  
+    float: right;
+    height: auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.Tracking_info_h5 {
+    width: 100%;
+    margin: auto;
     text-align: center;
     font-size: 20px;
     font-weight: 700;
     margin-top: 5px;
 }
-.Tracking_info_center{
+
+.Tracking_info_center {
     width: 300px;
-    margin: auto;  
+    margin: auto;
     background-color: #9081f6;
     height: 75px;
     border-radius: 10px;
     color: #fff;
-   
- }
-.Tracking_info_spen-R{
+
+}
+
+.Tracking_info_spen-R {
     margin-top: 5px;
     float: right;
     width: 50%;
@@ -125,7 +150,7 @@ margin-bottom: 50px;
     padding-right: 19px;
 }
 
-.Tracking_info_spen-L{
+.Tracking_info_spen-L {
     margin-top: 5px;
     float: right;
     width: 50%;
@@ -136,9 +161,23 @@ margin-bottom: 50px;
 
 
 @media screen and (max-width: 785px) {
-    .rowTracking {float: right;width:100%;margin-right: 0%;}
-    .Tracking_info_center{  width: 100%; }
-    .Tracking_h1 { font-size: 1.2em;    }
-    .container_Tracking { width:98%;   margin-right: 1%;}
-        
- }
+    .rowTracking {
+        float: right;
+        width: 100%;
+        margin-right: 0%;
+    }
+
+    .Tracking_info_center {
+        width: 100%;
+    }
+
+    .Tracking_h1 {
+        font-size: 1.2em;
+    }
+
+    .container_Tracking {
+        width: 98%;
+        margin-right: 1%;
+    }
+
+}

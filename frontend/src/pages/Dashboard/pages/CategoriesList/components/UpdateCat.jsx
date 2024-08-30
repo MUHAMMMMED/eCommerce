@@ -81,7 +81,7 @@ export default function UpdateCat({ item, fetchcategories }) {
       </div>
 
       <div className={`modal_dash ${showModalUpdate ? 'show_dash' : ''}`}>
-        <form className="modal-content_dash animate" onSubmit={handleSubmit} encType="multipart/form-data"style={{color:'#000'}}>
+        <form className="modal-content_dash animate" onSubmit={handleSubmit} encType="multipart/form-data" style={{ color: '#000' }}>
           <div className='form_title'>تحديث البيانات</div>
 
           <div className="FOrm-container_dash">
@@ -118,7 +118,7 @@ export default function UpdateCat({ item, fetchcategories }) {
             </div>
           </div>
 
-          <br/><br/>
+          <br /><br />
           <div className="FOrm-container_dash">
             <div style={{ width: '78%' }}><button className="button-form" type="submit">حفظ</button></div>
             <div style={{ width: '20%' }}><button className="cancel-button" onClick={handleCloseModal}>الغاء</button></div>

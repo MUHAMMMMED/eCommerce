@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import AxiosInstance from '../../../../../../components/Authentication/AxiosInstance';
 import Config from '../../../../../../components/config';
- 
+
 
 export default function CreateDeal({ fetchData }) {
   const [showModalCreate, setShowModalCreate] = useState(false);
   const [products, setProducts] = useState([]);
   const [product, setproduct] = useState([]);
   const [formData, setFormData] = useState({
-    title:'',
-    product:'',
- 
+    title: '',
+    product: '',
+
   });
 
   const handleChange = (e) => {
@@ -24,39 +24,39 @@ export default function CreateDeal({ fetchData }) {
       setShowModalCreate(false);
       fetchData();
       setFormData({
-        title:'',
-        product:product,
- 
+        title: '',
+        product: product,
+
       });
     } catch (error) {
       console.error("Error creating Country:", error);
     }
   };
 
- 
+
 
   const handleCloseModal = () => {
     setShowModalCreate(false);
   };
-  
+
 
   useEffect(() => {
-      fetchProducts();
+    fetchProducts();
   }, []);
 
   const fetchProducts = async () => {
-      try {
-          const response = await AxiosInstance.get(`${Config.baseURL}/api/products/product_list_dash/`);
-          setProducts(response.data.products);
-       } catch (error) {
-          console.error("There was an error fetching the product data!", error);
-      }
+    try {
+      const response = await AxiosInstance.get(`${Config.baseURL}/api/products/product_list_dash/`);
+      setProducts(response.data.products);
+    } catch (error) {
+      console.error("There was an error fetching the product data!", error);
+    }
   };
- 
+
   const handleproductChange = (event) => {
     setproduct(event.target.value);
-};
- 
+  };
+
   return (
     <>
       <button onClick={() => setShowModalCreate(true)} className="Creat_button">اضافه</button>
@@ -68,13 +68,13 @@ export default function CreateDeal({ fetchData }) {
               <label className='label_dash' htmlFor="title" style={{ paddingTop: '15px' }}>  العنوان  </label>
               <input type="text" className='text_dash' name="title" value={formData.title} onChange={handleChange} placeholder="  عنوان العرض  " />
             </div>
-  <div className="form-container-half" style={{marginTop:'10px'}}>
- <label htmlFor="product-select"style={{ paddingTop: '15px',textAlign:'center',float:'right',marginBottom:'5px' }} >اختر المنتج</label>
- <select id="product-select" onChange={handleproductChange}>
- <option value="" >  المنتجات</option>                              
- {products.map((item) => (<option key={item.id} value={item.id}>{item.name}</option>))}
- </select>  </div>   </div>
-  <br /><br />
+            <div className="form-container-half" style={{ marginTop: '10px' }}>
+              <label htmlFor="product-select" style={{ paddingTop: '15px', textAlign: 'center', float: 'right', marginBottom: '5px' }} >اختر المنتج</label>
+              <select id="product-select" onChange={handleproductChange}>
+                <option value="" >  المنتجات</option>
+                {products.map((item) => (<option key={item.id} value={item.id}>{item.name}</option>))}
+              </select>  </div>   </div>
+          <br /><br />
           <div className="FOrm-container_dash" style={{ paddingTop: '20px' }}>
             <div style={{ width: '78%' }}><button className="button-form" type="submit">حفظ</button></div>
             <div style={{ width: '20%' }}><button className="cancel-button" onClick={handleCloseModal}>الغاء</button></div>

@@ -11,16 +11,16 @@ const Success = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-      // Set a timer to navigate after 5 seconds
-      const timer = setTimeout(() => {
-        navigate('/success');
-      }, 5000);
-  
-      // Cleanup the timer if the component is unmounted
-      return () => clearTimeout(timer);
+        // Set a timer to navigate after 5 seconds
+        const timer = setTimeout(() => {
+            navigate('/success');
+        }, 5000);
+
+        // Cleanup the timer if the component is unmounted
+        return () => clearTimeout(timer);
     }, [navigate]);
-  
-   
+
+
 
     const { id: orderId } = useParams();
     const [order, setOrder] = useState(null);
@@ -43,15 +43,16 @@ const Success = () => {
         fetchOrder();
     }, [orderId]);
 
-    if (loading) return <Loading/>;
-    if (error) return<h2 style={{
-        textAlign:'center',
-        float:'right',width:'100%',
-        marginTop:'20%', color: '#9081f6',
+    if (loading) return <Loading />;
+    if (error) return <h2 style={{
+        textAlign: 'center',
+        float: 'right', width: '100%',
+        marginTop: '20%', color: '#9081f6',
         border: '1px solid #9081f6',
-        padding:'20px 20px'}}> البيانات المطلوبة لم تعد متاحة </h2>;
+        padding: '20px 20px'
+    }}> البيانات المطلوبة لم تعد متاحة </h2>;
 
-   
+
 
     const saveInvoiceAsImage = () => {
         const invoiceElement = document.querySelector('.invoice-container');
@@ -74,15 +75,15 @@ const Success = () => {
     };
 
     const calculateSubtotal = () => {
-        return order.items.reduce((acc, item) => acc + item.price * item.quantity, 0) ;
+        return order.items.reduce((acc, item) => acc + item.price * item.quantity, 0);
     };
-  
-    const Tax =  order?.tax_amount   ;
-    const shipping = order?.shipping ;
-    const total = (parseFloat(calculateSubtotal())) ;
-    const total_tax_shipping =Tax + shipping 
-    const  order_total = (  order?.total - total_tax_shipping) ;
-    const discount = (total - order_total) ;
+
+    const Tax = order?.tax_amount;
+    const shipping = order?.shipping;
+    const total = (parseFloat(calculateSubtotal()));
+    const total_tax_shipping = Tax + shipping
+    const order_total = (order?.total - total_tax_shipping);
+    const discount = (total - order_total);
 
     return (
         <>
@@ -105,19 +106,19 @@ const Success = () => {
                             <p className="text-primary">الفاتوره الي</p>
                             <h4>{order?.customer?.name}</h4>
                             <ul className="list-unstyled">
-                                <li >   العنوان : -     
-                                   {order?.customer?.country?.name}
+                                <li >   العنوان : -
+                                    {order?.customer?.country?.name}
                                     {order?.customer?.governorate} ,
-                                    {order?.customer?.city}  <br/>
+                                    {order?.customer?.city}  <br />
                                     {order?.customer?.neighborhood} ,
-                                    {order?.customer?.shipping_address} 
-                                </li>
-                                {order?.customer?.shipping_address&&
-                                <li>العنوان تفصيلي:
                                     {order?.customer?.shipping_address}
-                                </li>}
-                                {order?.customer?.phone&&
-                                <li>رقم الهاتف: {order?.customer?.phone}</li>}
+                                </li>
+                                {order?.customer?.shipping_address &&
+                                    <li>العنوان تفصيلي:
+                                        {order?.customer?.shipping_address}
+                                    </li>}
+                                {order?.customer?.phone &&
+                                    <li>رقم الهاتف: {order?.customer?.phone}</li>}
                             </ul>
                         </div>
                         <div className="invoice-flex_right">
@@ -149,9 +150,9 @@ const Success = () => {
                                     <td>{item?.quantity}</td>
                                     <td>{calculateTotal(item?.price, item?.quantity)} SAR</td>
                                 </tr>
-           
-           ))}
-  {discount >  0 ? (
+
+                            ))}
+                            {discount > 0 ? (
                                 <>
                                     <tr>
                                         <th></th>
@@ -169,7 +170,7 @@ const Success = () => {
                                             <br />
                                             بعد تطبيق الخصم
                                         </td>
-                                        <td className="text-primary  ">{discount.toFixed(2)||0} SAR</td>
+                                        <td className="text-primary  ">{discount.toFixed(2) || 0} SAR</td>
                                     </tr>
                                 </>
                             ) : (
@@ -181,35 +182,35 @@ const Success = () => {
                                     <td>{calculateSubtotal()} SAR</td>
                                 </tr>
                             )}
-  
+
 
                             <tr>
                                 <th></th>
                                 <td></td>
                                 <td></td>
                                 <td style={{ width: '200px' }}>الضريب ( {order?.tax} % ) </td>
-                                <td>{Tax.toFixed(2)||0 } SAR</td>
+                                <td>{Tax.toFixed(2) || 0} SAR</td>
                             </tr>
                             <tr>
                                 <th></th>
                                 <td></td>
                                 <td></td>
                                 <td style={{ width: '200px' }}>الشحن</td>
-                                <td>{order?.shipping.toFixed(2)||0 } SAR</td>
+                                <td>{order?.shipping.toFixed(2) || 0} SAR</td>
                             </tr>
                             <tr>
                                 <th></th>
                                 <td></td>
                                 <td></td>
                                 <td className="text-primary fw-bold" style={{ width: '200px' }}>المجموع</td>
-                                <td className="text-primary fw-bold">{order?.total.toFixed(2)||0 }  SAR</td>
+                                <td className="text-primary fw-bold">{order?.total.toFixed(2) || 0}  SAR</td>
                             </tr>
                         </tbody>
                     </table>
                     <div className="text-center">
                         <p className="text-muted"><span className="fw-semibold">ملاحظة: </span> سيتم فرض رسوم تمويل بنسبة 1.5% على الأرصدة غير المدفوعة بعد 30 يومًا.</p>
                     </div>
-                    {order?.Tracking && <Tracking Tracking={order?.Tracking } />}
+                    {order?.Tracking && <Tracking Tracking={order?.Tracking} />}
                     <div id="footer-bottom">
                         <div className="container border-top">
                             <div className="row mt-3">
@@ -231,4 +232,3 @@ const Success = () => {
 };
 
 export default Success;
- 

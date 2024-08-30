@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import Config from '../../config';
- 
+
 const CartContext = createContext();
 
 export const useCart = () => useContext(CartContext);

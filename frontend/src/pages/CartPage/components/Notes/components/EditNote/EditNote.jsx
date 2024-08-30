@@ -1,16 +1,16 @@
- 
+
 import axios from 'axios';
 import React, { useState } from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Config from '../../../../../../components/config';
 import './EditNote.css';
- 
+
 
 export default function EditNote({ noteItem, fetchCart }) {
     const [note, setNote] = useState(noteItem.note);
     const [isEditing, setIsEditing] = useState(false);
- 
+
 
 
     const handleNoteChange = (e) => {
@@ -24,7 +24,7 @@ export default function EditNote({ noteItem, fetchCart }) {
     const handleSaveClick = async () => {
         setIsEditing(false);
         try {
-            const response = await axios.put(`${Config.baseURL}/api/cart/notes/${noteItem.id}/`, { note });
+            await axios.put(`${Config.baseURL}/api/cart/notes/${noteItem.id}/`, { note });
             fetchCart();
             // toast.success('Note saved successfully!');
         } catch (error) {
@@ -35,7 +35,7 @@ export default function EditNote({ noteItem, fetchCart }) {
 
     const handleDeleteClick = async () => {
         try {
-            const response = await axios.delete(`${Config.baseURL}/api/cart/notes/${noteItem.id}/`);
+            await axios.delete(`${Config.baseURL}/api/cart/notes/${noteItem.id}/`);
             fetchCart();
             // toast.success('Note deleted successfully!');
         } catch (error) {

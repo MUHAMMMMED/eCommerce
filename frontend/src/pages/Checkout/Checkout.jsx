@@ -46,7 +46,7 @@ export default function Checkout() {
       </section>
       <section className="section-Checkout">
         <div className="section-Checkout-row1">
-          <ContactForm   fetchCart={fetchCart} order={cart?.order} customer={cart?.customers} />
+          <ContactForm fetchCart={fetchCart} order={cart?.order} customer={cart?.customers} />
         </div>
 
         {cart?.order && (
@@ -59,8 +59,8 @@ export default function Checkout() {
                 <SmallCard key={item.id} quantity={item.quantity} image={item.product?.image_side_one} />
               ))}
             </div>
-            <InvoiceDetails cart={cart} order={cart?.order}  />
-            <FollowUpPayment order={cart?.order} cart={cart}/>
+            <InvoiceDetails cart={cart} order={cart?.order} />
+            <FollowUpPayment order={cart?.order} cart={cart} />
           </div>
         )}
       </section>

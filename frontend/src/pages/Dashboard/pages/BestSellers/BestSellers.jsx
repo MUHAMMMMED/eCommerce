@@ -12,17 +12,17 @@ import Delete from './components/Form/Delete';
 const BestSellers = () => {
     const navigate = useNavigate();
     useEffect(() => {
-      const userExists = localStorage.getItem('user');
-      if (!userExists) {
-        navigate('/login');
-      }
+        const userExists = localStorage.getItem('user');
+        if (!userExists) {
+            navigate('/login');
+        }
     }, [navigate]); // Ensure navigate is added as a dependency for useEffect
- 
+
     const [data, setData] = useState([]); // Initialize dealData as an empty array
     const [count, setCount] = useState('');
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-   
+
     useEffect(() => {
         fetchData();
     }, []);
@@ -34,24 +34,24 @@ const BestSellers = () => {
                 setData(response.data.best);
                 setCount(response.data.best_count);
 
- 
+
             } else {
                 setError(error.response?.data?.message || " الصفحة غير موجوده");
             }
         } catch (error) {
             setError(error.response?.data?.message || " الصفحة غير موجوده");
-          } finally {
+        } finally {
             setLoading(false);
-          }
-        };
+        }
+    };
     if (loading) {
         return <Loading />;
-      }
-      
-      if (error) {
+    }
+
+    if (error) {
         return <ErrorPage head="Error Occurred" error={error} />;
-      }
-      
+    }
+
     return (
         <div className='container_order_details'>
             <div className='details_head'>
@@ -77,11 +77,11 @@ const BestSellers = () => {
                 <table>
                     <thead>
                         <tr>
-                        <th> </th>
-                        <th> </th>
+                            <th> </th>
+                            <th> </th>
 
                             <th>اسم المنتج</th>
-  
+
                             <th></th>
 
                         </tr>
@@ -89,17 +89,17 @@ const BestSellers = () => {
                     <tbody>
                         {data.map(item => (
                             <tr key={item.id}>
-                             <td className="Package_img">
-                            {item?.product?.image_side_one&&  
-                             <img className="Package_img" src={`${Config.baseURL}${item?.product?.image_side_one}`} alt={item?.product?.name}/>} 
-                            </td>
-                            <td className="Package_img">
-                            {item?.product?.image_side_two&&  
-                             <img className="Package_img" src={`${Config.baseURL}${item?.product?.image_side_two}`} alt={item?.product?.name}/>} 
-                            </td>
+                                <td className="Package_img">
+                                    {item?.product?.image_side_one &&
+                                        <img className="Package_img" src={`${Config.baseURL}${item?.product?.image_side_one}`} alt={item?.product?.name} />}
+                                </td>
+                                <td className="Package_img">
+                                    {item?.product?.image_side_two &&
+                                        <img className="Package_img" src={`${Config.baseURL}${item?.product?.image_side_two}`} alt={item?.product?.name} />}
+                                </td>
                                 <td>{item?.product?.name}</td>
-                                 <td style={{ width: '50px' }}>
-                               <Delete itemId={item.id} fetchData={fetchData}  />   </td>
+                                <td style={{ width: '50px' }}>
+                                    <Delete itemId={item.id} fetchData={fetchData} />   </td>
                             </tr>
                         ))}
                     </tbody>

@@ -30,7 +30,7 @@ class ApexChart_Location_country extends React.Component {
           style: {
             colors: ['#fff']
           },
-          formatter: function(val, opt) {
+          formatter: function (val, opt) {
             return opt.w.globals.labels[opt.dataPointIndex] + ":  " + val;
           },
           offsetX: 0,
@@ -66,7 +66,7 @@ class ApexChart_Location_country extends React.Component {
           },
           y: {
             title: {
-              formatter: function() {
+              formatter: function () {
                 return '';
               }
             }
@@ -103,7 +103,7 @@ class ApexChart_Location_country extends React.Component {
 
     return (
       <div>
-        <h2 style={{textAlign:'center',width:'100',float:'right'}}>{title}</h2>
+        <h2 style={{ textAlign: 'center', width: '100', float: 'right' }}>{title}</h2>
         <div id="chart">
           <ReactApexChart options={options} series={series} type="bar" />
         </div>

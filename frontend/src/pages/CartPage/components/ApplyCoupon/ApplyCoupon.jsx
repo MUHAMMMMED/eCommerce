@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { RiCoupon3Line } from "react-icons/ri";
 import Config from '../../../../components/config';
 
- 
+
 export default function ApplyCoupon({ total, setAppliedCoupon }) {
   const [couponCode, setCouponCode] = useState('');
 

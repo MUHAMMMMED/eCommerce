@@ -45,64 +45,64 @@ import OrderTracking from './pages/OrderTracking/OrderTracking';
 import ProductDetail from './pages/ProductDetail/ProductDetail';
 import ProductDetailPage from './pages/ProductDetailPage/ProductDetailPage';
 import ProductDetailPageplus from './pages/ProductDetailPageplus/ProductDetailPageplus';
- 
+
 
 function App() {
   return (
     <CartProvider>
-     <Router>
-      <Header/>
-      <Routes>
-        <Route path="/" exact element={<Home />} />
-        <Route path="/login" exact element={<Login />} />
-        <Route path="/All_Products" exact element={<AllProducts />} />
-        <Route path="/Categories" exact element={<Categories />} />
-        <Route path="/offrs" exact element={<Offer />} />
-        <Route path="/Category/:slug/:id" exact element={<Category />} />
-        <Route path="/order_tracking" exact element={<OrderTracking />} />
-        <Route path="/cart" element={<CartPage />} />
-        <Route path="/Checkout" exact element={<Checkout />} />
-        <Route path="/Product/:slug/:id" element={<ProductDetail />} />
-        <Route path="/products" element={<ProductDetailPage />} />
-        <Route path="/products/plus" element={<ProductDetailPageplus />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/order/:id" element={<OrderDetails />} />
-        <Route path="/Settings" element={<Settings />} />
-        <Route path="/report" element={<Report />} />
-        <Route path="/customer_list" element={<CustomerList />} />
-        <Route path="/product_create" element={<ProductCreate />} />
-        <Route path="/product_update/:id" element={<ProductUpdate />} />
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" exact element={<Home />} />
+          <Route path="/login" exact element={<Login />} />
+          <Route path="/All_Products" exact element={<AllProducts />} />
+          <Route path="/Categories" exact element={<Categories />} />
+          <Route path="/offrs" exact element={<Offer />} />
+          <Route path="/Category/:slug/:id" exact element={<Category />} />
+          <Route path="/order_tracking" exact element={<OrderTracking />} />
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="/Checkout" exact element={<Checkout />} />
+          <Route path="/Product/:slug/:id" element={<ProductDetail />} />
+          <Route path="/products" element={<ProductDetailPage />} />
+          <Route path="/products/plus" element={<ProductDetailPageplus />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/order/:id" element={<OrderDetails />} />
+          <Route path="/Settings" element={<Settings />} />
+          <Route path="/report" element={<Report />} />
+          <Route path="/customer_list" element={<CustomerList />} />
+          <Route path="/product_create" element={<ProductCreate />} />
+          <Route path="/product_update/:id" element={<ProductUpdate />} />
 
-        <Route path="/expense" element={<Expense />} />
-        <Route path="/purchase" element={<Purchase />} />
-        <Route path="/package" element={<Package />} />
-        <Route path="/Categories_list" element={<CategoriesList />} />
-        <Route path="/Products_list" element={<ProductsList />} />
-        <Route path="/shipping_company" element={<ShippingCompany />} />
-        <Route path="/shipping_country" element={<ShippingCountry />} />
-        <Route path="/coupon" element={<Coupon />} />
-        <Route path="/deal" element={<Deal />} />
-        <Route path="/rate" element={<Rate />} />
-        <Route path="/questions" element={<QuestionsGeneral />} />
-        <Route path="/slide" element={<Slide />} />
-        <Route path="/card" element={<Card />} />
-        <Route path="/best_sellers" element={<BestSellers />} />
-        <Route path="/group" element={<Group />} />
-        <Route path="/info_settings" element={<InfoSettings />} />
-        <Route path="/shipping_balance" element={<ShippingBalance />} />
-        <Route path="/ad_budget" element={<AdBudget />} />
-        <Route path="/note" element={<Note />} />
-        <Route path="/invoice" element={<InvoiceList />} />
-        <Route path="/success/:id" element={<Success />} />
-        <Route path="/success" element={<FollowSuccess />} />
-        <Route path="/cancel" element={<Cancel />} />
- 
-  
-        <Route path="*" element={<ErrorPage/>} />    
+          <Route path="/expense" element={<Expense />} />
+          <Route path="/purchase" element={<Purchase />} />
+          <Route path="/package" element={<Package />} />
+          <Route path="/Categories_list" element={<CategoriesList />} />
+          <Route path="/Products_list" element={<ProductsList />} />
+          <Route path="/shipping_company" element={<ShippingCompany />} />
+          <Route path="/shipping_country" element={<ShippingCountry />} />
+          <Route path="/coupon" element={<Coupon />} />
+          <Route path="/deal" element={<Deal />} />
+          <Route path="/rate" element={<Rate />} />
+          <Route path="/questions" element={<QuestionsGeneral />} />
+          <Route path="/slide" element={<Slide />} />
+          <Route path="/card" element={<Card />} />
+          <Route path="/best_sellers" element={<BestSellers />} />
+          <Route path="/group" element={<Group />} />
+          <Route path="/info_settings" element={<InfoSettings />} />
+          <Route path="/shipping_balance" element={<ShippingBalance />} />
+          <Route path="/ad_budget" element={<AdBudget />} />
+          <Route path="/note" element={<Note />} />
+          <Route path="/invoice" element={<InvoiceList />} />
+          <Route path="/success/:id" element={<Success />} />
+          <Route path="/success" element={<FollowSuccess />} />
+          <Route path="/cancel" element={<Cancel />} />
 
 
-      </Routes>
-    </Router>
+          <Route path="*" element={<ErrorPage />} />
+
+
+        </Routes>
+      </Router>
     </CartProvider>
 
   );

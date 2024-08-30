@@ -3,13 +3,29 @@ body {
     margin: 0;
     padding: 0;
 }
-.web{display: block; width: 100%;float: right; }
-.mbile{  display: none;}
+
+.web {
+    display: block;
+    width: 100%;
+    float: right;
+}
+
+.mbile {
+    display: none;
+}
+
 @media screen and (max-width: 785px) {
-    .web{ display: none;  }
-    .mbile{  display: block;float: right; width: 100%;}
-    
-  }
+    .web {
+        display: none;
+    }
+
+    .mbile {
+        display: block;
+        float: right;
+        width: 100%;
+    }
+
+}
 
 .header {
     display: flex;
@@ -25,7 +41,7 @@ body {
 
 .header-right {
     display: flex;
-    align-items: center;   
+    align-items: center;
     display: block;
 }
 
@@ -33,12 +49,14 @@ body {
     display: flex;
     align-items: center;
     display: block;
- }
- .logo {
+}
 
-float: right;
+.logo {
 
- }
+    float: right;
+
+}
+
 .logo img {
     height: 50px;
     margin-left: 80px;
@@ -67,7 +85,8 @@ float: right;
     font-weight: bold;
 }
 
-.header-left a, .header-right .cart-icon {
+.header-left a,
+.header-right .cart-icon {
     text-decoration: none;
     color: #333;
     font-weight: bold;
@@ -100,16 +119,17 @@ float: right;
     float: left;
     border: 1px solid #ccc;
     border-radius: 50%;
-    background-color: #fff!important;
-    padding: 6px 8px!important;
-    color: #000!important;
-    font-size: 20px!important;
+    background-color: #fff !important;
+    padding: 6px 8px !important;
+    color: #000 !important;
+    font-size: 20px !important;
     display: block;
 
 }
-.ShoppingBag:hover{
-    background-color: #000000!important;
-    color: #ffffff!important;
+
+.ShoppingBag:hover {
+    background-color: #000000 !important;
+    color: #ffffff !important;
 
 }
 
@@ -119,23 +139,23 @@ float: right;
 .login {
     float: left;
     border-radius: 50%;
-    background-color: #ffffff!important;
-    margin-top:13px!important;
-    color: #000!important;
-    font-size: 20px!important;
+    background-color: #ffffff !important;
+    margin-top: 13px !important;
+    color: #000 !important;
+    font-size: 20px !important;
     margin-right: 15px;
     display: block;
 
 }
 
-.cart-togg{
+.cart-togg {
     float: left;
     border: 1px solid #ccc;
     border-radius: 50%;
-    background-color: #fff!important;
-    padding: 6px 8px!important;
-    color: #000!important;
-    font-size: 20px!important;
+    background-color: #fff !important;
+    padding: 6px 8px !important;
+    color: #000 !important;
+    font-size: 20px !important;
     display: block;
     margin-right: 25px;
     margin-top: -8px;

@@ -1,4 +1,4 @@
- 
+
 import axios from 'axios';
 import React from 'react';
 import { FaArrowLeftLong } from "react-icons/fa6";
@@ -8,7 +8,7 @@ axios.defaults.withCredentials = true; // Ensuring cookies are sent with request
 
 const PurchaseFollowUp = ({ discountedPrice }) => {
   const navigate = useNavigate();
- 
+
   const handleSubmit = async () => {
     try {
       const orderResponse = await axios.post(`${Config.baseURL}/api/orders/orders/`, { total: discountedPrice });
@@ -27,7 +27,7 @@ const PurchaseFollowUp = ({ discountedPrice }) => {
       console.error('Error submitting order:', error);
     }
   };
-  
+
   return (
     <div className="grid">
       <Link className="grid-a" to={'/All_Products'}>
@@ -38,7 +38,7 @@ const PurchaseFollowUp = ({ discountedPrice }) => {
       </Link>
       <div className="grid-a" onClick={handleSubmit}>
         <div className="Btn fw-bold">
-          ريال {discountedPrice}  
+          ريال {discountedPrice}
           <div>متابعة الشراء</div>
         </div>
       </div>

@@ -22,7 +22,7 @@ export default function CartPage() {
   const [discountedPrice, setDiscountedPrice] = useState(0);
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
- 
+
   const fetchCart = async () => {
     try {
       const response = await axios.get(`${Config.baseURL}/api/cart/cart/`);
@@ -66,7 +66,7 @@ export default function CartPage() {
       setDiscountedPrice(response.data.total);
     } catch (error) {
       console.error('Error updating total:', error.message);
-     }
+    }
   };
 
   const applyCoupon = async () => {
@@ -75,7 +75,7 @@ export default function CartPage() {
       if (response.data.valid) {
         const newDiscountedPrice = response.data.discounted_price;
         setDiscountedPrice(newDiscountedPrice);
-         setSuccessMessage("تم تطبيق كودالخصم بنجاح!"); // Set success message
+        setSuccessMessage("تم تطبيق كودالخصم بنجاح!"); // Set success message
 
         updateTotal(newDiscountedPrice);  // Update total after applying the coupon
       } else {
@@ -83,7 +83,7 @@ export default function CartPage() {
       }
     } catch (error) {
       console.error('Error applying coupon:', error.message);
-       setErrorMessage("كود الخصم غير صحيح"); // Set success message
+      setErrorMessage("كود الخصم غير صحيح"); // Set success message
 
     }
   };
@@ -98,7 +98,7 @@ export default function CartPage() {
 
   return (
     <div>
-     
+
       <section className="cartPageSection">
         <h3 className="h2">سلة المشتريات</h3>
       </section>
@@ -157,13 +157,13 @@ export default function CartPage() {
                       placeholder="أدخل كود الخصم"
                       value={couponCode}
                       onChange={handleCouponCodeChange}
-                      
+
                     />
-                    <br/>
-                    </div>
-                    <div className="section-card" style={{marginTop:'0' ,paddingTop:'0'}}>
-                        {successMessage && ( <div className="successMessage">{successMessage}</div>   )} 
-                        {errorMessage && ( <div className="errorMessage">{errorMessage}</div>   )} 
+                    <br />
+                  </div>
+                  <div className="section-card" style={{ marginTop: '0', paddingTop: '0' }}>
+                    {successMessage && (<div className="successMessage">{successMessage}</div>)}
+                    {errorMessage && (<div className="errorMessage">{errorMessage}</div>)}
                   </div>
                 </div>
                 <PurchaseFollowUp discountedPrice={discountedPrice} cart={cart} />
@@ -171,8 +171,8 @@ export default function CartPage() {
             </div>
           </section>
         ) : (
-          <div className="section-cart-products-row1" style={{width:'100%',marginRight:'0',marginLeft:'0', marginTop:'100px',marginBottom:'300px'}}>
-            <div className="grid" style={{width:'50%',margin:'auto'}}>
+          <div className="section-cart-products-row1" style={{ width: '100%', marginRight: '0', marginLeft: '0', marginTop: '100px', marginBottom: '300px' }}>
+            <div className="grid" style={{ width: '50%', margin: 'auto' }}>
               <Link className="grid-a" to={'/All_Products'}>
                 <div className="Btn-b">
                   <FaArrowLeftLong />

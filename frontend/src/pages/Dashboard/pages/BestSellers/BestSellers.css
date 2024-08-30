@@ -31,7 +31,7 @@
 .filters button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color:  #9081f6;
+    background-color: #9081f6;
     color: white;
     border: none;
     cursor: pointer;
@@ -48,17 +48,19 @@
     direction: rtl;
 }
 
-.customer-list th, .customer-list td {
+.customer-list th,
+.customer-list td {
     border: 1px solid #9081f6;
     padding: 8px;
     text-align: center;
     font-weight: 300;
 }
+
 .customer-list th {
     background-color: #9081f6;
     color: #ffffff;
 }
- 
+
 .customer-list tr:hover {
     background-color: #9081f6;
     color: #ffffff;
@@ -111,12 +113,13 @@
     display: block;
 }
 
-.modalContent{
-width: 100%;
-float: right;
-text-align: right;
+.modalContent {
+    width: 100%;
+    float: right;
+    text-align: right;
 }
-.modalContent-P{
+
+.modalContent-P {
     width: 100%;
     float: right;
     text-align: right;
@@ -125,24 +128,24 @@ text-align: right;
 }
 
 
-.modalContent-span{
+.modalContent-span {
     float: right;
     margin-left: 10px;
 
 }
 
-.customer-list_but{
+.customer-list_but {
     float: right;
     margin-right: 10%;
     width: 80%;
     border: 1px solid #f0f0f0;
     background-color: #9081f6;
-    color:  #9081f6; 
+    color: #9081f6;
     color: #ffff;
 }
 
 
-.Package_img{
- 
+.Package_img {
+
     width: 70px;
 }

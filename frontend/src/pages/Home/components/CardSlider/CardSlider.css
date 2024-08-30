@@ -1,23 +1,22 @@
 /* ImageSlider.css */
-.Slick-card{    
-  float: right; 
-  width: 100%; 
+.Slick-card {
+  float: right;
+  width: 100%;
 
   @media screen and (max-width: 1200px) {
     width: 90%;
-    margin-right:5%;
+    margin-right: 5%;
 
   }
-  
+
   @media screen and (max-width: 785px) {
     width: 90%;
-    margin-right:5%;
+    margin-right: 5%;
 
   }
 }
-   
-  .card-slider {
-    width:100%;
-    height: auto;
-  }
-  
+
+.card-slider {
+  width: 100%;
+  height: auto;
+}

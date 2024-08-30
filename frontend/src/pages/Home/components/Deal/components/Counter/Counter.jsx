@@ -31,22 +31,22 @@ export default function Counter({ targetDate }) {
   return (
     <>
       <div className='detail-timer-row'>
-        <div className='detail-timer-row-number' style={{display:'blank'}}>{timeLeft.days}</div>
+        <div className='detail-timer-row-number' style={{ display: 'blank' }}>{timeLeft.days}</div>
         <div className='detail-timer-row-text'>يوم</div>
       </div>
 
       <div className='detail-timer-row'>
-        <div className='detail-timer-row-number'style={{display:'blank'}}>{timeLeft.hours}</div>
+        <div className='detail-timer-row-number' style={{ display: 'blank' }}>{timeLeft.hours}</div>
         <div className='detail-timer-row-text'>الساعه</div>
       </div>
 
       <div className='detail-timer-row'>
-        <div className='detail-timer-row-number'style={{display:'blank'}}>{timeLeft.minutes}</div>
+        <div className='detail-timer-row-number' style={{ display: 'blank' }}>{timeLeft.minutes}</div>
         <div className='detail-timer-row-text'>الدقيقه</div>
       </div>
 
       <div className='detail-timer-row'>
-        <div className='detail-timer-row-number'style={{display:'blank'}}>{timeLeft.seconds}</div>
+        <div className='detail-timer-row-number' style={{ display: 'blank' }}>{timeLeft.seconds}</div>
         <div className='detail-timer-row-text'>ثانيه</div>
       </div>
     </>

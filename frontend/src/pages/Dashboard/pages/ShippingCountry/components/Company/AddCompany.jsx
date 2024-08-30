@@ -42,7 +42,7 @@ export default function AddCompany({ itemId, fetchCountry }) {
     };
 
     return (
-        <div className="product-filter" style={{ width: '100%', float: 'right', marginTop:'20px' }}>
+        <div className="product-filter" style={{ width: '100%', float: 'right', marginTop: '20px' }}>
             <div style={{ width: '70%', float: 'right' }}>
                 <label htmlFor="category-select">شركات الشحن</label>
                 <select id="category-select" onChange={handleCompanyChange} value={formData.CompanyId}>

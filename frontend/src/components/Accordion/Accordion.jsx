@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { SlArrowDown, SlArrowUp } from 'react-icons/sl'; // Assuming you have react-icons installed
 import './Accordion.css';
 
-const Accordion = ({questions}) => {
+const Accordion = ({ questions }) => {
   const [activeIndex, setActiveIndex] = useState(0); // Set initial state to 0 to open the first item by default
 
   const handleToggle = (index) => {
@@ -13,7 +13,7 @@ const Accordion = ({questions}) => {
     <>
       <div className='accordion-text'>  الأسئلة المتكررة</div>
       <div className="accordion-container">
-        { questions.map((item, index) => (
+        {questions.map((item, index) => (
           <React.Fragment key={index}>
             <button className="accordion" onClick={() => handleToggle(index)}>
               <div className="accordionContent">
@@ -32,4 +32,3 @@ const Accordion = ({questions}) => {
 };
 
 export default Accordion;
- 

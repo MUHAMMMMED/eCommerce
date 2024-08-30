@@ -7,7 +7,7 @@ export default function CreateCoupon({ fetchCoupon }) {
   const [showModalCreate, setShowModalCreate] = useState(false);
   const [formData, setFormData] = useState({
     code: '',
-    discount:0,
+    discount: 0,
     coupon_usage: 0,
     expiryDate: '',
   });
@@ -24,7 +24,7 @@ export default function CreateCoupon({ fetchCoupon }) {
       fetchCoupon();
       setFormData({
         code: '',
-        discount:0,
+        discount: 0,
         coupon_usage: 0,
         expiryDate: '',
       });
@@ -33,7 +33,7 @@ export default function CreateCoupon({ fetchCoupon }) {
     }
   };
 
- 
+
 
   const handleCloseModal = () => {
     setShowModalCreate(false);
@@ -54,25 +54,25 @@ export default function CreateCoupon({ fetchCoupon }) {
 
             <div className="form-container-half">
               <label className='label_dash' htmlFor="expiryDate" style={{ paddingTop: '15px' }}>تاريخ انتهاء الكود</label>
-              <input type="date" className='text_dash' name="expiryDate" value={formData.expiryDate}  onChange={handleChange} />
+              <input type="date" className='text_dash' name="expiryDate" value={formData.expiryDate} onChange={handleChange} />
             </div>
           </div>
 
           <div className="FOrm-container_dash">
 
-          <div className="form-container-half">
+            <div className="form-container-half">
               <label className='label_dash' htmlFor="discount" style={{ paddingTop: '15px' }}>الخصم</label>
-              <input type="number" className='text_dash' name="discount" value={formData.discount}  onChange={handleChange} />
+              <input type="number" className='text_dash' name="discount" value={formData.discount} onChange={handleChange} />
             </div>
-            
+
             <div className="form-container-half">
               <label className='label_dash' htmlFor="coupon_usage" style={{ paddingTop: '15px' }}>عدد مرات الاستخدام </label>
-              <input type="text" className='text_dash' name="coupon_usage" value={formData.coupon_usage} onChange={handleChange}  />
+              <input type="text" className='text_dash' name="coupon_usage" value={formData.coupon_usage} onChange={handleChange} />
             </div>
-            
-            </div>
-       
-         
+
+          </div>
+
+
           <br /><br />
           <div className="FOrm-container_dash" style={{ paddingTop: '20px' }}>
             <div style={{ width: '78%' }}><button className="button-form" type="submit">حفظ</button></div>

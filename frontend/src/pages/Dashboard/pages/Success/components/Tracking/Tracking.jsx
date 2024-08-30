@@ -2,7 +2,7 @@ import React from 'react';
 import { LiaShippingFastSolid } from 'react-icons/lia';
 import './Tracking.css';
 
-const Tracking = ({Tracking}) => {
+const Tracking = ({ Tracking }) => {
   return (
     <div className="Tracking">
       <div className="Tracking-icon-wrapper ">

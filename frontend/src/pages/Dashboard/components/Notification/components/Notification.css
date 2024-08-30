@@ -1,66 +1,65 @@
- 
-.Notif {
-  float: right;
-  width: 100%;
-  display: block;
+ .Notif {
+   float: right;
+   width: 100%;
+   display: block;
 
-  @media (max-width: 768px) {
- 
-}}
- 
-.Card_Notif{
-  float: right;
-  display: block;
-  background-color: #fff;
-  border: 1px solid #b6aeee;
-  margin-top: 20px;
-  margin-right: 5%;
-  border-radius:  8px;
-  /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
-  @media (max-width: 768px) {
-    width: 90%;
-    margin-right:5% ;
-}}
+   @media (max-width: 768px) {}
+ }
+
+ .Card_Notif {
+   float: right;
+   display: block;
+   background-color: #fff;
+   border: 1px solid #b6aeee;
+   margin-top: 20px;
+   margin-right: 5%;
+   border-radius: 8px;
+
+   /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
+   @media (max-width: 768px) {
+     width: 90%;
+     margin-right: 5%;
+   }
+ }
 
 
 
-.Card_Notif_row{ float: right;}
- 
-.Notif_icon{
-  float: right;
-  padding: 5px  9px  5px 9px ;
-  border-radius:  0px 8px 8px 0px ;
-  background-color: #9081f6;
-  font-size: 20px;
-  font-weight: 700;
-  margin-left: 4px;
-  color: #ffffff;
-  border: 1px solid  #9081f6;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;  
-  display: block;
+ .Card_Notif_row {
+   float: right;
+ }
+
+ .Notif_icon {
+   float: right;
+   padding: 5px 9px 5px 9px;
+   border-radius: 0px 8px 8px 0px;
+   background-color: #9081f6;
+   font-size: 20px;
+   font-weight: 700;
+   margin-left: 4px;
+   color: #ffffff;
+   border: 1px solid #9081f6;
+   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+   display: block;
 
 
  }
 
-.Notif_text{
-  float: right;
-  padding: 7px;
-  font-size: 16px;
-  text-align: right;
-  /* color: #ffffff; */
-  color: #a89af7;
-  display: block;
+ .Notif_text {
+   float: right;
+   padding: 7px;
+   font-size: 16px;
+   text-align: right;
+   /* color: #ffffff; */
+   color: #a89af7;
+   display: block;
 
-  font-weight: 700;
-  margin-left: 8px;
-  padding-top: 8px;
-  @media (max-width: 768px) {
-    padding-top:11px;
+   font-weight: 700;
+   margin-left: 8px;
+   padding-top: 8px;
 
-    font-size: 11px;
-  }
-}
- 
+   @media (max-width: 768px) {
+     padding-top: 11px;
 
-
-
+     font-size: 11px;
+   }
+ }

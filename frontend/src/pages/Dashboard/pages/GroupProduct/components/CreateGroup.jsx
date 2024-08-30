@@ -111,19 +111,19 @@ export default function CreateGroup({ fetchData }) {
               ))}
             </div>
 
- 
-              <label className='label_dash' htmlFor="link">الرابط</label>
-              <input
-                type="text"
-                className='text_dash'
-                name="link"
-                value={formData.link}
-                onChange={handleChange}
-                placeholder="الرابط"
-              />
-        
 
-            <br/><br/>
+            <label className='label_dash' htmlFor="link">الرابط</label>
+            <input
+              type="text"
+              className='text_dash'
+              name="link"
+              value={formData.link}
+              onChange={handleChange}
+              placeholder="الرابط"
+            />
+
+
+            <br /><br />
             <div className="FOrm-container_dash">
               <div style={{ width: '78%' }}>
                 <button className="button-form" type="submit">حفظ</button>

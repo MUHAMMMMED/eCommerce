@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import AxiosInstance from '../../../../../../../../components/Authentication/AxiosInstance';
 import Config from '../../../../../../../../components/config';
 
-export default function SelectStatus({ orderId, initialStatus,fetchOrders }) {
+export default function SelectStatus({ orderId, initialStatus, fetchOrders }) {
     const [currentStatus, setCurrentStatus] = useState(initialStatus);
 
     useEffect(() => {

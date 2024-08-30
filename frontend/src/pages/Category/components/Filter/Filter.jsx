@@ -6,32 +6,32 @@ import Config from '../../../../components/config';
 import './Filter.css';
 
 const Filter = ({ categoryId }) => {
- 
-    const [searchTerm, setSearchTerm] = useState('');
-    const [category, setCategory] = useState(null);
-    const [products, setProducts] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(null);
-  
-    const fetchProducts = async (query) => {
-      setLoading(true);
-      try {
-   
-        const response = await axios.get(`${Config.baseURL}/api/products/category/${categoryId}/`, {
-          params: { query }
-        });
-        setProducts(response.data.products);
-        setCategory(response.data.categories);
-  
-      } catch (error) {
-        setError(error.response?.data?.message || 'Error fetching products');
-      } finally {
-        setLoading(false);
-      }
-    };
+
+  const [searchTerm, setSearchTerm] = useState('');
+  const [category, setCategory] = useState(null);
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  const fetchProducts = async (query) => {
+    setLoading(true);
+    try {
+
+      const response = await axios.get(`${Config.baseURL}/api/products/category/${categoryId}/`, {
+        params: { query }
+      });
+      setProducts(response.data.products);
+      setCategory(response.data.categories);
+
+    } catch (error) {
+      setError(error.response?.data?.message || 'Error fetching products');
+    } finally {
+      setLoading(false);
+    }
+  };
 
 
-  
+
 
   useEffect(() => {
     fetchProducts(searchTerm);
@@ -47,7 +47,7 @@ const Filter = ({ categoryId }) => {
   ];
   return (
     <>
-     <Breadcrumb tags={tags}/>
+      <Breadcrumb tags={tags} />
 
       <div className='Filter'>
         <div className='product-filter-input'>
@@ -66,9 +66,9 @@ const Filter = ({ categoryId }) => {
           </div>
         </div>
       </div>
- 
 
- <Cart products={products} title={''} />
+
+      <Cart products={products} title={''} />
 
 
       {/* </div> */}
@@ -76,4 +76,4 @@ const Filter = ({ categoryId }) => {
   );
 };
 
-export default  Filter;
+export default Filter;

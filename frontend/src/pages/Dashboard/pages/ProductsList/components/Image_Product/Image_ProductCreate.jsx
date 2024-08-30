@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import AxiosInstance from '../../../../../../components/Authentication/AxiosInstance';
 import Config from '../../../../../../components/config';
- 
+
 const Image_ProductCreate = ({ ProductId, fetchImageProducts }) => {
   const [selectedFile, setSelectedFile] = useState(null);
 
@@ -36,16 +36,16 @@ const Image_ProductCreate = ({ ProductId, fetchImageProducts }) => {
 
   return (
     <>
-        <div className="form-group_image"  >
+      <div className="form-group_image"  >
         <div className="form-group_image_center"  >
-          <label className='form-group-label' style={{width:'100%',textAlign:'center'}}>اضف صور المنتج لعرض الشرائح</label>
+          <label className='form-group-label' style={{ width: '100%', textAlign: 'center' }}>اضف صور المنتج لعرض الشرائح</label>
           <input type="file" name="image" onChange={handleFileChange} />
         </div>
         <div className="form-group_but"  >
-          <button className='form-group_button' style={{ marginTop: '40px' }}  onClick={handleSubmit}>إضافة صور المنتج</button>
-          </div> </div>
-        </>
- 
+          <button className='form-group_button' style={{ marginTop: '40px' }} onClick={handleSubmit}>إضافة صور المنتج</button>
+        </div> </div>
+    </>
+
   );
 };
 

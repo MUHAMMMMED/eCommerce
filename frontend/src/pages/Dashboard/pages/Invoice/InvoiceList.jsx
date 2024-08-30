@@ -25,7 +25,7 @@ const InvoiceList = () => {
     const [invoiceNumber, setInvoiceNumber] = useState('');
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-   
+
     useEffect(() => {
         fetchBalance();
     }, []);
@@ -35,13 +35,13 @@ const InvoiceList = () => {
             const response = await AxiosInstance.get(`${Config.baseURL}/api/orders/invoice/`, { params });
             setData(response.data.orders);
             setCount(response.data.orders_count);
- 
+
         } catch (error) {
             setError(error.response?.data?.message || " الصفحة غير موجوده");
-          } finally {
+        } finally {
             setLoading(false);
-          }
-        };
+        }
+    };
 
     const handleSearch = () => {
         const params = {};
@@ -53,11 +53,11 @@ const InvoiceList = () => {
     };
     if (loading) {
         return <Loading />;
-      }
-      
-      if (error) {
+    }
+
+    if (error) {
         return <ErrorPage head="Error Occurred" error={error} />;
-      }
+    }
 
     return (
         <div className='container_order_details'>
@@ -101,7 +101,7 @@ const InvoiceList = () => {
                     </div>
                     <div style={{ width: '50%', float: 'right' }}>
                         <span style={{ width: '90%', float: 'right', textAlign: 'left', fontSize: '20px', marginTop: '5px', fontWeight: '600' }}>
-                         عدد الفواتير ({count})
+                            عدد الفواتير ({count})
                         </span>
                     </div>
                 </div>
@@ -116,4 +116,3 @@ const InvoiceList = () => {
 };
 
 export default InvoiceList;
- 

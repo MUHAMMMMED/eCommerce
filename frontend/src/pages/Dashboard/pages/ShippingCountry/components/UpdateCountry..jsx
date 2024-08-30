@@ -1,21 +1,21 @@
 
 import React, { useState } from 'react';
 import Config from '../../../../../components/config';
- 
+
 import { AiOutlineDelete } from 'react-icons/ai';
 import { GrUpdate } from "react-icons/gr";
 import AxiosInstance from '../../../../../components/Authentication/AxiosInstance';
 import AddCompany from './Company/AddCompany';
 import Delete from './Company/Delete';
 
-export default function UpdateCountry({  item, fetchCountry }) {
- 
-    const [showModalUpdate, setShowModalUpdate] = useState(false);
-    const [formData, setFormData] = useState({
-      name:item.name,
-      tax:item.tax,
- 
-    });
+export default function UpdateCountry({ item, fetchCountry }) {
+
+  const [showModalUpdate, setShowModalUpdate] = useState(false);
+  const [formData, setFormData] = useState({
+    name: item.name,
+    tax: item.tax,
+
+  });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -37,7 +37,7 @@ export default function UpdateCountry({  item, fetchCountry }) {
     }
   };
 
-  
+
 
   const handleDelete = async () => {
     if (window.confirm('هل أنت متأكد أنك تريد حذف هذه  الدوله   ؟')) {
@@ -64,7 +64,7 @@ export default function UpdateCountry({  item, fetchCountry }) {
         <span className='onLine-icon' onClick={handleDelete}><AiOutlineDelete /></span>
       </div>
 
-      <div className={`modal_dash ${showModalUpdate ? 'show_dash' : ''}`} style={{color:'#000'}}>
+      <div className={`modal_dash ${showModalUpdate ? 'show_dash' : ''}`} style={{ color: '#000' }}>
         <form className="modal-content_dash animate" onSubmit={handleSubmit} encType="multipart/form-data">
           <div className='form_title'>تحديث البيانات</div>
           <div className="FOrm-container_dash">
@@ -75,33 +75,33 @@ export default function UpdateCountry({  item, fetchCountry }) {
 
             <div className="form-container-half">
               <label className='label_dash' htmlFor="tax" style={{ paddingTop: '15px' }}>الضريبه</label>
-              <input type="number" className='text_dash' name="tax" value={formData.tax}  onChange={handleChange} />
+              <input type="number" className='text_dash' name="tax" value={formData.tax} onChange={handleChange} />
             </div>
           </div>
 
-       
 
-<AddCompany itemId={item.id} fetchCountry={fetchCountry}/>             
-         
 
-{item.Shipping.map(ship => (
-  <div key={item.id} style={{ width: '100%', float: 'right' }}>
-    <span style={{ float: 'right' }}>
-      <Delete itemId={item.id}  companyId={ship.id} fetchCountry={fetchCountry} />
-    </span>
-    <span style={{
-      width: '90%',
-      float: 'right',
-      marginTop: '5px',
-      paddingTop: '10px',
-      marginRight: '8px',
-      textAlign: 'right',
-      fontWeight: '700'
-    }}>
-      {ship.name}
-    </span>
-  </div>
-))}
+          <AddCompany itemId={item.id} fetchCountry={fetchCountry} />
+
+
+          {item.Shipping.map(ship => (
+            <div key={item.id} style={{ width: '100%', float: 'right' }}>
+              <span style={{ float: 'right' }}>
+                <Delete itemId={item.id} companyId={ship.id} fetchCountry={fetchCountry} />
+              </span>
+              <span style={{
+                width: '90%',
+                float: 'right',
+                marginTop: '5px',
+                paddingTop: '10px',
+                marginRight: '8px',
+                textAlign: 'right',
+                fontWeight: '700'
+              }}>
+                {ship.name}
+              </span>
+            </div>
+          ))}
 
 
 

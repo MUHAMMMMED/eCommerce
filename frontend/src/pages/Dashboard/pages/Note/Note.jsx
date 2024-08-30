@@ -11,10 +11,10 @@ import Delete from './components/Form/Delete';
 const Note = () => {
     const navigate = useNavigate();
     useEffect(() => {
-      const userExists = localStorage.getItem('user');
-      if (!userExists) {
-        navigate('/login');
-      }
+        const userExists = localStorage.getItem('user');
+        if (!userExists) {
+            navigate('/login');
+        }
     }, [navigate]); // Ensure navigate is added as a dependency for useEffect
 
 
@@ -22,7 +22,7 @@ const Note = () => {
     const [count, setCount] = useState('');
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-   
+
     useEffect(() => {
         fetchData();
     }, []);
@@ -38,18 +38,18 @@ const Note = () => {
             }
         } catch (error) {
             setError(error.response?.data?.message || " الصفحة غير موجوده");
-          } finally {
+        } finally {
             setLoading(false);
-          }
-        };
+        }
+    };
 
     if (loading) {
         return <Loading />;
-      }
-      
-      if (error) {
+    }
+
+    if (error) {
         return <ErrorPage head="Error Occurred" error={error} />;
-      }
+    }
     return (
         <div className='container_order_details'>
             <div className='details_head'>
@@ -64,7 +64,7 @@ const Note = () => {
             <div className="customer-list">
                 <div className="filters">
                     <div style={{ width: '49%', float: 'left', marginRight: '1%' }}>
-                     </div>
+                    </div>
                     <div style={{ width: '50%', float: 'right' }}>
                         <samp style={{ width: '90%', float: 'right', textAlign: 'left', fontSize: '20px', marginTop: '5px', fontWeight: '600' }}>
                             عدد الملاحظات  ({count})
@@ -74,16 +74,16 @@ const Note = () => {
                 <table>
                     <thead>
                         <tr>
-                            <th  style={{textAlign:'right'}}> الملاحظة</th>
+                            <th style={{ textAlign: 'right' }}> الملاحظة</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         {data.map(item => (
                             <tr key={item.id}>
-                                <td style={{textAlign:'right'}}>{item?.note}</td>
+                                <td style={{ textAlign: 'right' }}>{item?.note}</td>
                                 <td style={{ width: '50px' }}>
-                                <Delete itemId={item.id} fetchData={fetchData}  />  </td>
+                                    <Delete itemId={item.id} fetchData={fetchData} />  </td>
                             </tr>
                         ))}
                     </tbody>

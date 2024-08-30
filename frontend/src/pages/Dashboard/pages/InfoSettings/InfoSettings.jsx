@@ -19,13 +19,13 @@ export default function InfoSettings() {
           <div className='details_head_ArrowBack'><IoIosArrowBack /></div>
         </Link>
       </div>
-      
+
       <div className='details_head'>
         <div className='details_head_h4'> </div>
       </div>
- <div className='InfoSet'>
-<Info/>
-  </div></div>
+      <div className='InfoSet'>
+        <Info />
+      </div></div>
 
   );
 } 

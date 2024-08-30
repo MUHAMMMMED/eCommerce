@@ -1,4 +1,4 @@
-.experts{
+.experts {
   margin-top: 20px;
   width: 98%;
   float: right;
@@ -8,28 +8,29 @@
 
 }
 
-.experts-container_text{
-   width: 100%;
+.experts-container_text {
+  width: 100%;
   margin-top: 50px;
   font-size: 33px;
   color: #000;
   font-weight: 500;
-  text-align:right; 
+  text-align: right;
   float: right;
   /* letter-spacing: .3rem; */
   margin-bottom: 20px;
   padding-right: 150px;
-   @media screen and (max-width: 1200px) {
-    padding-right:  0px;
+
+  @media screen and (max-width: 1200px) {
+    padding-right: 0px;
     font-size: 28px;
-    text-align:center; 
+    text-align: center;
 
   }
-  
+
   @media screen and (max-width: 785px) {
-    padding-right:  0px;
+    padding-right: 0px;
     font-size: 23px;
-    text-align:center; 
+    text-align: center;
     font-weight: 500;
 
 
@@ -37,60 +38,17 @@
 }
 
 
-.experts-card{  
-  float: right;  border-radius: 10px; width: 30%; 
-   margin-right: 2.5%; margin-bottom:50px;
-     @media screen and (max-width: 785px) {
-      margin-right: 5%; width: 90%; 
-      
-     }
-   }
-  
-  
-  
-  
-  
-.experts-card-top{  width:100%;float: right; }
-.experts-card-top-img{  width:100%;  border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);  }
-.experts-card-bottom{ float: right;  width:100%;     margin-top:15px;        }
-.flex-container{ display: flex; justify-content: space-between;  width:100%;}
-.space-div{width:30% ;}
-.experts-card-bottom-img{  width:100%;   border-radius: 10px;   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);}
-.experts-card-titel{text-align: center;font-size:18px;font-weight: bold; margin-top:15px; 
- width:100%;
-float: right;
-@media screen and (max-width: 785px) {
-  font-size: 15px;}
-}
-
-
-.experts-card-price{
-width:50%;
-font-size:22px;
-margin-top: 20px;
-font-weight: bold; 
-text-align: right;
-@media screen and (max-width: 785px) {
-  font-size: 15px;}
-}    
-
-.experts-but{width:50%; margin-top: 20px;  }
-.experts-but-button{
-  background-color: #fff;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  width:100%;
-  transition: 0.3s;
-  font-size: 18px;
-  border: 1px solid #ccc;
-  border-radius:3px;
-  color: #000;
-  height:30px;
+.experts-card {
+  float: right;
+  border-radius: 10px;
+  width: 30%;
+  margin-right: 2.5%;
+  margin-bottom: 50px;
 
   @media screen and (max-width: 785px) {
-      font-size: 15px;
-      width: 100%;
+    margin-right: 5%;
+    width: 90%;
+
   }
 }
 
@@ -98,4 +56,94 @@ text-align: right;
 
 
 
-.experts-but-button:hover{ background-color:#000;color:#fff;}
+.experts-card-top {
+  width: 100%;
+  float: right;
+}
+
+.experts-card-top-img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.experts-card-bottom {
+  float: right;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.space-div {
+  width: 30%;
+}
+
+.experts-card-bottom-img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.experts-card-titel {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
+  width: 100%;
+  float: right;
+
+  @media screen and (max-width: 785px) {
+    font-size: 15px;
+  }
+}
+
+
+.experts-card-price {
+  width: 50%;
+  font-size: 22px;
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: right;
+
+  @media screen and (max-width: 785px) {
+    font-size: 15px;
+  }
+}
+
+.experts-but {
+  width: 50%;
+  margin-top: 20px;
+}
+
+.experts-but-button {
+  background-color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  color: #000;
+  height: 30px;
+
+  @media screen and (max-width: 785px) {
+    font-size: 15px;
+    width: 100%;
+  }
+}
+
+
+
+
+
+.experts-but-button:hover {
+  background-color: #000;
+  color: #fff;
+}

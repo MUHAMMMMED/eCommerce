@@ -7,7 +7,7 @@ import Config from '../../../../../components/config';
 
 export default function CreateAdBudget({ fetchBalance }) {
   const [showModalCreate, setShowModalCreate] = useState(false);
-   const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState({
     name: '',
     month: '',
     initial_balance: 0,
@@ -43,7 +43,7 @@ export default function CreateAdBudget({ fetchBalance }) {
     setShowModalCreate(false);
   };
 
-  
+
 
   return (
     <>
@@ -63,16 +63,16 @@ export default function CreateAdBudget({ fetchBalance }) {
               <input type="name" className='text_dash' name="name" value={formData.name} onChange={handleChange} />
             </div>
 
-       
+
           </div>
           <div className="FOrm-container_dash">
 
-          <div className="form-container-half">
+            <div className="form-container-half">
               <label className='label_dash' htmlFor="initial_balance">رصيد اول المده</label>
               <input type="number" className='text_dash' name="initial_balance" value={formData.initial_balance} onChange={handleChange} />
             </div>
 
-          <div className="form-container-half">
+            <div className="form-container-half">
               <label className='label_dash' htmlFor="added_amount">رصيد مضاف</label>
               <input type="number" className='text_dash' name="added_amount" value={formData.added_amount} onChange={handleChange} />
             </div>
@@ -81,8 +81,8 @@ export default function CreateAdBudget({ fetchBalance }) {
               <label className='label_dash' htmlFor="amount">رصيد اخر المده</label>
               <input type="number" className='text_dash' name="final_balance" value={formData.final_balance} onChange={handleChange} />
             </div>
-            </div>
-        
+          </div>
+
           <div className="FOrm-container_dash">
             <div style={{ width: '78%' }}>
               <button className="button-form" type="submit">حفظ</button>

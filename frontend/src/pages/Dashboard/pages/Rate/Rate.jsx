@@ -15,15 +15,15 @@ const Rate = () => {
     useEffect(() => {
         const userExists = localStorage.getItem('user');
         if (!userExists) {
-          navigate('/login');
+            navigate('/login');
         }
-      }, [navigate]); // Ensure navigate is added as a dependency for useEffect
-    
+    }, [navigate]); // Ensure navigate is added as a dependency for useEffect
+
     const [rate, setRate] = useState([]); // Initialize dealData as an empty array
     const [RateCount, setRateCount] = useState('');
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-   
+
     useEffect(() => {
         fetchData();
     }, []);
@@ -35,24 +35,24 @@ const Rate = () => {
                 setRate(response.data.rate);
                 setRateCount(response.data.rate_count);
 
-             
+
             } else {
                 setError(error.response?.data?.message || " الصفحة غير موجوده");
             }
         } catch (error) {
             setError(error.response?.data?.message || " الصفحة غير موجوده");
-          } finally {
+        } finally {
             setLoading(false);
-          }
-        };
+        }
+    };
 
     if (loading) {
         return <Loading />;
-      }
-      
-      if (error) {
+    }
+
+    if (error) {
         return <ErrorPage head="Error Occurred" error={error} />;
-      }
+    }
 
     return (
         <div className='container_order_details'>
@@ -79,7 +79,7 @@ const Rate = () => {
                 <table>
                     <thead>
                         <tr>
-                       
+
                             <th>اسم العميل  </th>
                             <th> التقييم</th>
                             <th>   عدد النجوم</th>
@@ -91,18 +91,18 @@ const Rate = () => {
                     <tbody>
                         {rate.map(item => (
                             <tr key={item.id}>
-                               {/* <td>{item.created}</td> */}
+                                {/* <td>{item.created}</td> */}
 
                                 <td>{item.name}</td>
                                 <td>{item.message}</td>
-                                <td> 
-                                {Array.from({ length: item.rate_number }, (_, index) => (
-                                <FaStar key={index}  style={{color:'#ffba00'}}/>))}
-                                
+                                <td>
+                                    {Array.from({ length: item.rate_number }, (_, index) => (
+                                        <FaStar key={index} style={{ color: '#ffba00' }} />))}
+
                                 </td>
                                 <td>{item.product.name}</td>
- 
-                                <td style={{ width: '105px' }}><UpdateRate item={item } fetchData={fetchData}  /> </td>
+
+                                <td style={{ width: '105px' }}><UpdateRate item={item} fetchData={fetchData} /> </td>
 
                             </tr>
                         ))}

@@ -142,7 +142,7 @@ const ContactForm = ({ fetchCart, order, customer }) => {
     <div className="container">
       <form>
         <h3>بيانات الشحن</h3>
-    
+
         <input
           type="text"
           id="fname"
@@ -164,13 +164,13 @@ const ContactForm = ({ fetchCart, order, customer }) => {
           inputClass="phone-input"
         />
         <div className="grub">
-          <select 
-          className='select'
+          <select
+            className='select'
             id="country"
             name="country"
             value={customerData?.country}
             onChange={handleInputCustomerChange}
-            style={{   borderRadius: '5px' }}
+            style={{ borderRadius: '5px' }}
           >
             <option value="0">الدولة</option>
             {shippingCountries.map((country) => (
@@ -180,7 +180,7 @@ const ContactForm = ({ fetchCart, order, customer }) => {
             ))}
           </select>
           <input
-          
+
             type="text"
             id="governorate"
             name="governorate"
@@ -266,15 +266,15 @@ const ContactForm = ({ fetchCart, order, customer }) => {
                       src={`${Config.baseURL}${company?.image}`}
                       height="35"
                       className="Delivery-option-icon"
-                      alt="Delivery Option Icon"/>
-                    
+                      alt="Delivery Option Icon" />
+
                   </div>
                   <div className="DElivery-card-content">
                     <span className="card-title">{company?.name}</span>
 
                     <span className="card-text">{company?.work_days}</span>
                   </div>
-                  <div className="DElivery-card-price"> {company?.shipping_price} <span className='money_code' style={{display:'block', }}> ريال</span></div>
+                  <div className="DElivery-card-price"> {company?.shipping_price} <span className='money_code' style={{ display: 'block', }}> ريال</span></div>
                 </div>
               ))}
             </div>

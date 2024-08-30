@@ -6,32 +6,31 @@ import Notification from './components/Notification';
 const NotifiProduct = () => {
   const [products, setProducts] = useState([]);
 
-const fetchPackage = async () => {
+  const fetchPackage = async () => {
     try {
-        const response = await AxiosInstance.get(`${Config.baseURL}/api/products/notification_products/`);
-        setProducts(response.data);
-     } catch (error) {
-        console.error("There was an error fetching the products data!", error);
+      const response = await AxiosInstance.get(`${Config.baseURL}/api/products/notification_products/`);
+      setProducts(response.data);
+    } catch (error) {
+      console.error("There was an error fetching the products data!", error);
     }
-};
+  };
 
-useEffect(() => {
-  fetchPackage();
-}, []);
+  useEffect(() => {
+    fetchPackage();
+  }, []);
 
   return (
- <>
- {products.map(item => (
-  <>
- <Notification Id={item.id}link={'product_update'}   name={item.name}  stock_no={item.stock_no} key={item.id} /> 
-  </>
- ))}
- </>
+    <>
+      {products.map(item => (
+        <>
+          <Notification Id={item.id} link={'product_update'} name={item.name} stock_no={item.stock_no} key={item.id} />
+        </>
+      ))}
+    </>
   );
 };
-   
+
 
 export default NotifiProduct;
- 
 
- 
+

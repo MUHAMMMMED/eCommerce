@@ -1,32 +1,3 @@
- 
-# # استخدام صورة Node.js كقاعدة
-# FROM node:18-alpine
-
-# # تعيين مجلد العمل
-# WORKDIR /app
-
-# # نسخ ملفات التبعيات وتثبيتها
-# COPY package.json ./
-# COPY package-lock.json ./
-# RUN npm install
-
-# # # Clean npm cache before installing dependencies
-# RUN npm cache clean --force && npm install
-# # نسخ باقي ملفات التطبيق
-# COPY . .
-# # # # Increase memory allocation (adjust as needed)
-# ENV NODE_OPTIONS=--max_old_space_size=8192
-
-# # بناء التطبيق
-# RUN npm run build
-
-# # تعيين مجلد البناء كدليل ثابت
-# RUN npm install -g serve
-# CMD ["serve", "-s", "build", "-l", "3000"]
-
-# # فتح المنفذ 3000
-# EXPOSE 3000
- 
 
 
 # Use a specific Node version image
@@ -61,4 +32,3 @@ EXPOSE 3000
 CMD ["serve", "-s", "build", "-l", "3000"]
 
 
- 

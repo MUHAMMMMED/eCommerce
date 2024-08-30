@@ -7,7 +7,7 @@ import Orders from './components/orders/Orders';
 import './form.css';
 import ButtonGroup from './pages/OrderDetails/components/ButtonGroup/ButtonGroup';
 const Dashboard = () => {
-  
+
   const navigate = useNavigate();
   useEffect(() => {
     const userExists = localStorage.getItem('user');
@@ -19,10 +19,10 @@ const Dashboard = () => {
 
   return (
     <>
-  <ButtonGroup />
-  <NotifiProduct />
-  <NotificationPackage />
-  <Orders />
+      <ButtonGroup />
+      <NotifiProduct />
+      <NotificationPackage />
+      <Orders />
     </>
   );
 };

@@ -94,13 +94,13 @@ export default function CreateShippingBalance({ fetchBalance }) {
             </div>
 
 
-   
+
 
             <div className="form-container-half">
               <label className='label_dash' htmlFor="added_amount">رصيد مضاف</label>
               <input type="number" className='text_dash' name="added_amount" value={formData.added_amount} onChange={handleChange} />
             </div>
-        
+
 
 
             <div className="form-container-half">

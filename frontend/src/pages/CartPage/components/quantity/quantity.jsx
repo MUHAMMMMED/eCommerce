@@ -1,4 +1,4 @@
- 
+
 import axios from 'axios'; // Import axios
 import React from 'react';
 import { AiOutlinePlus } from "react-icons/ai";
@@ -13,26 +13,26 @@ export default function Quantity({ itemId, quantity, fetchCart }) {
       itemId: itemId,
       quantity: quantity + 1,
     })
-    .then(response => {
-      fetchCart(); // Update the cart after successful request
-    })
-    .catch(error => {
-      console.error('Error updating quantity:', error);
-    });
-  };
-
-  const handleQuantityChangeDown = () => {
-    if (quantity > 1) {
-        axios.put(`${Config.baseURL}/api/cart/update_quantity/${itemId}/`, {
-            itemId: itemId,
-        quantity: quantity - 1, // Decrease quantity
-      })
       .then(response => {
         fetchCart(); // Update the cart after successful request
       })
       .catch(error => {
         console.error('Error updating quantity:', error);
       });
+  };
+
+  const handleQuantityChangeDown = () => {
+    if (quantity > 1) {
+      axios.put(`${Config.baseURL}/api/cart/update_quantity/${itemId}/`, {
+        itemId: itemId,
+        quantity: quantity - 1, // Decrease quantity
+      })
+        .then(response => {
+          fetchCart(); // Update the cart after successful request
+        })
+        .catch(error => {
+          console.error('Error updating quantity:', error);
+        });
     } else {
       console.error('Minimum quantity reached');
     }
