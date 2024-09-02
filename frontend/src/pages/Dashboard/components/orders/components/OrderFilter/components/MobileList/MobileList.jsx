@@ -60,7 +60,7 @@ export default function MobileList({ order }) {
       </div>
 
       <div className='list_mobile'>
-        <div className='mobile_text1' style={{ color: '#9081f6' }}>
+        <div className='mobile_text1' style={{ color: '#9081f6', display: 'block' }}>
 
           {order.new ? <span style={{
             float: 'right',
@@ -68,7 +68,8 @@ export default function MobileList({ order }) {
             background: '#fff',
             border: '1px solid #9081f6',
             borderRadius: '3px',
-            marginTop: '3px'
+            marginTop: '3px',
+            display: 'block'
           }}>جديد</span> : <></>}
 
 

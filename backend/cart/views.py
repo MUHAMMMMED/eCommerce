@@ -9,37 +9,56 @@ from .models import Cart, CartItem
 from .serializers import *
 from products.models import Product,Coupon
  
+ 
 
 class AddToCartView(APIView):
     def post(self, request, *args, **kwargs):
         product_id = request.data.get('productId')
         quantity = request.data.get('quantity', 1)
-        notes = request.data.get('notes')
+        notes = request.data.get('notes', [])
+
+        # Create a session if it doesn't exist
         if not request.session.session_key:
             request.session.create()
         session_id = request.session.session_key
+
+        # Get the product instance
         product = get_object_or_404(Product, id=product_id)
-        cart, created = Cart.objects.get_or_create(session_id=session_id)
-        # Ensure quantity is set properly
-        cart_item, created = CartItem.objects.get_or_create(cart=cart, product=product)
-        if created:
+
+        # Create the cart if it doesn't exist; don't modify if it exists
+        cart, cart_created = Cart.objects.get_or_create(session_id=session_id)
+
+        # Only create a new cart item if it doesn't exist; don't modify if it exists
+        cart_item, cart_item_created = CartItem.objects.get_or_create(cart=cart, product=product)
+        if cart_item_created:
             cart_item.quantity = quantity
-        else:
-            cart_item.quantity += quantity
-        cart_item.save()
-        # Check if notes are provided and add them
-        for note_text in notes:
-                note, note_created = Note.objects.get_or_create(note=note_text)
-                cart_item.notes.add(note)
-        cart_item.save()
+            cart_item.save()
+
+            # Add notes to the cart item if provided
+            if notes:
+                for note_text in notes:
+                    # Create a new note using the serializer
+                    note_data = {'note': note_text}
+                    note_serializer = NoteSerializer(data=note_data)
+                    if note_serializer.is_valid():
+                        note = note_serializer.save()
+                        cart_item.notes.add(note)
+                    else:
+                        # If the note serializer is not valid, return a bad request response
+                        return Response(note_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+            # Save cart item after adding notes
+            cart_item.save()
+
         return Response({"message": "Product added to cart"}, status=status.HTTP_200_OK)
- 
+
  
  
      
 class CartDetailView(APIView):
     def get(self, request, *args, **kwargs):
         session_id = request.session.session_key
+ 
         # Get or create a session ID if it doesn't exist
         if not session_id:
             request.session.create()
