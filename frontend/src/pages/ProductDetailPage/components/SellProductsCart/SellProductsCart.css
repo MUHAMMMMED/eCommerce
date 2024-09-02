@@ -3,6 +3,16 @@
   float: right;
   width: 100%;
 
+
+}
+
+.note-border {
+  animation: toggleBorder 2s infinite;
+  border-color: 3px solid #9081f6;
+  border: 3px solid transparent;
+  line-height: 20px;
+  background-color: #9081f6;
+  height: 62px;
 }
 
 .note {
@@ -10,10 +20,10 @@
   width: 100%;
   height: 60px;
   margin-right: 0;
-  animation: toggleBorder 2s infinite;
-  border: 3px solid transparent;
+  /* animation: toggleBorder 2s infinite;
+  border: 3px solid transparent; */
   /* Start with a transparent border */
-  border-color: #9081f6;
+  /* border-color: #9081f6; */
   /* Actual border color */
   line-height: 20px;
 }

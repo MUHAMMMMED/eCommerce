@@ -112,12 +112,13 @@ function SellProductsCart({ product }) {
               <div>
                 {Array.from({ length: productsList[selectedProduct - 1].quantity }).map((_, index) => (
                   <div key={index} className='modal-note'>
-                    <textarea
-                      name={`note${index}`}
-                      className='note'
-                      value={notes[index] || ""}
-                      onChange={(e) => handleNoteChange(index, e.target.value)}
-                      placeholder={` (${index + 1})${product?.note_help}`} />
+                    <div className='note-border'>
+                      <textarea
+                        name={`note${index}`}
+                        className='note'
+                        value={notes[index] || ""}
+                        onChange={(e) => handleNoteChange(index, e.target.value)}
+                        placeholder={` (${index + 1})${product?.note_help}`} /></div>
                   </div>))}
               </div>
               {product.note_help_bottom &&
