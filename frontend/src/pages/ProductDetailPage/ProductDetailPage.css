@@ -1,5 +1,5 @@
  .sectionDetailPage {
-   padding-top: 36px;
+   padding-top: 0px;
    width: 80%;
    float: right;
    margin-right: 5%;
@@ -46,7 +46,7 @@
    .DetailPageRow {
      width: 100%;
      float: right;
-     padding-top: 5px;
+     padding-top: 0px;
    }
  }
 
@@ -73,13 +73,6 @@
    object-fit: contain;
    display: block;
  }
-
-
-
-
-
-
-
 
 
  .product_cat {

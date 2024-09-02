@@ -265,9 +265,11 @@
   }
 
   .but_bay {
-    font-size: 10px;
+    font-size: 8px;
     font-weight: 700;
     height: auto !important;
+    padding: 8px 5px 8px 5px;
+
   }
 
   .single_product_text {

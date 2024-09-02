@@ -97,7 +97,7 @@
 .option_title {
   width: 70%;
   color: #333232;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-style: normal !important;
   font-weight: bold !important;
   text-transform: none;
@@ -106,6 +106,24 @@
   line-height: 1.2 !important;
   font-family: Montserrat, sans-serif;
 }
+
+.option_title-quantity {
+  position: relative;
+  height: 100%;
+  float: right;
+  width: 16px;
+  margin-right: 0;
+
+}
+
+.option_title-text {
+  position: relative;
+  height: 100%;
+  float: right;
+  width: 93%;
+
+}
+
 
 .option_price {
   width: 20%;
@@ -153,7 +171,7 @@
   }
 
   .option_img {
-    width: 60px;
+    width: 50px;
   }
 
   .option_title {
@@ -219,6 +237,21 @@
 
   .option_title {
     font-size: .8em;
+  }
+
+  .option_title-quantity {
+    position: relative;
+    height: 100%;
+    float: right;
+    width: 10px;
+    margin-right: 3px;
+  }
+
+  .option_title-text {
+    position: relative;
+    height: 100%;
+    float: right;
+    width: 90%;
   }
 
   .note {

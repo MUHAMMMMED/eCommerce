@@ -1,11 +1,10 @@
-/* src/Breadcrumb.css */
 ul.breadcrumb {
   float: right;
-  padding: 8px;
+  /* padding: 8px; */
   width: 100%;
   list-style: none;
   text-align: right;
-  padding: 10px 16px;
+  padding: 3px 6px;
   font-weight: 600;
 }
 

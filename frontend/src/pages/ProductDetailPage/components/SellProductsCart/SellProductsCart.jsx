@@ -45,7 +45,7 @@ function SellProductsCart({ product }) {
   const handleAddToCart = async () => {
     try {
       const selectedProductData = productsList.find(product => product.id === selectedProduct);
-      const response = await axios.post(`${Config.baseURL}/api/cart/add/`, {
+      await axios.post(`${Config.baseURL}/api/cart/add/`, {
         productId: product.id,
         quantity: selectedProductData.quantity,
         notes: notes
@@ -93,10 +93,12 @@ function SellProductsCart({ product }) {
 
                   <spen className='money_code' style={{ display: 'block', float: 'left', marginTop: '5px' }}>{product?.currency}</spen>
 
-                </div>
-              </div>
+                </div> </div>
 
-              <div className='option_title'>{product?.quantity} - {product?.name} </div>
+              <div className='option_title'>
+                <samp className='option_title-quantity' >{product?.quantity} </samp>
+                <samp className='option_title-text' > {product?.name} </samp>
+              </div>
               <div className='option_img'> <img className='IMG' src={product?.img} alt="Product" /></div>
               <div className='option_checked'>
                 {selectedProduct === product.id ? <span className="checked"></span> : <span className="unchecked"></span>}
@@ -130,7 +132,7 @@ function SellProductsCart({ product }) {
       </div>
       {successMessage && (<div className="successMessage" style={{ display: 'block', textAlign: 'center' }}>{successMessage}</div>)}
 
-      lll
+
     </>
   );
 }
