@@ -33,7 +33,9 @@ export default function Notes({ item, quantity, fetchCart }) {
             <div className='note-card' key={index}>
               <div className='note-card-content'>
                 <div className='note-card-icon'>{index + 1}</div>
-                <div className='note-card-title'>{noteItem.note}</div>
+                <div className='note-card-title'>
+                  {noteItem?.note.length > 50 ? noteItem.note.substring(0, 50) + '...' : noteItem.note}
+                </div>
               </div>
               <div className='note-card-but'>
                 <EditNote noteItem={noteItem} fetchCart={fetchCart} />
