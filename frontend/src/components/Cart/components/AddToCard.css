@@ -197,10 +197,11 @@
    text-align: center;
    width: 100%;
    height: 60px;
-   animation: toggleBorder 2s infinite;
-   border: 3px solid transparent;
+   /* animation: toggleBorder 2s infinite; */
+   /* border: 3px solid transparent; */
    /* Start with a transparent border */
-   border-color: #9081f6;
+   /* border-color: #9081f6; */
+   border: 3px solid #9081f6;
    /* Actual border color */
    line-height: 20px;
 

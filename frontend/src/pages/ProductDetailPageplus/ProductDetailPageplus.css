@@ -9,12 +9,7 @@
 
 
  .bg {
-
-
-   /* Full height */
    height: 100%;
-
-   /* Center and scale the image nicely */
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
@@ -57,21 +52,11 @@
  }
 
  .video {
-
    width: 100%;
    height: auto;
    object-fit: contain;
    display: block;
  }
-
-
-
-
-
-
-
-
-
 
  .product_cat {
    margin-top: 0;
