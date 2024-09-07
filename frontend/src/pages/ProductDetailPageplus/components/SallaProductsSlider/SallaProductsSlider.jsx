@@ -1,6 +1,4 @@
 
-
-
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -117,6 +115,10 @@ export default function SellProductsSlider({ product }) {
           onDecrement={handleDecrement}
         />
 
+        <div className="SUB_total" style={{ textDecoration: "line-through", color: '#989898', fontSize: '13px', padding: '0' }}> اجمالي الطلب قبل الخصم :  {subtotal_discount.toFixed(2)}   <spen className='money_code'>{product?.currency}</spen> </div>
+
+        <div className="SUB_total">اجمالي الطلب :  {subtotal.toFixed(2)}   <spen className='money_code'>{product?.currency}</spen> </div>
+
         <div className="Sell-Row">
           {product.note_help_top && <div className='modal-note-text'>{product.note_help_top}</div>}
           {product.is_active_note && (
@@ -136,9 +138,6 @@ export default function SellProductsSlider({ product }) {
             <span className="google-business-message" style={{ display: 'block', width: '100%', textAlign: 'center' }}>{product.note_help_bottom}</span>
           )}
         </div>
-        <div className="SUB_total" style={{ textDecoration: "line-through", color: '#989898', fontSize: '13px', padding: '0' }}> المجموع قبل الخصم :  {subtotal_discount.toFixed(2)}   <spen className='money_code'>{product?.currency}</spen> </div>
-
-        <div className="SUB_total">المجموع :  {subtotal.toFixed(2)}   <spen className='money_code'>{product?.currency}</spen> </div>
 
         <div style={{ float: 'right', width: '95%', marginRight: '2.5%' }}>
           <div className="Sell-Row-name">
