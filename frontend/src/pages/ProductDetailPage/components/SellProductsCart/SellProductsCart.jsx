@@ -15,13 +15,69 @@ function SellProductsCart({ product }) {
   const [notes, setNotes] = useState([]);
   const [successMessage, setSuccessMessage] = useState("");
 
+
   const productsList = [
-    { id: 1, name: product?.name, quantity: product?.quantity1, price: product?.price1, discount_price: product?.discount_price1, currency: product?.currency, img: `${Config.baseURL}${product?.image_side_one}` },
-    { id: 2, name: product?.name, quantity: product?.quantity2, price: product?.price2, discount_price: product?.discount_price2, currency: product?.currency, img: `${Config.baseURL}${product?.image_side_one}` },
-    { id: 3, name: product?.name, quantity: product?.quantity3, price: product?.price3, discount_price: product?.discount_price3, currency: product?.currency, img: `${Config.baseURL}${product?.image_side_one}` },
-    { id: 4, name: product?.name, quantity: product?.quantity4, price: product?.price4, discount_price: product?.discount_price4, currency: product?.currency, img: `${Config.baseURL}${product?.image_side_one}` },
-    { id: 5, name: product?.name, quantity: product?.quantity5, price: product?.price5, discount_price: product?.discount_price5, currency: product?.currency, img: `${Config.baseURL}${product?.image_side_one}` },
+    {
+      id: 1,
+      name: product?.name,
+      quantity: product?.quantity1,
+      price: product?.price1,
+      discount_price: product?.discount_price1,
+      total_discount_price: product?.discount_price1 * product?.quantity1,
+      total_price: product?.price1 * product?.quantity1,
+      currency: product?.currency,
+      img: `${Config.baseURL}${product?.image_side_one}`,
+    },
+    {
+      id: 2,
+      name: product?.name,
+      quantity: product?.quantity2,
+      price: product?.price2,
+      discount_price: product?.discount_price2,
+      total_discount_price: product?.discount_price2 * product?.quantity2,
+      total_price: product?.price2 * product?.quantity2,
+      currency: product?.currency,
+      img: `${Config.baseURL}${product?.image_side_one}`,
+    },
+    {
+      id: 3,
+      name: product?.name,
+      quantity: product?.quantity3,
+      price: product?.price3,
+      discount_price: product?.discount_price3,
+      total_discount_price: product?.discount_price3 * product?.quantity3,
+      total_price: product?.price3 * product?.quantity3,
+      currency: product?.currency,
+      img: `${Config.baseURL}${product?.image_side_one}`,
+    },
+    {
+      id: 4,
+      name: product?.name,
+      quantity: product?.quantity4,
+      price: product?.price4,
+      discount_price: product?.discount_price4,
+      total_discount_price: product?.discount_price4 * product?.quantity4,
+      total_price: product?.price4 * product?.quantity4,
+      currency: product?.currency,
+      img: `${Config.baseURL}${product?.image_side_one}`,
+    },
+    {
+      id: 5,
+      name: product?.name,
+      quantity: product?.quantity5,
+      price: product?.price5,
+      discount_price: product?.discount_price5,
+      total_discount_price: product?.discount_price5 * product?.quantity5,
+      total_price: product?.price5 * product?.quantity5,
+      currency: product?.currency,
+      img: `${Config.baseURL}${product?.image_side_one}`,
+    },
   ];
+
+
+
+
+
 
   useEffect(() => {
     if (selectedProduct) {
@@ -82,15 +138,15 @@ function SellProductsCart({ product }) {
             <div className='new-option'>
               <div className='option_price' style={{ display: 'block' }}>
                 <div className="first-price" style={{ display: 'block' }}>
-
-                  <span style={{ display: 'block', float: 'left' }}>{product?.price}</span>
+                  {/* <span style={{ display: 'block', float: 'left' }}>{product?.price}</span> */}
+                  <span style={{ display: 'block', float: 'left' }}>{product?.total_price}</span>
                   <spen className='money_code' style={{ display: 'block', float: 'left', marginTop: '5px' }}>{product?.currency}</spen>
 
                 </div>
 
                 <div className="second-price">
-                  <span style={{ display: 'block', float: 'left', textDecoration: 'line-through' }}>{product?.discount_price}</span>
-
+                  {/* <span style={{ display: 'block', float: 'left', textDecoration: 'line-through' }}>{product?.discount_price}</span> */}
+                  <span style={{ display: 'block', float: 'left', textDecoration: 'line-through' }}>{product?.total_discount_price}</span>
                   <spen className='money_code' style={{ display: 'block', float: 'left', marginTop: '5px' }}>{product?.currency}</spen>
 
                 </div> </div>

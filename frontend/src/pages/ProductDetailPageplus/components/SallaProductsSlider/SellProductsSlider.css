@@ -4,7 +4,6 @@
   border-radius: 8px;
   border: 1px solid #ccc;
   padding: 10px;
-
   margin-bottom: 30px;
 
 }
@@ -41,6 +40,7 @@
   vertical-align: top;
   font-weight: 600;
   font-size: 1.1rem;
+  display: block;
 }
 
 .Sell-before-price {
@@ -53,6 +53,7 @@
   color: #989898;
   font-size: .8rem;
   letter-spacing: .13rem;
+  display: block;
 
 }
 
@@ -138,4 +139,22 @@
   text-align: center;
   width: 100%;
   background-color: #38c883;
+  display: block;
+
+}
+
+.SUB_total {
+  width: 100%;
+  float: right;
+  text-align: center;
+  color: #9081f6;
+  font-size: 19px;
+  padding-bottom: 15px;
+  font-weight: 700;
+
+  @media screen and (max-width: 780px) {
+    font-size: 19px;
+    padding-bottom: 15px;
+
+  }
 }

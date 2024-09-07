@@ -38,7 +38,9 @@ const PurchaseFollowUp = ({ discountedPrice }) => {
       </Link>
       <div className="grid-a" onClick={handleSubmit}>
         <div className="Btn fw-bold">
-          ريال {discountedPrice}
+          ريال
+
+          {discountedPrice?.toFixed(2)}
           <div>متابعة الشراء</div>
         </div>
       </div>

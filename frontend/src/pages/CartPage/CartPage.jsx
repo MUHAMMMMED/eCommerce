@@ -1,3 +1,5 @@
+
+
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { FaArrowLeftLong } from "react-icons/fa6";
@@ -42,21 +44,30 @@ export default function CartPage() {
   const getProductPrice = (item) => {
     if (item.product) {
       const { quantity, product } = item;
+
       if (quantity <= product.quantity1) {
-        return { price: product.price1, discount: product.discount_price1 };
+        const total_price = product.price1 * quantity;
+        const total_discount = product.discount_price1 * quantity;
+        return { total_price, total_discount };
       } else if (quantity <= product.quantity2) {
-        return { price: product.price2, discount: product.discount_price2 };
+        const total_price = product.price2 * quantity;
+        const total_discount = product.discount_price2 * quantity;
+        return { total_price, total_discount };
       } else if (quantity <= product.quantity3) {
-        return { price: product.price3, discount: product.discount_price3 };
+        const total_price = product.price3 * quantity;
+        const total_discount = product.discount_price3 * quantity;
+        return { total_price, total_discount };
       } else if (quantity <= product.quantity4) {
-        return { price: product.price4, discount: product.discount_price4 };
-      } else if (quantity <= product.quantity5) {
-        return { price: product.price5, discount: product.discount_price5 };
+        const total_price = product.price4 * quantity;
+        const total_discount = product.discount_price4 * quantity;
+        return { total_price, total_discount };
       } else {
-        return { price: product.price5, discount: product.discount_price5 };
+        const total_price = product.price5 * quantity;
+        const total_discount = product.discount_price5 * quantity;
+        return { total_price, total_discount };
       }
     } else {
-      return { price: 0, discount: 0 };
+      return { total_price: 0, total_discount: 0 };
     }
   };
 
@@ -75,16 +86,14 @@ export default function CartPage() {
       if (response.data.valid) {
         const newDiscountedPrice = response.data.discounted_price;
         setDiscountedPrice(newDiscountedPrice);
-        setSuccessMessage("تم تطبيق كودالخصم بنجاح!"); // Set success message
-
+        setSuccessMessage("تم تطبيق كود الخصم بنجاح!"); // Set success message
         updateTotal(newDiscountedPrice);  // Update total after applying the coupon
       } else {
         console.error(response.data.error);
       }
     } catch (error) {
       console.error('Error applying coupon:', error.message);
-      setErrorMessage("كود الخصم غير صحيح"); // Set success message
-
+      setErrorMessage("كود الخصم غير صحيح"); // Set error message
     }
   };
 
@@ -92,13 +101,16 @@ export default function CartPage() {
     setCouponCode(e.target.value);
   };
 
-  // if (loading) {
-  //   return <Loading />;
-  // }
+  if (loading) {
+    return <Loading />;
+  }
+
+  if (error) {
+    return <div>{error}</div>;
+  }
 
   return (
     <div>
-
       <section className="cartPageSection">
         <h3 className="h2">سلة المشتريات</h3>
       </section>
@@ -106,42 +118,45 @@ export default function CartPage() {
         cart.cart_items.length > 0 ? (
           <section className="section-cart-products">
             <div className="section-cart-products-row1">
-              {cart.cart_items.map(item => (
-                <div className='list-group-item' key={item.id}>
-                  <RemoveItem itemId={item.id} FetchCart={fetchCart} />
-                  <div className="cart-product-col-img">
-                    <div style={{ float: 'right' }}>
-                      <img className="cart-product-image" src={`${Config.baseURL}${item.product?.image_side_one}`} alt={item.product.name} />
+              {cart.cart_items.map(item => {
+                const { total_price, total_discount } = getProductPrice(item); // Destructure prices
+                return (
+                  <div className='list-group-item' key={item.id}>
+                    <RemoveItem itemId={item.id} FetchCart={fetchCart} />
+                    <div className="cart-product-col-img">
+                      <div style={{ float: 'right' }}>
+                        <img className="cart-product-image" src={`${Config.baseURL}${item.product?.image_side_one}`} alt={item.product.name} />
+                      </div>
+                      <Link to={`/Product/${item?.product?.name}/${item?.product?.id}`}>
+                        <div className='cart-product-titel'>{item.product?.name}</div>
+                      </Link>
                     </div>
-                    <Link to={`/Product/${item?.product?.name}/${item?.product?.id}`}>
-                      <div className='cart-product-titel'>{item.product?.name}</div>
-                    </Link>
+                    <Quantity itemId={item.id} quantity={item.quantity} fetchCart={fetchCart} />
+                    <div className='cart-product-price'>
+                      <div className='price'>{total_price?.toFixed(2)} <span className='money_code'>{item.product?.currency}</span></div>
+                      <div className='before-price'>{total_discount?.toFixed(2)} <span className='money_code'>{item.product?.currency}</span></div>
+                    </div>
+                    {item && item.product.is_active_note && (
+                      <Notes item={item} quantity={item.quantity} fetchCart={fetchCart} />
+                    )}
                   </div>
-                  <Quantity itemId={item.id} quantity={item.quantity} fetchCart={fetchCart} />
-                  <div className='cart-product-price'>
-                    <div className='price'>{getProductPrice(item).price} <span className='money_code'>{item.product?.currency}</span></div>
-                    <div className='before-price'>{getProductPrice(item).discount} <span className='money_code'>{item.product?.currency}</span></div>
-                  </div>
-                  {item && item.product.is_active_note && (
-                    <Notes item={item} quantity={item.quantity} fetchCart={fetchCart} />
-                  )}
-                </div>
-              ))}
+                );
+              })}
             </div>
             <div className='section-cart-products-row2'>
               <div className='section-cart-totals'>
                 <h5 className="text-body">مجموع الطلب</h5>
                 <ul className="list-group">
                   <li className="list-group-item-li">
-                    <span className="fw-bold text-primary" style={{ textAlign: 'center' }}>({cart.cart_items_count}) </span>
+                    <span className="fw-bold text-primary">({cart.cart_items_count}) </span>
                     <div className="me-auto"><span>عدد المنتجات</span></div>
                   </li>
                   <li className="list-group-item-li">
-                    <span className="fw-bold text-primary" style={{ textAlign: 'center' }}>({cart.cart_quantity}) </span>
+                    <span className="fw-bold text-primary">({cart.cart_quantity}) </span>
                     <div className="me-auto"><span>الكمية</span></div>
                   </li>
                   <li className="list-group-item-li">
-                    <span className="fw-bold text-primary">{cart.total} <span className='money_code'> ريال</span></span>
+                    <span className="fw-bold text-primary">  {cart?.total.toFixed(2)}    <span className='money_code'> ريال</span></span>
                     <div className="me-auto"><span>المجموع</span></div>
                   </li>
                 </ul>
@@ -157,7 +172,6 @@ export default function CartPage() {
                       placeholder="أدخل كود الخصم"
                       value={couponCode}
                       onChange={handleCouponCodeChange}
-
                     />
                     <br />
                   </div>
@@ -171,7 +185,7 @@ export default function CartPage() {
             </div>
           </section>
         ) : (
-          <div className="section-cart-products-row1" style={{ width: '100%', marginRight: '0', marginLeft: '0', marginTop: '100px', marginBottom: '300px' }}>
+          <div className="section-cart-products-row1" style={{ width: '100%', marginTop: '100px', marginBottom: '300px' }}>
             <div className="grid" style={{ width: '50%', margin: 'auto' }}>
               <Link className="grid-a" to={'/All_Products'}>
                 <div className="Btn-b">

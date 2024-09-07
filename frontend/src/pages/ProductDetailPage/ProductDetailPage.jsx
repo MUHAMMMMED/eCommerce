@@ -53,8 +53,8 @@ export default function ProductDetailPage({ product }) {
                 <div style={{ float: 'right', marginRight: '5px' }}>({product?.rate_count})</div></div>  </div>
 
             <div className="product_price">
-              <div className="price_item">{product?.price1} <spen className='money_code'>{product?.currency}</spen>  </div>
-              <div className="price-item_sale">{product?.discount_price1} <spen className='money_code'>{product?.currency}</spen>  </div>
+              {/* <div className="price_item">{product?.price1} <spen className='money_code'>{product?.currency}</spen>  </div>
+              <div className="price-item_sale">{product?.discount_price1} <spen className='money_code'>{product?.currency}</spen>  </div> */}
 
               {product?.stock_no <= 0 ? (
                 <div className="sold_out">نفذ المخزون</div>

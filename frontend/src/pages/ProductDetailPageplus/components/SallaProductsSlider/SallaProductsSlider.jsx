@@ -1,4 +1,6 @@
 
+
+
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -18,6 +20,42 @@ export default function SellProductsSlider({ product }) {
   const [notes, setNotes] = useState(Array(product?.default_option).fill(""));
   const [successMessage, setSuccessMessage] = useState("");
 
+
+
+  let subtotal = 0;
+  let total = 0;
+  let subtotal_discount = 0;
+
+
+
+  // Calculate subtotal based on quantity tiers
+  if (quantity[productId] <= product?.quantity1) {
+    subtotal = product?.price1 * quantity[productId];
+    subtotal_discount = product?.discount_price1 * quantity[productId];
+
+  } else if (quantity[productId] <= product?.quantity2) {
+    subtotal = product?.price2 * quantity[productId];
+    subtotal_discount = product?.discount_price2 * quantity[productId];
+
+  } else if (quantity[productId] <= product?.quantity3) {
+    subtotal = product?.price3 * quantity[productId];
+    subtotal_discount = product?.discount_price3 * quantity[productId];
+
+  } else if (quantity[productId] <= product?.quantity4) {
+    subtotal = product?.price4 * quantity[productId];
+    subtotal_discount = product?.discount_price4 * quantity[productId];
+
+  } else if (quantity[productId] <= product?.quantity5) {
+    subtotal = product?.price5 * quantity[productId];
+    subtotal_discount = product?.discount_price5 * quantity[productId];
+  } else {
+    subtotal = product?.price5 * quantity[productId];
+    subtotal_discount = product?.discount_price5 * quantity[productId];
+  }
+
+  total += subtotal;
+
+
   useEffect(() => {
     if (productId) {
       setNotes(Array(quantity[productId]).fill(""));
@@ -28,18 +66,18 @@ export default function SellProductsSlider({ product }) {
     if (!productId) return;
 
     try {
-      await axios.post(`${Config.baseURL}/api/cart/add/`, {
+      const response = await axios.post(`${Config.baseURL}/api/cart/add/`, {
         productId,
         quantity: quantity[productId],
         notes: notes,
       });
-
 
       setQuantity({ [productId]: 1 }); // Reset quantity to 1 after success
       setNotes('');
       fetchCart();
       setSuccessMessage("تمت إضافة المنتج إلى السلة"); // Set success message
     } catch (error) {
+      console.error("Error adding to cart:", error);
     }
   };
 
@@ -98,13 +136,19 @@ export default function SellProductsSlider({ product }) {
             <span className="google-business-message" style={{ display: 'block', width: '100%', textAlign: 'center' }}>{product.note_help_bottom}</span>
           )}
         </div>
+        <div className="SUB_total" style={{ textDecoration: "line-through", color: '#989898', fontSize: '13px', padding: '0' }}> المجموع قبل الخصم :  {subtotal_discount.toFixed(2)}   <spen className='money_code'>{product?.currency}</spen> </div>
+
+        <div className="SUB_total">المجموع :  {subtotal.toFixed(2)}   <spen className='money_code'>{product?.currency}</spen> </div>
+
         <div style={{ float: 'right', width: '95%', marginRight: '2.5%' }}>
           <div className="Sell-Row-name">
             <button className='Sell-button-btn' onClick={handleAddToCart}>إضافة للسلة</button>
           </div>
           <div className="Sell-Row-price">
             <button className='Sell-button-pay' onClick={handleBuyNow}>اشتري الآن</button>
-          </div></div>
+          </div>
+        </div>
+
         {successMessage && (
           <div className="successMessage">{successMessage}</div>
         )}
@@ -135,7 +179,9 @@ const NoteInput = ({ index, value, onChange, product }) => (
       className='note'
       value={value}
       onChange={onChange}
-      placeholder={` (${index + 1})${product?.note_help}`}
+      placeholder={` (${index + 1}) ${product?.note_help}`}
     />
   </div>
 );
+
+
