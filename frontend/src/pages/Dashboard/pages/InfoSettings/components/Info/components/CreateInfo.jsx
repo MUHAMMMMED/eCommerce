@@ -12,11 +12,13 @@ export default function CreateInfo({ fetchBalance }) {
     Whatsapp: '',
     snapchat: '',
     instagram: '',
-    Facebook: '',
+    facebook: '',
     Twitter: '',
     pixel_id: '',
     offer_message: '',
     StripeFee: '',
+    TikTok: '',
+    email: '',
 
 
   });
@@ -49,10 +51,13 @@ export default function CreateInfo({ fetchBalance }) {
         Whatsapp: '',
         snapchat: '',
         instagram: '',
+        facebook: '',
         Twitter: '',
         pixel_id: '',
         offer_message: '',
         StripeFee: '',
+        TikTok: '',
+        email: '',
       });
     } catch (error) {
       console.error("Error submitting the form!", error);
@@ -91,6 +96,18 @@ export default function CreateInfo({ fetchBalance }) {
 
           </div>
 
+
+          <div className="FOrm-container_dash">
+            <div className="form-container-half">
+              <label className='label_dash' htmlFor="email">   البريد الإلكتروني   </label>
+              <input type="text" className='text_dash' name="email" value={formData.email} onChange={handleChange} />
+            </div>
+            <div className="form-container-half">
+              <label className='label_dash' htmlFor="TikTok"> تيك توك</label>
+              <input type="text" className='text_dash' name="TikTok" value={formData.TikTok} onChange={handleChange} />
+            </div>
+          </div>
+
           <div className="FOrm-container_dash">
 
             <div className="form-container-half">
@@ -101,6 +118,7 @@ export default function CreateInfo({ fetchBalance }) {
               <label className='label_dash' htmlFor="instagram"> انستجرام</label>
               <input type="text" className='text_dash' name="instagram" value={formData.instagram} onChange={handleChange} />
             </div>
+
 
           </div>
           <div className="FOrm-container_dash">
