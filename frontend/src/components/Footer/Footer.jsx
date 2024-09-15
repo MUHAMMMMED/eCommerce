@@ -1,8 +1,7 @@
 
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { AiFillTikTok } from "react-icons/ai";
-import { FaFacebook, FaInstagram, FaSnapchat, FaTwitter } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaSnapchat, FaTiktok, FaTwitter } from 'react-icons/fa'; // Replace this with the correct TikTok icon
 import FloatButton from '../FloatButton/FloatButton';
 import Config from '../config';
 import './Footer.css';
@@ -32,7 +31,7 @@ const Footer = () => {
               {info?.Twitter && <a href={info.Twitter}><FaTwitter /></a>}
               {info?.instagram && <a href={info.instagram}><FaInstagram /></a>}
               {info?.snapchat && <a href={info.snapchat}><FaSnapchat /></a>}
-              {info?.TikTok && <a href={info.TikTok}><AiFillTikTok /></a>}
+              {info?.TikTok && <a href={info.TikTok}><FaTiktok /></a>}
 
             </div>
           </div>
