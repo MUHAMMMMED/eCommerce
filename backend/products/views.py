@@ -213,7 +213,7 @@ class ProductCreate_UpdateAPIView(APIView):
             rate = Rate.objects.filter(product=pk)
  
             # Serializing data
-            serializer = ProductSerializer(product)
+            serializer = ProductDash_Serializer(product)
             moreInfo_Serializer = MoreInfoSerializer(more_info, many=True)
             image_produc_Serializer = Image_ProductSerializer(image_product, many=True)
             freq_Serializer = FrequentlyAsked_Serializer(freq, many=True)
