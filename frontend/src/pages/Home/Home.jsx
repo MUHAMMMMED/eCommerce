@@ -1,13 +1,13 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 // import Accordion from '../../components/Accordion/Accordion';
-// import BestCart from '../../components/Cart/BestCart';
+import BestCart from '../../components/Cart/BestCart';
 // import Feedback from '../../components/Feedback/Feedback';
 import Footer from '../../components/Footer/Footer';
 import ErrorPage from '../../components/Loading/ErrorPage';
 import Loading from '../../components/Loading/Loading';
 import Config from '../../components/config';
-import CardSlider from './components/CardSlider/CardSlider';
+// import CardSlider from './components/CardSlider/CardSlider';
 // import CategoryCard from './components/CategoryCard/CategoryCard';
 // import Deal from './components/Deal/Deal';
 // import Experts from './components/Experts/Experts';
@@ -61,8 +61,8 @@ export default function Home() {
         {/* <CategoryCard Category={data?.Category} /> */}
         {/* <Deal data={data} /> */}
         {/* <Experts group_product={data.group_product} name={'استعرض المنتج'} title={'تم اختياره من قبل خبرائنا'} /> */}
-        <CardSlider card={data?.card} />
-        {/* <BestCart Items={data?.best_sellers} title={'الاكثر مبيعا'} /> */}
+        {/* <CardSlider card={data?.card} /> */}
+        <BestCart Items={data?.best_sellers} title={'الاكثر مبيعا'} />
         {/* <Accordion questions={data?.questions} /> */}
         {/* <Feedback rates={data?.rate} /> */}
 
