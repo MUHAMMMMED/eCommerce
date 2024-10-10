@@ -1,8 +1,8 @@
 import React from 'react';
-import Accordion from '../../components/Accordion/Accordion';
+// import Accordion from '../../components/Accordion/Accordion';
 import Breadcrumb from '../../components/Breadcrumb/Breadcrumb';
-import SlideCart from '../../components/Cart/SlideCart';
-import Feedback from '../../components/Feedback/Feedback';
+// import SlideCart from '../../components/Cart/SlideCart';
+// import Feedback from '../../components/Feedback/Feedback';
 import MoreInfo from '../ProductDetailPage/components/MoreInfo/MoreInfo';
 import './ProductDetailPageplus.css';
 import Counter from './components/Counter/Counter';
@@ -78,9 +78,9 @@ export default function ProductDetailPageplus({ product }) {
               <MoreInfo more_info={product?.more_info} />
             </div></div></div></div>
 
-      <Accordion questions={product?.freq} />
-      <Feedback rates={product?.rate} />
-      <SlideCart products={product?.products} title=" منتجات ذات صله" />
+      {/* <Accordion questions={product?.freq} /> */}
+      {/* <Feedback rates={product?.rate} /> */}
+      {/* <SlideCart products={product?.products} title=" منتجات ذات صله" /> */}
 
     </>
   )

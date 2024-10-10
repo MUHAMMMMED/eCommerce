@@ -1,8 +1,8 @@
 import React from 'react';
-import Accordion from '../../components/Accordion/Accordion';
+// import Accordion from '../../components/Accordion/Accordion';
 import Breadcrumb from '../../components/Breadcrumb/Breadcrumb';
-import SlideCart from '../../components/Cart/SlideCart';
-import Feedback from '../../components/Feedback/Feedback';
+// import SlideCart from '../../components/Cart/SlideCart';
+// import Feedback from '../../components/Feedback/Feedback';
 import Config from '../../components/config';
 import Counter from '../ProductDetailPageplus/components/Counter/Counter';
 import './ProductDetailPage.css';
@@ -73,11 +73,6 @@ export default function ProductDetailPage({ product }) {
 
                 <div style={{ width: '100%', float: 'left' }}></div>
 
-
-
-
-
-
                 {today < expirationDate && (
                   <div style={{ float: 'left', width: '100%', paddingTop: '15px', paddingBottom: '15px', marginTop: '5px', marginBottom: '15px' }}  >
                     <h5 style={{ textAlign: 'center' }}>ينتهي العرض</h5>
@@ -92,9 +87,9 @@ export default function ProductDetailPage({ product }) {
             )}
           </div> </div> </div>
 
-      <Accordion questions={product?.freq} />
-      <Feedback rates={product?.rate} />
-      <SlideCart products={product?.products} title=" منتجات ذات صله" />
+      {/* <Accordion questions={product?.freq} />
+      <Feedback rates={product?.rate} /> */}
+      {/* <SlideCart products={product?.products} title=" منتجات ذات صله" /> */}
     </>
   );
 }
