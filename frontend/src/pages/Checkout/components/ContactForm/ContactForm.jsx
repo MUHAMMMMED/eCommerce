@@ -1,5 +1,3 @@
-
-
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import PhoneInput from 'react-phone-input-2';
@@ -56,7 +54,15 @@ const ContactForm = ({ fetchCart, order, customer }) => {
       if (selectedCountry) {
         try {
           const response = await axios.get(`${Config.baseURL}/api/orders/shipping-company/${selectedCountry}/`);
-          setCompanies(response.data?.Shipping || []);
+          const shippingCompanies = response.data?.Shipping || [];
+          setCompanies(shippingCompanies);
+
+          // Set the first shipping company as default if not already selected
+          if (!selectedCompany && shippingCompanies.length > 0) {
+            setSelectedCompany(shippingCompanies[0].id);
+            setOrderData((prevData) => ({ ...prevData, Shipping: shippingCompanies[0].id }));
+          }
+
           fetchCart();
         } catch (error) {
           console.error('Error fetching shipping details:', error);
@@ -65,7 +71,7 @@ const ContactForm = ({ fetchCart, order, customer }) => {
     };
     fetchShippingDetails();
   }, [selectedCountry]);
-  // , fetchCart
+
   useEffect(() => {
     const fetchShipping = async () => {
       if (selectedCompany) {
@@ -79,7 +85,7 @@ const ContactForm = ({ fetchCart, order, customer }) => {
     };
     fetchShipping();
   }, [selectedCompany]);
-  // , fetchCart
+
   useEffect(() => {
     const submitOrderData = async () => {
       if (order && order?.id) {
@@ -94,7 +100,7 @@ const ContactForm = ({ fetchCart, order, customer }) => {
     };
     submitOrderData();
   }, [orderData, order?.id]);
-  // , fetchCart
+
   useEffect(() => {
     const submitCustomerData = async () => {
       if (customer && customer?.id) {
@@ -180,7 +186,6 @@ const ContactForm = ({ fetchCart, order, customer }) => {
             ))}
           </select>
           <input
-
             type="text"
             id="governorate"
             name="governorate"
@@ -267,11 +272,9 @@ const ContactForm = ({ fetchCart, order, customer }) => {
                       height="35"
                       className="Delivery-option-icon"
                       alt="Delivery Option Icon" />
-
                   </div>
                   <div className="DElivery-card-content">
                     <span className="card-title">{company?.name}</span>
-
                     <span className="card-text">{company?.work_days}</span>
                   </div>
                   <div className="DElivery-card-price"> {company?.shipping_price} <span className='money_code' style={{ display: 'block', }}> ريال</span></div>
